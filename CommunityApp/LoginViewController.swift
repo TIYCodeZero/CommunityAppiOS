@@ -66,7 +66,7 @@ final class LoginViewController: UIViewController {
                     return
                 }
                 switch Login.Response.Result(data: data) {
-                case let .success(member):
+                case let .success:
                     let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
                     let vc = storyboard.instantiateViewController(withIdentifier: "MainNav")
                     self.present(vc, animated: true, completion: nil)
