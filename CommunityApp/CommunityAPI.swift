@@ -22,7 +22,6 @@ struct CommunityAPI {
         ]
         return config
     }
-    
 }
 
 extension CommunityAPI {
@@ -40,7 +39,6 @@ extension CommunityAPI {
                 return "login.json"
             }
         }
-        
         var url: URL {
             return base.appendingPathComponent(pathComponent)
         }
