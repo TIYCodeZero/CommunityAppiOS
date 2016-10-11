@@ -12,6 +12,11 @@
 		F714A5D21DAADF840017958D /* JSONTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F714A5D11DAADF840017958D /* JSONTools.swift */; };
 		F714A5D41DAAE4710017958D /* RegistrationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F714A5D31DAAE4710017958D /* RegistrationRequest.swift */; };
 		F714A5D61DAC1AA00017958D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F714A5D51DAC1AA00017958D /* RegisterViewController.swift */; };
+		F71FB10E1DAD2D530091E8A8 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71FB10D1DAD2D530091E8A8 /* MenuViewController.swift */; };
+		F71FB1101DAD2DAF0091E8A8 /* MembersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71FB10F1DAD2DAF0091E8A8 /* MembersTableViewController.swift */; };
+		F71FB1121DAD2E030091E8A8 /* MemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71FB1111DAD2E030091E8A8 /* MemberCell.swift */; };
+		F71FB1141DAD2E580091E8A8 /* MemberStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71FB1131DAD2E580091E8A8 /* MemberStore.swift */; };
+		F71FB1161DAD3C610091E8A8 /* MemberRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71FB1151DAD3C610091E8A8 /* MemberRequest.swift */; };
 		F73F00211DA8235C007A9DEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F00201DA8235C007A9DEC /* AppDelegate.swift */; };
 		F73F00231DA8235C007A9DEC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F00221DA8235C007A9DEC /* LoginViewController.swift */; };
 		F73F00261DA8235C007A9DEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F73F00241DA8235C007A9DEC /* Main.storyboard */; };
@@ -48,6 +53,11 @@
 		F714A5D11DAADF840017958D /* JSONTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONTools.swift; sourceTree = "<group>"; };
 		F714A5D31DAAE4710017958D /* RegistrationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationRequest.swift; sourceTree = "<group>"; };
 		F714A5D51DAC1AA00017958D /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		F71FB10D1DAD2D530091E8A8 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		F71FB10F1DAD2DAF0091E8A8 /* MembersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersTableViewController.swift; sourceTree = "<group>"; };
+		F71FB1111DAD2E030091E8A8 /* MemberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberCell.swift; sourceTree = "<group>"; };
+		F71FB1131DAD2E580091E8A8 /* MemberStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberStore.swift; sourceTree = "<group>"; };
+		F71FB1151DAD3C610091E8A8 /* MemberRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberRequest.swift; sourceTree = "<group>"; };
 		F73F001D1DA8235C007A9DEC /* CommunityApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommunityApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F73F00201DA8235C007A9DEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F73F00221DA8235C007A9DEC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -126,10 +136,15 @@
 				F714A5CF1DAAD9FA0017958D /* LoginRequest.swift */,
 				F73F00221DA8235C007A9DEC /* LoginViewController.swift */,
 				F73F00241DA8235C007A9DEC /* Main.storyboard */,
+				F71FB1131DAD2E580091E8A8 /* MemberStore.swift */,
+				F71FB1151DAD3C610091E8A8 /* MemberRequest.swift */,
+				F71FB1111DAD2E030091E8A8 /* MemberCell.swift */,
+				F71FB10F1DAD2DAF0091E8A8 /* MembersTableViewController.swift */,
 				F73F00541DA823A0007A9DEC /* Member.swift */,
 				F73F00501DA8238D007A9DEC /* Post.swift */,
 				F714A5D51DAC1AA00017958D /* RegisterViewController.swift */,
 				F714A5D31DAAE4710017958D /* RegistrationRequest.swift */,
+				F71FB10D1DAD2D530091E8A8 /* MenuViewController.swift */,
 			);
 			path = CommunityApp;
 			sourceTree = "<group>";
@@ -296,10 +311,15 @@
 				F714A5D61DAC1AA00017958D /* RegisterViewController.swift in Sources */,
 				F73F00511DA8238D007A9DEC /* Event.swift in Sources */,
 				F73F00211DA8235C007A9DEC /* AppDelegate.swift in Sources */,
+				F71FB10E1DAD2D530091E8A8 /* MenuViewController.swift in Sources */,
 				F73F00521DA8238D007A9DEC /* Group.swift in Sources */,
+				F71FB1101DAD2DAF0091E8A8 /* MembersTableViewController.swift in Sources */,
 				F73F00531DA8238D007A9DEC /* Post.swift in Sources */,
+				F71FB1121DAD2E030091E8A8 /* MemberCell.swift in Sources */,
+				F71FB1141DAD2E580091E8A8 /* MemberStore.swift in Sources */,
 				F714A5CE1DAAD3970017958D /* CommunityAPI.swift in Sources */,
 				F714A5D01DAAD9FA0017958D /* LoginRequest.swift in Sources */,
+				F71FB1161DAD3C610091E8A8 /* MemberRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

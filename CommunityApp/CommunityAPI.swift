@@ -11,14 +11,13 @@ import Foundation
 
 struct CommunityAPI {
     
-//  Change url placeholder
     static let base: URL = URL(string: "http://codezerocommunity.herokuapp.com")!
     
     static var sessionConfig: URLSessionConfiguration {
         let config = URLSessionConfiguration.default
         config.httpAdditionalHeaders = [
-            "Accept": "application.json",
-            "Content-Type": "application.json"
+            "Accept": "application/json",
+            "Content-Type": "application/json"
         ]
         return config
     }
@@ -28,15 +27,16 @@ extension CommunityAPI {
     enum Method {
         case register
         case login
-        
-// Confirm pathComponent
-        
+        case memberDirectory
+                
         var pathComponent: String {
             switch self {
             case .register:
                 return "/register.json"
             case .login:
                 return "/login.json"
+            case .memberDirectory:
+                return "/memberList.json"
             }
         }
         var url: URL {

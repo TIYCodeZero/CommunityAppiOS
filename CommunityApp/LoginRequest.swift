@@ -47,7 +47,7 @@ extension Login {
             init(data: Data) {
                 do {
                     let objects: [String: Any] = try JSONSerialization.jsonObject(with: data, options: [])
-                    if let memberDict = objects["member"] as? [String: Any],
+                    if let memberDict = objects["responseMember"] as? [String: Any],
                         let member = Member(dictionary: memberDict) {
                         self = .success(member)
                     } else {
