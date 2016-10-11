@@ -18,6 +18,10 @@
 		F71FB1141DAD2E580091E8A8 /* MemberStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71FB1131DAD2E580091E8A8 /* MemberStore.swift */; };
 		F71FB1161DAD3C610091E8A8 /* MemberRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71FB1151DAD3C610091E8A8 /* MemberRequest.swift */; };
 		F71FB1181DAD627A0091E8A8 /* MemberDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71FB1171DAD627A0091E8A8 /* MemberDetailViewController.swift */; };
+		F71FB11A1DAD6A150091E8A8 /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71FB1191DAD6A150091E8A8 /* PostsTableViewController.swift */; };
+		F71FB11C1DAD6A450091E8A8 /* PostsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71FB11B1DAD6A450091E8A8 /* PostsStore.swift */; };
+		F71FB11E1DAD6A9C0091E8A8 /* PostsCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71FB11D1DAD6A9C0091E8A8 /* PostsCellTableViewCell.swift */; };
+		F71FB1201DAD6F940091E8A8 /* PostsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71FB11F1DAD6F940091E8A8 /* PostsRequest.swift */; };
 		F73F00211DA8235C007A9DEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F00201DA8235C007A9DEC /* AppDelegate.swift */; };
 		F73F00231DA8235C007A9DEC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F00221DA8235C007A9DEC /* LoginViewController.swift */; };
 		F73F00261DA8235C007A9DEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F73F00241DA8235C007A9DEC /* Main.storyboard */; };
@@ -60,6 +64,10 @@
 		F71FB1131DAD2E580091E8A8 /* MemberStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberStore.swift; sourceTree = "<group>"; };
 		F71FB1151DAD3C610091E8A8 /* MemberRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberRequest.swift; sourceTree = "<group>"; };
 		F71FB1171DAD627A0091E8A8 /* MemberDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberDetailViewController.swift; sourceTree = "<group>"; };
+		F71FB1191DAD6A150091E8A8 /* PostsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
+		F71FB11B1DAD6A450091E8A8 /* PostsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsStore.swift; sourceTree = "<group>"; };
+		F71FB11D1DAD6A9C0091E8A8 /* PostsCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsCellTableViewCell.swift; sourceTree = "<group>"; };
+		F71FB11F1DAD6F940091E8A8 /* PostsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsRequest.swift; sourceTree = "<group>"; };
 		F73F001D1DA8235C007A9DEC /* CommunityApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommunityApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F73F00201DA8235C007A9DEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F73F00221DA8235C007A9DEC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -139,9 +147,13 @@
 				F73F00221DA8235C007A9DEC /* LoginViewController.swift */,
 				F73F00241DA8235C007A9DEC /* Main.storyboard */,
 				F71FB1171DAD627A0091E8A8 /* MemberDetailViewController.swift */,
+				F71FB1191DAD6A150091E8A8 /* PostsTableViewController.swift */,
+				F71FB11B1DAD6A450091E8A8 /* PostsStore.swift */,
 				F73F00541DA823A0007A9DEC /* Member.swift */,
 				F71FB1111DAD2E030091E8A8 /* MemberCell.swift */,
+				F71FB11D1DAD6A9C0091E8A8 /* PostsCellTableViewCell.swift */,
 				F71FB1151DAD3C610091E8A8 /* MemberRequest.swift */,
+				F71FB11F1DAD6F940091E8A8 /* PostsRequest.swift */,
 				F71FB10F1DAD2DAF0091E8A8 /* MembersTableViewController.swift */,
 				F71FB1131DAD2E580091E8A8 /* MemberStore.swift */,
 				F71FB10D1DAD2D530091E8A8 /* MenuViewController.swift */,
@@ -308,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F71FB1181DAD627A0091E8A8 /* MemberDetailViewController.swift in Sources */,
+				F71FB1201DAD6F940091E8A8 /* PostsRequest.swift in Sources */,
 				F73F00231DA8235C007A9DEC /* LoginViewController.swift in Sources */,
 				F73F00551DA823A0007A9DEC /* Member.swift in Sources */,
 				F714A5D41DAAE4710017958D /* RegistrationRequest.swift in Sources */,
@@ -318,8 +331,11 @@
 				F71FB10E1DAD2D530091E8A8 /* MenuViewController.swift in Sources */,
 				F73F00521DA8238D007A9DEC /* Group.swift in Sources */,
 				F71FB1101DAD2DAF0091E8A8 /* MembersTableViewController.swift in Sources */,
+				F71FB11E1DAD6A9C0091E8A8 /* PostsCellTableViewCell.swift in Sources */,
 				F73F00531DA8238D007A9DEC /* Post.swift in Sources */,
+				F71FB11C1DAD6A450091E8A8 /* PostsStore.swift in Sources */,
 				F71FB1121DAD2E030091E8A8 /* MemberCell.swift in Sources */,
+				F71FB11A1DAD6A150091E8A8 /* PostsTableViewController.swift in Sources */,
 				F71FB1141DAD2E580091E8A8 /* MemberStore.swift in Sources */,
 				F714A5CE1DAAD3970017958D /* CommunityAPI.swift in Sources */,
 				F714A5D01DAAD9FA0017958D /* LoginRequest.swift in Sources */,
