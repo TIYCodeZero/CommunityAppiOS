@@ -12,7 +12,7 @@ import Foundation
 struct CommunityAPI {
     
 //  Change url placeholder
-    static let base: URL = URL(string: "placeholder.com")!
+    static let base: URL = URL(string: "http://codezerocommunity.herokuapp.com")!
     
     static var sessionConfig: URLSessionConfiguration {
         let config = URLSessionConfiguration.default
@@ -34,9 +34,9 @@ extension CommunityAPI {
         var pathComponent: String {
             switch self {
             case .register:
-                return "register.json"
+                return "/register.json"
             case .login:
-                return "login.json"
+                return "/login.json"
             }
         }
         var url: URL {

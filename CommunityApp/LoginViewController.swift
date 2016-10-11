@@ -8,10 +8,10 @@
 
 import UIKit
 
+// Not sure I need this delegate
 protocol MemberAuthenViewControllerDelegate {
     func loginViewController(_ controller: UIViewController, successfullyAuthenticated member: Member)
 }
-
 
 internal func displayAlertMessage(title: String, message: String, from controller: UIViewController)-> Void {
     let myAlert = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertControllerStyle(rawValue: 1)!)
@@ -19,7 +19,6 @@ internal func displayAlertMessage(title: String, message: String, from controlle
     myAlert.addAction(okAction)
     controller.present(myAlert, animated: true, completion: nil)
 }
-
 
 final class LoginViewController: UIViewController {
     var delegate: MemberAuthenViewControllerDelegate?
@@ -40,12 +39,10 @@ final class LoginViewController: UIViewController {
         CommunityApp.displayAlertMessage(title: "Error", message: "Please check credentials and try again", from: self)
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-    
     
     @IBAction func loginButton (_ sender: AnyObject){
         guard let loginReq = loginRequest else {
@@ -78,6 +75,5 @@ final class LoginViewController: UIViewController {
             }
             .resume()
     }
-    
-    
+        
 }

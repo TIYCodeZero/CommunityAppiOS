@@ -207,6 +207,9 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bec-vk-uTo">
                                                 <state key="normal" title="Register"/>
+                                                <connections>
+                                                    <action selector="registerButton:" destination="Wih-ay-5GT" eventType="touchUpInside" id="5mG-hD-EkJ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -222,6 +225,14 @@
                             <constraint firstItem="lHr-YA-myD" firstAttribute="top" secondItem="pXw-95-HFb" secondAttribute="bottom" constant="8" id="xLy-6H-VqV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="confirmPasswordField" destination="7DB-aL-SYh" id="0xv-iU-FDK"/>
+                        <outlet property="emailField" destination="Mz9-bO-rL5" id="9vf-cJ-hVG"/>
+                        <outlet property="firstNameField" destination="DHU-a0-eDX" id="LhW-L8-GZ7"/>
+                        <outlet property="lastNameField" destination="s2O-yQ-aiX" id="Grc-6u-qrP"/>
+                        <outlet property="passwordField" destination="H5B-tn-aTA" id="Zjj-N9-IGn"/>
+                        <outlet property="streetAddressField" destination="E33-Wx-1P7" id="zq3-rY-Iby"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pCi-bX-Fga" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
