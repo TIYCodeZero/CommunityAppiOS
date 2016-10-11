@@ -13,9 +13,6 @@ class PostsTableViewController: UITableViewController {
     var posts: [Post] = []
     var postsStore: PostsStore = PostsStore()
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Member Posts"
@@ -25,9 +22,37 @@ class PostsTableViewController: UITableViewController {
         tableView.contentInset = insets
         tableView.scrollIndicatorInsets = insets
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 65
+        tableView.estimatedRowHeight = 80
         
-     }
+        
+        
+        postsStore.fetchPosts {
+            (PostsResult) -> Void in
+            
+            switch PostsResult {
+            case let .success(posts):
+                print("Successfully found \(posts.count) posts.")
+                OperationQueue.main.addOperation {
+                    self.posts = posts
+                    self.tableView.reloadData()
+                }
+            case let .failure(error):
+                print("Error fetching posts: \(error)")
+                
+            }
+        }
+    }
 
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PostsCell", for: indexPath) as! PostsCell
+        let post = posts[(indexPath as IndexPath).row]
+        
+        cell.titleLabel.text = post.title
+//        cell.authorLabel.text = post.author
+        cell.bodyTextField.text = post.body
+        
+        return cell
+    }
 
 }

@@ -14,14 +14,6 @@ class MemberStore {
     var allMembers: [Member] = []
     
     
-    
-    func processMembersRequest (data: Data?, error: NSError?)-> MembersResult{
-        guard let jsonData = data else {
-            return .failure("Unable to process members request")
-        }
-        return membersFromJSONData(jsonData)
-    }
-    
     func fetchMembers (completionHandler: @escaping (MembersResult) -> Void) -> Void {
         
         let session = URLSession(configuration: CommunityAPI.sessionConfig)
@@ -45,4 +37,10 @@ class MemberStore {
 }
 
 
-/**/
+
+/*    func processMembersRequest (data: Data?, error: NSError?)-> MembersResult{
+        guard let jsonData = data else {
+            return .failure("Unable to process members request")
+        }
+        return membersFromJSONData(jsonData)
+    } */
