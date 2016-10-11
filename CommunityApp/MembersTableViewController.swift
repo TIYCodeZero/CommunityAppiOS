@@ -40,4 +40,19 @@ class MembersTableViewController: UITableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return members.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MemberCell", for: indexPath) as! MemberCell
+        let member = members[(indexPath as IndexPath).row]
+        
+        cell.nameLabel.text = "\(member.lastName), \(member.firstName)"
+        
+        return cell
+    }
+    
+    
 }
