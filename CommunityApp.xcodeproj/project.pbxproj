@@ -33,6 +33,7 @@
 		F73F00521DA8238D007A9DEC /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F004F1DA8238D007A9DEC /* Group.swift */; };
 		F73F00531DA8238D007A9DEC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F00501DA8238D007A9DEC /* Post.swift */; };
 		F73F00551DA823A0007A9DEC /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F00541DA823A0007A9DEC /* Member.swift */; };
+		F7785EB81DAE786600149DCE /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7785EB71DAE786600149DCE /* CreatePostViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		F73F004F1DA8238D007A9DEC /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		F73F00501DA8238D007A9DEC /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		F73F00541DA823A0007A9DEC /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		F7785EB71DAE786600149DCE /* CreatePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 				F71FB11F1DAD6F940091E8A8 /* PostsRequest.swift */,
 				F71FB11B1DAD6A450091E8A8 /* PostsStore.swift */,
 				F71FB1191DAD6A150091E8A8 /* PostsTableViewController.swift */,
+				F7785EB71DAE786600149DCE /* CreatePostViewController.swift */,
 				F714A5D51DAC1AA00017958D /* RegisterViewController.swift */,
 				F714A5D31DAAE4710017958D /* RegistrationRequest.swift */,
 			);
@@ -337,6 +340,7 @@
 				F71FB1121DAD2E030091E8A8 /* MemberCell.swift in Sources */,
 				F71FB11A1DAD6A150091E8A8 /* PostsTableViewController.swift in Sources */,
 				F71FB1141DAD2E580091E8A8 /* MemberStore.swift in Sources */,
+				F7785EB81DAE786600149DCE /* CreatePostViewController.swift in Sources */,
 				F714A5CE1DAAD3970017958D /* CommunityAPI.swift in Sources */,
 				F714A5D01DAAD9FA0017958D /* LoginRequest.swift in Sources */,
 				F71FB1161DAD3C610091E8A8 /* MemberRequest.swift in Sources */,

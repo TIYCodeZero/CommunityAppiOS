@@ -13,15 +13,6 @@ class PostsTableViewController: UITableViewController {
     var posts: [Post] = []
     var postsStore: PostsStore = PostsStore()
     
-// Need to review DateFormatter code:
-    let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .none
-        return formatter
-    }()
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Member Posts"

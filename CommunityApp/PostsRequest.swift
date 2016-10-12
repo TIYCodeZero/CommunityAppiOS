@@ -54,8 +54,12 @@ func postsFromJSONData(_ data: Data)-> PostsResult {
 }
 
 fileprivate func postFromJSONObject(_ json: [String:Any])-> Post? {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "dd MMM yyyy HH:mm"
+
     guard let
-        date = json["date"] as? Date,
+        dateAsString = json["date"] as? String,
+        let date = dateFormatter.date(from: dateAsString),
         let title = json["title"] as? String,
         let body = json["body"] as? String,
         let authorInfo = json["author"] as? [String: Any],

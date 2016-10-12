@@ -29,6 +29,7 @@ extension CommunityAPI {
         case login
         case memberDirectory
         case postsList
+        case createPost
                 
         var pathComponent: String {
             switch self {
@@ -40,6 +41,8 @@ extension CommunityAPI {
                 return "/memberList.json"
             case .postsList:
                 return "/postsList.json"
+            case .createPost:
+                return "/createPost.json"
             }
         }
         var url: URL {
