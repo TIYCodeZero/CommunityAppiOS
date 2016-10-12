@@ -9,37 +9,57 @@
 import UIKit
 
 class CreatePostViewController: UIViewController {
-
+    
+    var user: Member?
+    
     @IBOutlet var titleField: UITextField!
     @IBOutlet var bodyField: UITextField!
     
-/*    @IBAction func nextButton(_ sender: AnyObject) {
+    @IBAction func nextButton(_ sender: AnyObject) {
         let currentDate = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMM dd, yyyy HH:mm"
         let date = dateFormatter.string(from: currentDate)
-        let author =
+        let author = user
+        
         guard let title = titleField.text,
-        let body = bodyField.text else {
-            CommunityApp.displayAlertMessage(title: "Error", message: "All fields are required", from: self)
-            return
+            let body = bodyField.text else {
+                CommunityApp.displayAlertMessage(title: "Error", message: "All fields are required", from: self)
+                return
         }
-    } */
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        title = "Post"
-    }
- 
-/*    class func createPost(date: String, title: String, body: String, author: Member, completionHandler: @escaping (PostsResult) -> Void) -> Void {
         let session = URLSession(configuration: CommunityAPI.sessionConfig)
         let method = CommunityAPI.Method.createPost
         var request = URLRequest(url: method.url)
         request.httpMethod = "POST"
         
-        let postProfile: [String: String] = ["date": date, "title": title, "body": body, "author": author]
+        let postProfile: [String: Any] = ["date": date, "title": title, "body": body, "member": author]
         
-        request.httpBody = try
-    } */
+        request.httpBody = try! JSONSerialization.data(withJSONObject: postProfile, options: [])
+        session.dataTask(with: request) { (optData, optResponse, optError) in
+            OperationQueue.main.addOperation {
+                guard let data = optData else {
+                    self.displayAlertMessage()
+                    return
+                }
+                switch PostsResult(data: data) {
+                case .success:
+                    return
+                case .failure:
+                    self.displayAlertMessage()
+                }
+            }
+            }
+            .resume()
+    }
+    
+    func displayAlertMessage(){
+        CommunityApp.displayAlertMessage(title: "Error", message: "Unable to create post", from: self)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Post"
+    }
+    
+    
 }

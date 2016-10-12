@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class Member {
+class Member {
     
     public var firstName: String
     public var lastName: String
@@ -49,17 +49,6 @@ extension Member {
     static var passwordKey: String = "password"
 }
 
-
-
-
-
-
-
-
-
-
-
-
 extension Member : Equatable {
     public static func ==(lhs:Member, rhs:Member)->Bool {
         return (
@@ -70,4 +59,6 @@ extension Member : Equatable {
         lhs.id == rhs.id &&
         lhs.password == rhs.password)
     }
+    
+
 }

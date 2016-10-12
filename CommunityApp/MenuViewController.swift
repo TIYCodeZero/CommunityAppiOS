@@ -10,6 +10,7 @@ import UIKit
 
 class MenuViewController: UIViewController {
 
+    var user: Member?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,4 +21,11 @@ class MenuViewController: UIViewController {
         
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? CreatePostViewController {
+            destination.user = self.user
+        }
+        
+    }
+    
 }

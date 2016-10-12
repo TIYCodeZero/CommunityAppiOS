@@ -8,10 +8,6 @@
 
 import UIKit
 
-// Not sure I need this delegate
-protocol MemberAuthenViewControllerDelegate {
-    func loginViewController(_ controller: UIViewController, successfullyAuthenticated member: Member)
-}
 
 internal func displayAlertMessage(title: String, message: String, from controller: UIViewController)-> Void {
     let myAlert = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertControllerStyle(rawValue: 1)!)
@@ -21,7 +17,6 @@ internal func displayAlertMessage(title: String, message: String, from controlle
 }
 
 final class LoginViewController: UIViewController {
-    var delegate: MemberAuthenViewControllerDelegate?
     @IBOutlet var emailField: UITextField!
     @IBOutlet var passwordField: UITextField!
     
@@ -63,10 +58,12 @@ final class LoginViewController: UIViewController {
                     return
                 }
                 switch Login.Response.Result(data: data) {
-                case .success:
+                case let .success(user):
                     let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-                    let vc = storyboard.instantiateViewController(withIdentifier: "MainNav")
-                    self.present(vc, animated: true, completion: nil)
+                    let navController = storyboard.instantiateViewController(withIdentifier: "MainNav") as! UINavigationController
+                    let mainVC = navController.topViewController as! MenuViewController
+                    mainVC.user = user
+                    self.present(navController, animated: true, completion: nil)
                     return
                 case .failure:
                     self.displayAlertMessage()
@@ -75,5 +72,5 @@ final class LoginViewController: UIViewController {
             }
             .resume()
     }
-        
+    
 }
