@@ -62,11 +62,11 @@ fileprivate func postFromJSONObject(_ json: [String:Any])-> Post? {
         let date = dateFormatter.date(from: dateAsString),
         let title = json["title"] as? String,
         let body = json["body"] as? String,
-        let authorInfo = json["author"] as? [String: Any],
-        let author = Member(dictionary: authorInfo) else {
+        let memberInfo = json["member"] as? [String: Any],
+        let member = Member(dictionary: memberInfo) else {
             return nil
     }
-    let post = Post(date: date, title: title, body: body, author: author)
+    let post = Post(date: date, title: title, body: body, member: member)
     return post
 }
 

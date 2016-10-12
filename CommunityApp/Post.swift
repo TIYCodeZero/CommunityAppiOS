@@ -13,22 +13,22 @@ class Post {
     var date: Date
     var title: String
     var body: String
-    var author: Member
+    var member: Member
     
-    init(date: Date, title: String, body: String, author: Member) {
+    init(date: Date, title: String, body: String, member: Member) {
         self.date = date
         self.title = title
         self.body = body
-        self.author = author
+        self.member = member
     }
     
     convenience init?(dictionary: [String: Any]){
         guard  let date = dictionary["date"] as? Date,
         let title = dictionary["title"] as? String,
         let body = dictionary["body"] as? String,
-        let author = dictionary["author"] as? Member else {
+        let member = dictionary["member"] as? Member else {
             return nil
         }
-        self.init(date: date, title: title, body: body, author: author)
+        self.init(date: date, title: title, body: body, member: member)
     } 
 }

@@ -46,7 +46,7 @@ class PostsTableViewController: UITableViewController {
         let post = posts[(indexPath as IndexPath).row]
         
         cell.titleLabel.text = post.title
-//        cell.authorLabel.text = post.author
+//        cell.authorLabel.text = "\(post.member.firstName) \(post.member.lastName)"
         cell.bodyTextField.text = post.body
         return cell
     }
