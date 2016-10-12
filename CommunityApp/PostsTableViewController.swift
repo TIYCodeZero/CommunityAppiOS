@@ -13,6 +13,15 @@ class PostsTableViewController: UITableViewController {
     var posts: [Post] = []
     var postsStore: PostsStore = PostsStore()
     
+// Need to review DateFormatter code:
+    let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        return formatter
+    }()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Member Posts"
@@ -23,8 +32,6 @@ class PostsTableViewController: UITableViewController {
         tableView.scrollIndicatorInsets = insets
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 80
-        
-        
         
         postsStore.fetchPosts {
             (PostsResult) -> Void in
@@ -38,7 +45,6 @@ class PostsTableViewController: UITableViewController {
                 }
             case let .failure(error):
                 print("Error fetching posts: \(error)")
-                
             }
         }
     }
@@ -51,7 +57,6 @@ class PostsTableViewController: UITableViewController {
         cell.titleLabel.text = post.title
 //        cell.authorLabel.text = post.author
         cell.bodyTextField.text = post.body
-        
         return cell
     }
 

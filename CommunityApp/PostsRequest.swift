@@ -27,6 +27,7 @@ enum PostsResult {
         }
         self = .success(posts)
     }
+    
 }
 
 func postsFromJSONData(_ data: Data)-> PostsResult {
@@ -57,13 +58,13 @@ fileprivate func postFromJSONObject(_ json: [String:Any])-> Post? {
         date = json["date"] as? Date,
         let title = json["title"] as? String,
         let body = json["body"] as? String,
-        let author = json["author"] as? Member else {
+        let authorInfo = json["author"] as? [String: Any],
+        let author = Member(dictionary: authorInfo) else {
             return nil
     }
     let post = Post(date: date, title: title, body: body, author: author)
     return post
 }
-
 
 
 
