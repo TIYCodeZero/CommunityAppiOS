@@ -25,9 +25,7 @@ class Post {
     }
     
     convenience init?(dictionary: [String: Any]){
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd MMM yyyy HH:mm"
-
+        let dateFormatter = ISO8601DateFormatter()
         guard  let dateAsString = dictionary["date"] as? String,
         let date = dateFormatter.date(from: dateAsString),
         let title = dictionary["title"] as? String,
@@ -39,3 +37,4 @@ class Post {
         self.init(date: date, title: title, body: body, id: id, member: member)
     } 
 }
+

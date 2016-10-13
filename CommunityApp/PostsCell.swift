@@ -11,8 +11,8 @@ import UIKit
 class PostsCell: UITableViewCell {
 
     @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var authorLabel: UILabel!
-    @IBOutlet var bodyTextField: UITextField!
     
+    @IBOutlet var memberLabel: UILabel!
+    @IBOutlet var bodyLabel: UILabel!
     
 }

@@ -39,6 +39,10 @@ class PostsTableViewController: UITableViewController {
             }
         }
     }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return posts.count
+    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -46,8 +50,8 @@ class PostsTableViewController: UITableViewController {
         let post = posts[(indexPath as IndexPath).row]
         
         cell.titleLabel.text = post.title
-//        cell.authorLabel.text = "\(post.member.firstName) \(post.member.lastName)"
-        cell.bodyTextField.text = post.body
+        cell.memberLabel.text = "\(post.member)"
+        cell.bodyLabel.text = post.body
         return cell
     }
 

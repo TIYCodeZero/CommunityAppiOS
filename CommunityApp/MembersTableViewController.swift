@@ -50,6 +50,7 @@ class MembersTableViewController: UITableViewController {
         let member = members[(indexPath as IndexPath).row]
         
         cell.nameLabel.text = "\(member.lastName), \(member.firstName)"
+        cell.addressLabel.text = member.streetAddress
         
         return cell
     }
