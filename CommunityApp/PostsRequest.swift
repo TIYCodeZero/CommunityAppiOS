@@ -13,12 +13,12 @@ enum PostsResult {
     case failure(String)
     
     init(data: Data) {
-        guard let jsonObject = (try? JSONSerialization.jsonObject(with: data, options: [])) as? [[String: AnyObject]] else {
+        guard let jsonObject = (try? JSONSerialization.jsonObject(with: data, options: [])) as? [[String: Any]] else {
             self = .failure("Your effort to get posts was unsuccessful")
             return
         }
         let posts = jsonObject.flatMap {
-            (dictionary) in
+            (dictionary) -> Post? in
             return Post(dictionary: dictionary)
         }
         guard posts.count == jsonObject.count else {
@@ -34,7 +34,7 @@ func postsFromJSONData(_ data: Data)-> PostsResult {
     do {
         let jsonObject: Any = try JSONSerialization.jsonObject(with: data, options: [])
         guard let
-            postsArray = jsonObject as? [[String: AnyObject]] else {
+            postsArray = jsonObject as? [[String: Any]] else {
                 return .failure("Cannot create array of posts from jsonObject")
         }
         var finalPosts = [Post]()
@@ -62,11 +62,11 @@ fileprivate func postFromJSONObject(_ json: [String:Any])-> Post? {
         let date = dateFormatter.date(from: dateAsString),
         let title = json["title"] as? String,
         let body = json["body"] as? String,
-        let memberInfo = json["member"] as? [String: Any],
-        let member = Member(dictionary: memberInfo) else {
+        let id = json["id"] as? Int,
+        let member = json["member"] as? [String: Any] else {
             return nil
     }
-    let post = Post(date: date, title: title, body: body, member: member)
+    let post = Post(date: date, title: title, body: body, id: id, member: member)
     return post
 }
 
