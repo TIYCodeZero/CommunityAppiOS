@@ -22,7 +22,7 @@ class PostsTableViewController: UITableViewController {
         tableView.contentInset = insets
         tableView.scrollIndicatorInsets = insets
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 80
+        tableView.estimatedRowHeight = 120
         
         postsStore.fetchPosts {
             (PostsResult) -> Void in
@@ -47,10 +47,10 @@ class PostsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostsCell", for: indexPath) as! PostsCell
-        let post = posts[(indexPath as IndexPath).row]
+        let post = posts[indexPath.row]
         
         cell.titleLabel.text = post.title
-        cell.memberLabel.text = "\(post.member)"
+        cell.memberLabel.text = "\(post.member["firstName"]!) \(post.member["lastName"]!)"
         cell.bodyLabel.text = post.body
         return cell
     }

@@ -17,10 +17,9 @@ class CreatePostViewController: UIViewController {
     
     @IBAction func nextButton(_ sender: AnyObject) {
         let currentDate = Date()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMM dd, yyyy HH:mm"
+        let dateFormatter = ISO8601DateFormatter()
         let date = dateFormatter.string(from: currentDate)
-        let author = user
+        let member = user!
         
         guard let title = titleField.text,
             let body = bodyField.text else {
@@ -32,7 +31,7 @@ class CreatePostViewController: UIViewController {
         var request = URLRequest(url: method.url)
         request.httpMethod = "POST"
         
-        let postProfile: [String: Any] = ["date": date, "title": title, "body": body, "member": author]
+        let postProfile: [String: Any] = ["date": date, "title": title, "body": body, "member": member.jsonObject]
         
         request.httpBody = try! JSONSerialization.data(withJSONObject: postProfile, options: [])
         session.dataTask(with: request) { (optData, optResponse, optError) in
@@ -41,10 +40,11 @@ class CreatePostViewController: UIViewController {
                     self.displayAlertMessage()
                     return
                 }
-                switch PostsResult(data: data) {
+                switch CreatePostResult(data: data) {
                 case .success:
                     return
-                case .failure:
+                case let .failure(message):
+                    print("💜\(message)")
                     self.displayAlertMessage()
                 }
             }

@@ -370,39 +370,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostsCell" id="lI6-my-zaJ" customClass="PostsCell" customModule="CommunityApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="102"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostsCell" rowHeight="140" id="lI6-my-zaJ" customClass="PostsCell" customModule="CommunityApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lI6-my-zaJ" id="5z5-E7-Ozx">
-                                    <frame key="frameInset" width="375" height="101"/>
+                                <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lI6-my-zaJ" id="5z5-E7-Ozx">
+                                    <frame key="frameInset" width="375" height="139"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXo-oh-nfs">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" ambiguous="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXo-oh-nfs">
+                                            <frame key="frameInset" minX="16" minY="8" width="343" height="93"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnb-W9-au0">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" ambiguous="YES" text="Body" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnb-W9-au0">
+                                            <frame key="frameInset" minX="16" minY="114" width="343" height="17"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Member" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i72-w0-fnR">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" ambiguous="YES" text="Member" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i72-w0-fnR">
+                                            <frame key="frameInset" minX="16" minY="101" width="343" height="13"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="i72-w0-fnR" firstAttribute="leading" secondItem="nXo-oh-nfs" secondAttribute="leading" id="5ty-Vf-zVf"/>
-                                        <constraint firstItem="cnb-W9-au0" firstAttribute="leading" secondItem="i72-w0-fnR" secondAttribute="leading" id="8OQ-Sl-ima"/>
-                                        <constraint firstAttribute="leadingMargin" secondItem="nXo-oh-nfs" secondAttribute="leading" id="NfL-Er-sY5"/>
-                                        <constraint firstAttribute="topMargin" secondItem="nXo-oh-nfs" secondAttribute="top" id="Q5s-Bi-RGv"/>
-                                        <constraint firstItem="cnb-W9-au0" firstAttribute="leading" secondItem="nXo-oh-nfs" secondAttribute="leading" id="Xcn-4i-DcE"/>
-                                        <constraint firstItem="i72-w0-fnR" firstAttribute="top" secondItem="nXo-oh-nfs" secondAttribute="bottom" constant="8" id="dvQ-0a-bV9"/>
-                                        <constraint firstItem="cnb-W9-au0" firstAttribute="top" secondItem="i72-w0-fnR" secondAttribute="bottom" constant="12.5" id="iuk-3x-GAb"/>
+                                        <constraint firstItem="nXo-oh-nfs" firstAttribute="leading" secondItem="i72-w0-fnR" secondAttribute="leading" id="4kg-4g-B5J"/>
+                                        <constraint firstItem="i72-w0-fnR" firstAttribute="top" secondItem="nXo-oh-nfs" secondAttribute="bottom" id="5Y4-Gu-SOx"/>
+                                        <constraint firstAttribute="topMargin" secondItem="nXo-oh-nfs" secondAttribute="top" id="MdB-Y3-ygX"/>
+                                        <constraint firstItem="nXo-oh-nfs" firstAttribute="trailing" secondItem="cnb-W9-au0" secondAttribute="trailing" id="PuP-vb-PIj"/>
+                                        <constraint firstItem="nXo-oh-nfs" firstAttribute="trailing" secondItem="i72-w0-fnR" secondAttribute="trailing" id="Rwf-ot-Ugc"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="cnb-W9-au0" secondAttribute="bottom" id="Yup-Sh-7fD"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="nXo-oh-nfs" secondAttribute="trailing" constant="8" id="aye-0j-y40"/>
+                                        <constraint firstItem="nXo-oh-nfs" firstAttribute="leading" secondItem="5z5-E7-Ozx" secondAttribute="leadingMargin" constant="8" id="jjB-bb-SPq"/>
+                                        <constraint firstItem="nXo-oh-nfs" firstAttribute="leading" secondItem="cnb-W9-au0" secondAttribute="leading" id="pOd-7b-gxq"/>
+                                        <constraint firstItem="cnb-W9-au0" firstAttribute="top" secondItem="i72-w0-fnR" secondAttribute="bottom" id="tSb-zf-CZm"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
                                     <outlet property="bodyLabel" destination="cnb-W9-au0" id="qtA-Ie-69N"/>
                                     <outlet property="memberLabel" destination="i72-w0-fnR" id="9mc-Ip-EzO"/>

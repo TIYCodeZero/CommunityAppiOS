@@ -38,6 +38,17 @@ class Member {
         self.init(firstName: firstName, lastName: lastName, email: email, streetAddress: streetAddress, id: id, password: password)
     }
     
+    var jsonObject: [String: Any] {
+        return [
+            Member.firstNameKey : firstName,
+            Member.lastNameKey : lastName,
+            Member.emailKey : email,
+            Member.streetAddressKey : streetAddress,
+            Member.idKey : id,
+            Member.passwordKey : password
+        ]
+    }
+    
 }
 
 extension Member {
