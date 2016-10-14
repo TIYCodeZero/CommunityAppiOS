@@ -50,7 +50,9 @@ class EventsListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell", for: indexPath) as! EventCell
         let event = events[indexPath.row]
         
-//        cell.nameLabel.text = event.name
+        cell.nameLabel.text = event.name
+//        cell.dateLabel.text = event.date
+        cell.locationLabel.text = event.location
         
         return cell
     }

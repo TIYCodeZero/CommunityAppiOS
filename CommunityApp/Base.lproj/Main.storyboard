@@ -302,6 +302,11 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="Uj3-He-h0E" id="WH0-hU-yGZ"/>
+                                    <outlet property="locationLabel" destination="qlH-q8-txZ" id="3ew-Ia-GSh"/>
+                                    <outlet property="nameLabel" destination="dQA-k0-et3" id="xO0-0u-MG3"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

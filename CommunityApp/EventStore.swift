@@ -15,6 +15,24 @@ class EventStore {
     var allEvents: [Event] = []
     
     func fetchEvents(completionHandler: @escaping (EventsResult) -> Void) -> Void {
+            completionHandler(.failure("we didn't even try."))
         
+//        let session = URLSession(configuration: CommunityAPI.sessionConfig)
+//        let method = CommunityAPI.Method.memberDirectory
+//        var request = URLRequest(url: method.url)
+//        
+//        request.httpMethod = "GET"
+//        
+//        let task = session.dataTask(with: request) { (optData, optResponse, optError) in
+//            guard let data = optData else {
+//                let errorDescription = optResponse?.description ?? optError!.localizedDescription
+//                let eventsResult: EventsResult = .failure(errorDescription)
+//                completionHandler(eventsResult)
+//                return
+//            }
+//            completionHandler(EventsResult(data: data))
+//        }
+//        task.resume()
     }
+    
 }
