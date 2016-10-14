@@ -35,6 +35,25 @@ class Post {
             return nil
         }
         self.init(date: date, title: title, body: body, id: id, member: member)
-    } 
+    }
+    
+    // data: [[String: Any]]
+    static func array(data: Data) -> [Post] {
+        guard let jsonObject = (try? JSONSerialization.jsonObject(with: data, options: [])) as? [[String: Any]] else {
+             fatalError("Failed to convert json into array of Post descriptions")
+        }
+        return array(dictionaries: jsonObject)
+    }
+    
+    static func array(dictionaries: [[String: Any]]) -> [Post] {
+        let posts = dictionaries.flatMap {
+            (dictionary) in
+            return Post(dictionary: dictionary)
+        }
+        guard posts.count == dictionaries.count else {
+            fatalError("a dictionary was dropped from jsonObject")
+        }
+        return posts
+    }
 }
 

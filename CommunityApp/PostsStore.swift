@@ -26,7 +26,7 @@ class PostsStore {
                 completionHandler(postsResult)
                 return
             }
-            completionHandler(PostsResult(data: data))
+            completionHandler(.success(Post.array(data: data)))
         }
         task.resume()
     }

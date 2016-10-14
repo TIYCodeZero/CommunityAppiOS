@@ -22,7 +22,7 @@ class MembersTableViewController: UITableViewController {
         tableView.contentInset = insets
         tableView.scrollIndicatorInsets = insets
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 65
+        tableView.estimatedRowHeight = 100
         
         memberStore.fetchMembers{
             (MembersResult) -> Void in
@@ -47,7 +47,7 @@ class MembersTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "MemberCell", for: indexPath) as! MemberCell
-        let member = members[(indexPath as IndexPath).row]
+        let member = members[indexPath.row]
         
         cell.nameLabel.text = "\(member.lastName), \(member.firstName)"
         cell.addressLabel.text = member.streetAddress
