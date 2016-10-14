@@ -29,6 +29,8 @@ enum MembersResult {
     }
 }
 
+
+/*
 func membersFromJSONData(_ data: Data)-> MembersResult {
     do {
         let jsonObject: Any = try JSONSerialization.jsonObject(with: data, options: [])
@@ -65,3 +67,4 @@ fileprivate func memberFromJSONObject(_ json: [String:Any])-> Member? {
     let member = Member(firstName: firstName, lastName: lastName, email: email, streetAddress: streetAddress, id: id, password: password)
     return member
 }
+ */

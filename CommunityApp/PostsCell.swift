@@ -10,8 +10,7 @@ import UIKit
 
 class PostsCell: UITableViewCell {
 
-    @IBOutlet var titleLabel: UILabel!
-    
+    @IBOutlet var titleLabel: UILabel!    
     @IBOutlet var memberLabel: UILabel!
     @IBOutlet var bodyLabel: UILabel!
     
