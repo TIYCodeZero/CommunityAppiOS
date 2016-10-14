@@ -18,6 +18,12 @@ class Event {
     public var organizer: Member
     public var attendees: [Member]
     
+    internal static let dateFormatter = ISO8601DateFormatter()
+    internal static func scrub(_ date: Date) -> Date {
+        let dateString = Event.dateFormatter.string(from: date)
+        return dateFormatter.date(from: dateString)!
+    }
+    
     init(name: String, date: Date, location: String, information: String, organizer: Member, attendees: [Member]){
         self.name = name
         self.date = date
@@ -29,13 +35,17 @@ class Event {
     
     convenience init?(dictionary: [String: Any]){
         guard  let name = dictionary[Event.nameKey] as? String,
-        let date = dictionary[Event.dateKey] as? Date,
-        let location = dictionary[Event.locationKey] as? String,
-        let information = dictionary[Event.informationKey] as? String,
-        let organizer = dictionary[Event.organizerKey] as? Member,
-        let attendees = dictionary[Event.attendeesKey] as? [Member] else {
-            return nil
+            let dateString = dictionary[Event.dateKey] as? String,
+            let date = Event.dateFormatter.date(from: dateString),
+            let location = dictionary[Event.locationKey] as? String,
+            let information = dictionary[Event.informationKey] as? String,
+            let organizerInfo = dictionary[Event.organizerKey] as? [String: Any],
+            let organizer = Member(dictionary: organizerInfo),
+            let attendeeInfo = dictionary[Event.attendeesKey] as? [[String: Any]] else {
+                return nil
         }
+        
+        let attendees = Member.array(jsonDictionaries: attendeeInfo)
         self.init(name: name, date: date, location: location, information: information, organizer: organizer, attendees: attendees)
     }
 }
@@ -47,5 +57,17 @@ extension Event {
     static var informationKey: String = "information"
     static var organizerKey: String = "organizer"
     static var attendeesKey: String = "attendees"
+}
+
+extension Event : Equatable {
+    public static func ==(lhs: Event, rhs: Event) -> Bool {
+        return (lhs.name == rhs.name &&
+            lhs.date == rhs.date &&
+            lhs.location == rhs.location &&
+            lhs.information == rhs.information &&
+            lhs.organizer == rhs.organizer &&
+            lhs.attendees == rhs.attendees
+        )
+    }
     
 }

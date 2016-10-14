@@ -11,6 +11,7 @@
 		F706B8861DB122C500F2EB37 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F706B8851DB122C500F2EB37 /* EventCell.swift */; };
 		F706B8881DB1246500F2EB37 /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F706B8871DB1246500F2EB37 /* EventStore.swift */; };
 		F706B88A1DB1253500F2EB37 /* EventRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F706B8891DB1253500F2EB37 /* EventRequest.swift */; };
+		F706B88C1DB14DC500F2EB37 /* EventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F706B88B1DB14DC500F2EB37 /* EventTests.swift */; };
 		F714A5CE1DAAD3970017958D /* CommunityAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F714A5CD1DAAD3970017958D /* CommunityAPI.swift */; };
 		F714A5D01DAAD9FA0017958D /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F714A5CF1DAAD9FA0017958D /* LoginRequest.swift */; };
 		F714A5D21DAADF840017958D /* JSONTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F714A5D11DAADF840017958D /* JSONTools.swift */; };
@@ -62,6 +63,7 @@
 		F706B8851DB122C500F2EB37 /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		F706B8871DB1246500F2EB37 /* EventStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventStore.swift; sourceTree = "<group>"; };
 		F706B8891DB1253500F2EB37 /* EventRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRequest.swift; sourceTree = "<group>"; };
+		F706B88B1DB14DC500F2EB37 /* EventTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTests.swift; sourceTree = "<group>"; };
 		F714A5CD1DAAD3970017958D /* CommunityAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityAPI.swift; sourceTree = "<group>"; };
 		F714A5CF1DAAD9FA0017958D /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		F714A5D11DAADF840017958D /* JSONTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONTools.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			children = (
 				F73F00351DA8235C007A9DEC /* CommunityAppTests.swift */,
 				F73F00371DA8235C007A9DEC /* Info.plist */,
+				F706B88B1DB14DC500F2EB37 /* EventTests.swift */,
 			);
 			path = CommunityAppTests;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F706B88C1DB14DC500F2EB37 /* EventTests.swift in Sources */,
 				F73F00361DA8235C007A9DEC /* CommunityAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

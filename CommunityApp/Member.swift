@@ -49,6 +49,13 @@ class Member {
         ]
     }
     
+    static func array(jsonDictionaries: [[String: Any]]) -> [Member] {
+        let members = jsonDictionaries.flatMap(Member.init(dictionary:))
+        guard jsonDictionaries.count == members.count else {
+            fatalError("Failed to create member in array")
+        }
+        return members
+    }
 }
 
 extension Member {
@@ -61,7 +68,7 @@ extension Member {
 }
 
 extension Member : Equatable {
-    public static func ==(lhs:Member, rhs:Member)->Bool {
+    public static func == (lhs:Member, rhs:Member)->Bool {
         return (
         lhs.firstName == rhs.firstName &&
         lhs.lastName == rhs.lastName &&
