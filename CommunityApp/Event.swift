@@ -16,7 +16,7 @@ class Event {
     public var location: String
     public var information: String
     public var organizer: Member
-    public var attendees: [Member]
+    public var id: Int
     
     internal static let dateFormatter = ISO8601DateFormatter()
     internal static func scrub(_ date: Date) -> Date {
@@ -24,13 +24,13 @@ class Event {
         return dateFormatter.date(from: dateString)!
     }
     
-    init(name: String, date: Date, location: String, information: String, organizer: Member, attendees: [Member]){
+    init(name: String, date: Date, location: String, information: String, organizer: Member, id: Int){
         self.name = name
         self.date = date
         self.location = location
         self.information  = information
         self.organizer = organizer
-        self.attendees = attendees
+        self.id = id
     }
     
     convenience init?(dictionary: [String: Any]){
@@ -41,13 +41,24 @@ class Event {
             let information = dictionary[Event.informationKey] as? String,
             let organizerInfo = dictionary[Event.organizerKey] as? [String: Any],
             let organizer = Member(dictionary: organizerInfo),
-            let attendeeInfo = dictionary[Event.attendeesKey] as? [[String: Any]] else {
+            let id = dictionary[Event.idKey] as? Int else {
                 return nil
         }
-        
-        let attendees = Member.array(jsonDictionaries: attendeeInfo)
-        self.init(name: name, date: date, location: location, information: information, organizer: organizer, attendees: attendees)
+        self.init(name: name, date: date, location: location, information: information, organizer: organizer, id: id)
     }
+    
+    
+    static func array(dictionaries: [[String: Any]]) -> [Event] {
+        let events = dictionaries.flatMap {
+            (dictionary) in
+            return Event(dictionary: dictionary)
+        }
+        guard events.count == dictionaries.count else {
+            fatalError("a dictionary was dropped from jsonObject")
+        }
+        return events
+    }
+    
 }
 
 extension Event {
@@ -56,7 +67,7 @@ extension Event {
     static var locationKey: String = "location"
     static var informationKey: String = "information"
     static var organizerKey: String = "organizer"
-    static var attendeesKey: String = "attendees"
+    static var idKey: String = "id"
 }
 
 extension Event : Equatable {
@@ -66,7 +77,7 @@ extension Event : Equatable {
             lhs.location == rhs.location &&
             lhs.information == rhs.information &&
             lhs.organizer == rhs.organizer &&
-            lhs.attendees == rhs.attendees
+            lhs.id == rhs.id
         )
     }
     

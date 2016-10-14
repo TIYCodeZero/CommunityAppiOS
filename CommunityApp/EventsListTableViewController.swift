@@ -22,7 +22,7 @@ class EventsListTableViewController: UITableViewController {
         tableView.contentInset = insets
         tableView.scrollIndicatorInsets = insets
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 100
+        tableView.estimatedRowHeight = 140
         
         eventStore.fetchEvents {
             (EventsResult) -> Void in
