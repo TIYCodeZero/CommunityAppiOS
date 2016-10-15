@@ -15,11 +15,17 @@ class CreateEventViewController: UIViewController {
     @IBOutlet var nameLabel: UITextField!
     @IBOutlet var locationLabel: UITextField!
     @IBOutlet var informationLabel: UITextField!
-    @IBOutlet var date: UIDatePicker!
+
+    @IBOutlet weak var datePicker: UIDatePicker!
     
+    @IBAction func datePickerAction(_ sender: AnyObject) {
+        
+    }
     
-    @IBAction func saveEvent(_ sender: AnyObject) {
+    @IBAction func createEvent(_ sender: AnyObject) {
+        let dateFormatter = ISO8601DateFormatter()
         let organizer = user!
+        let date = dateFormatter.string(from: datePicker.date)
         
         guard let name = nameLabel.text,
             let location = locationLabel.text,

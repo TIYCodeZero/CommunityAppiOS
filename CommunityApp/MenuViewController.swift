@@ -17,15 +17,14 @@ class MenuViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func viewMembersButton(_ sender: AnyObject) {
-        
-    }
-
+ 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? CreatePostViewController {
             destination.user = self.user
         }
-        
+        if let destination = segue.destination as? CreateEventViewController {
+            destination.user = self.user
+        } 
     }
     
 }
