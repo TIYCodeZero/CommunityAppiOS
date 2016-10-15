@@ -51,7 +51,7 @@ class EventsListTableViewController: UITableViewController {
         let event = events[indexPath.row]
         
         cell.nameLabel.text = event.name
-//        cell.dateLabel.text = event.date
+        cell.dateLabel.text = "\(event.date)"
         cell.locationLabel.text = event.location
         
         return cell

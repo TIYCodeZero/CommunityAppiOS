@@ -23,3 +23,34 @@ enum EventsResult {
     }
     
 }
+
+enum CreateEventResult {
+    case success([Event])
+    case failure(String)
+
+    
+    init(data: Data) {
+        
+        guard let jsonObject = (try? JSONSerialization.jsonObject(with: data, options: [])) as? [String: Any] else {
+            self = .failure("Your effort to create an event was unsuccessful")
+            return
+        }
+        guard let eventsArray = jsonObject["eventList"] as? [[String: Any]] else {
+            self = .failure("You received data but no events list")
+            return
+        }
+        let events = eventsArray.flatMap {
+            (dictionary) in
+            return Event(dictionary: dictionary)
+        }
+        guard events.count == eventsArray.count else {
+            self = .failure("a dictionary was dropped from jsonObject")
+            return
+        }
+        self = .success(events)
+    }
+    
+
+    
+    
+}
