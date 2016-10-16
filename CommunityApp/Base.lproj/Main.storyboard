@@ -674,76 +674,103 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AmV-eq-N0w">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3C5-P0-dXN">
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="He0-W3-Ebf">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AmV-eq-N0w">
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mlk-6X-EiA">
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Ti-RF-B6g">
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="He0-W3-Ebf">
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mlk-6X-EiA">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Ti-RF-B6g">
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2TE-nw-IGC">
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3EG-nv-Y0F">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ry-gF-45C">
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cAl-e3-Zze">
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cP-3T-kNi">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nRg-3i-om7">
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="9Ti-RF-B6g" firstAttribute="width" secondItem="7ry-gF-45C" secondAttribute="width" id="3qd-8Y-SEJ"/>
+                                            <constraint firstItem="He0-W3-Ebf" firstAttribute="width" secondItem="AmV-eq-N0w" secondAttribute="width" id="6Gu-AG-Mr7"/>
+                                            <constraint firstItem="9Ti-RF-B6g" firstAttribute="width" secondItem="nRg-3i-om7" secondAttribute="width" id="ag1-kA-QmN"/>
+                                            <constraint firstItem="3EG-nv-Y0F" firstAttribute="width" secondItem="Mlk-6X-EiA" secondAttribute="width" id="g2I-gV-eCS"/>
+                                            <constraint firstItem="3EG-nv-Y0F" firstAttribute="width" secondItem="9cP-3T-kNi" secondAttribute="width" id="iR8-e9-ZmM"/>
+                                        </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2TE-nw-IGC">
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3EG-nv-Y0F">
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ry-gF-45C">
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cAl-e3-Zze">
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cP-3T-kNi">
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nRg-3i-om7">
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="HOP-8p-mRy"/>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="9Ti-RF-B6g" firstAttribute="width" secondItem="7ry-gF-45C" secondAttribute="width" id="3qd-8Y-SEJ"/>
-                                    <constraint firstItem="He0-W3-Ebf" firstAttribute="width" secondItem="AmV-eq-N0w" secondAttribute="width" id="6Gu-AG-Mr7"/>
-                                    <constraint firstItem="9Ti-RF-B6g" firstAttribute="width" secondItem="nRg-3i-om7" secondAttribute="width" id="ag1-kA-QmN"/>
-                                    <constraint firstItem="3EG-nv-Y0F" firstAttribute="width" secondItem="Mlk-6X-EiA" secondAttribute="width" id="g2I-gV-eCS"/>
-                                    <constraint firstItem="3EG-nv-Y0F" firstAttribute="width" secondItem="9cP-3T-kNi" secondAttribute="width" id="iR8-e9-ZmM"/>
+                                    <constraint firstAttribute="trailing" secondItem="AmV-eq-N0w" secondAttribute="trailing" id="0x1-mT-V5U"/>
+                                    <constraint firstAttribute="trailing" secondItem="HOP-8p-mRy" secondAttribute="trailing" id="ke0-rI-OIg"/>
+                                    <constraint firstItem="HOP-8p-mRy" firstAttribute="leading" secondItem="3C5-P0-dXN" secondAttribute="leading" id="mm8-BH-tBu"/>
                                 </constraints>
                             </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kWi-yH-4o4">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Kqu-Ft-bzZ"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="j5L-Uo-4IT">
+                                        <connections>
+                                            <action selector="cameraButtonTapped:" destination="Fsq-6O-U4H" id="4hi-qG-jPo"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="AmV-eq-N0w" firstAttribute="leading" secondItem="VUD-6w-fZ1" secondAttribute="leadingMargin" id="jot-Jb-45N"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="AmV-eq-N0w" secondAttribute="trailing" id="mVk-8N-n0V"/>
-                            <constraint firstItem="AmV-eq-N0w" firstAttribute="top" secondItem="DsT-D7-dj0" secondAttribute="bottom" constant="8" id="yMl-gE-7cG"/>
+                            <constraint firstItem="kWi-yH-4o4" firstAttribute="leading" secondItem="VUD-6w-fZ1" secondAttribute="leading" id="0WY-PK-lHz"/>
+                            <constraint firstItem="3C5-P0-dXN" firstAttribute="leading" secondItem="VUD-6w-fZ1" secondAttribute="leadingMargin" id="AVG-jl-Qex"/>
+                            <constraint firstAttribute="trailing" secondItem="kWi-yH-4o4" secondAttribute="trailing" id="BcJ-dg-xzV"/>
+                            <constraint firstItem="3C5-P0-dXN" firstAttribute="top" secondItem="DsT-D7-dj0" secondAttribute="bottom" constant="8" id="CA1-J7-4iA"/>
+                            <constraint firstItem="kWi-yH-4o4" firstAttribute="top" secondItem="3C5-P0-dXN" secondAttribute="bottom" constant="8" id="Juc-0o-9LQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3C5-P0-dXN" secondAttribute="trailing" id="QvL-GL-H8l"/>
+                            <constraint firstItem="tlb-1l-Owu" firstAttribute="top" secondItem="kWi-yH-4o4" secondAttribute="bottom" id="hCI-c8-SK2"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="addressField" destination="7ry-gF-45C" id="Kvo-w2-cFP"/>
                         <outlet property="emailField" destination="nRg-3i-om7" id="Cim-5H-bPF"/>
+                        <outlet property="imageView" destination="HOP-8p-mRy" id="Q4O-sl-fY5"/>
                         <outlet property="nameField" destination="9Ti-RF-B6g" id="y2u-Zx-zF3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hC4-Ba-kd8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1425" y="439"/>
+            <point key="canvasLocation" x="1424.8" y="438.53073463268368"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xN8-l4-f54">

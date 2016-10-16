@@ -13,6 +13,7 @@
 		F706B88A1DB1253500F2EB37 /* EventRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F706B8891DB1253500F2EB37 /* EventRequest.swift */; };
 		F706B88C1DB14DC500F2EB37 /* EventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F706B88B1DB14DC500F2EB37 /* EventTests.swift */; };
 		F706B88E1DB2A55F00F2EB37 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F706B88D1DB2A55F00F2EB37 /* CreateEventViewController.swift */; };
+		F70CD57E1DB3F7F700A4F880 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70CD57D1DB3F7F700A4F880 /* ImageStore.swift */; };
 		F714A5CE1DAAD3970017958D /* CommunityAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F714A5CD1DAAD3970017958D /* CommunityAPI.swift */; };
 		F714A5D01DAAD9FA0017958D /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F714A5CF1DAAD9FA0017958D /* LoginRequest.swift */; };
 		F714A5D21DAADF840017958D /* JSONTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F714A5D11DAADF840017958D /* JSONTools.swift */; };
@@ -66,6 +67,7 @@
 		F706B8891DB1253500F2EB37 /* EventRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRequest.swift; sourceTree = "<group>"; };
 		F706B88B1DB14DC500F2EB37 /* EventTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTests.swift; sourceTree = "<group>"; };
 		F706B88D1DB2A55F00F2EB37 /* CreateEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
+		F70CD57D1DB3F7F700A4F880 /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		F714A5CD1DAAD3970017958D /* CommunityAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityAPI.swift; sourceTree = "<group>"; };
 		F714A5CF1DAAD9FA0017958D /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		F714A5D11DAADF840017958D /* JSONTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONTools.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				F73F00541DA823A0007A9DEC /* Member.swift */,
 				F71FB1111DAD2E030091E8A8 /* MemberCell.swift */,
 				F71FB1171DAD627A0091E8A8 /* MemberDetailViewController.swift */,
+				F70CD57D1DB3F7F700A4F880 /* ImageStore.swift */,
 				F71FB1151DAD3C610091E8A8 /* MemberRequest.swift */,
 				F71FB10F1DAD2DAF0091E8A8 /* MembersTableViewController.swift */,
 				F71FB1131DAD2E580091E8A8 /* MemberStore.swift */,
@@ -359,6 +362,7 @@
 				F73F00531DA8238D007A9DEC /* Post.swift in Sources */,
 				F71FB11C1DAD6A450091E8A8 /* PostsStore.swift in Sources */,
 				F71FB1121DAD2E030091E8A8 /* MemberCell.swift in Sources */,
+				F70CD57E1DB3F7F700A4F880 /* ImageStore.swift in Sources */,
 				F71FB11A1DAD6A150091E8A8 /* PostsTableViewController.swift in Sources */,
 				F71FB1141DAD2E580091E8A8 /* MemberStore.swift in Sources */,
 				F7785EB81DAE786600149DCE /* CreatePostViewController.swift in Sources */,
