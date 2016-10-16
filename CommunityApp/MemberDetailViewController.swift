@@ -28,11 +28,11 @@ class MemberDetailViewController: UIViewController, UINavigationControllerDelega
         present(imagePicker, animated: true, completion: nil)
     }
     
-/*    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-        
-        
-    } */
+        self.imageView.image = image
+        dismiss(animated: true, completion: nil)
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
