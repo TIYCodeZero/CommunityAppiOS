@@ -16,7 +16,6 @@ class MembersTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "All Members"
-        
         let statusBarHeight = UIApplication.shared.statusBarFrame.height
         let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
         tableView.contentInset = insets
@@ -26,7 +25,6 @@ class MembersTableViewController: UITableViewController {
         
         memberStore.fetchMembers{
             (MembersResult) -> Void in
-            
             switch MembersResult {
             case let .success(members):
                 print("Successfully found \(members.count) members")
@@ -45,15 +43,21 @@ class MembersTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "MemberCell", for: indexPath) as! MemberCell
         let member = members[indexPath.row]
-        
         cell.nameLabel.text = "\(member.lastName), \(member.firstName)"
         cell.addressLabel.text = member.streetAddress
-        
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowMemberDetail" {
+            if let row = (tableView.indexPathForSelectedRow as IndexPath?)?.row {
+                let member = members[row]
+                let memberDetailViewController = segue.destination as! MemberDetailViewController
+                memberDetailViewController.member = member
+            }
+        }
+    }
     
 }

@@ -10,18 +10,22 @@ import UIKit
 
 class MemberDetailViewController: UIViewController {
 
+    
+    
     @IBOutlet var nameField: UITextField!
     @IBOutlet var addressField: UITextField!
     @IBOutlet var emailField: UITextField!
  
+    var member: Member!
     
     
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        nameField.text = "\(member.firstName) \(member.lastName)"
+        addressField.text = member.streetAddress
+        emailField.text = member.email
+        
     }
 
  
