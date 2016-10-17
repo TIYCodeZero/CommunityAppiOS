@@ -57,7 +57,7 @@ class MembersTableViewController: UITableViewController {
                 let member = members[row]
                 let memberDetailViewController = segue.destination as! MemberDetailViewController
                 memberDetailViewController.member = member
-                memberDetailViewController.imageStore = imageStore
+//                memberDetailViewController.imageStore = imageStore
             }
         }
     }

@@ -29,4 +29,16 @@ class PostsStore {
         task.resume()
     }
     
+//    func getMemberPosts(posts: [Post], member: Member) -> [Post] {
+//        let postsCount = posts.count
+//        var memberPosts: [Post] = []
+//        
+//        for index in 0...(postsCount - 1) {
+//            if posts[index].member.id == member.id {
+//                memberPosts.append(posts[index])
+//            }
+//        }
+//        return memberPosts
+//    }
+    
 }

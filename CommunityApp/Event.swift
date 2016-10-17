@@ -17,6 +17,7 @@ class Event {
     public var information: String
     public var organizer: Member
     public var id: Int
+    public var organization: Organization
     
     internal static let dateFormatter = ISO8601DateFormatter()
     internal static func scrub(_ date: Date) -> Date {
@@ -24,13 +25,14 @@ class Event {
         return dateFormatter.date(from: dateString)!
     }
     
-    init(name: String, date: Date, location: String, information: String, organizer: Member, id: Int){
+    init(name: String, date: Date, location: String, information: String, organizer: Member, id: Int, organization: Organization){
         self.name = name
         self.date = date
         self.location = location
         self.information  = information
         self.organizer = organizer
         self.id = id
+        self.organization = organization
     }
     
     convenience init?(dictionary: [String: Any]){
@@ -41,10 +43,12 @@ class Event {
             let information = dictionary[Event.informationKey] as? String,
             let organizerInfo = dictionary[Event.organizerKey] as? [String: Any],
             let organizer = Member(dictionary: organizerInfo),
-            let id = dictionary[Event.idKey] as? Int else {
+            let id = dictionary[Event.idKey] as? Int,
+            let organizationInfo = dictionary[Event.organizationKey] as? [String: Any],
+            let organization = Organization(dictionary: organizationInfo) else {
                 return nil
         }
-        self.init(name: name, date: date, location: location, information: information, organizer: organizer, id: id)
+        self.init(name: name, date: date, location: location, information: information, organizer: organizer, id: id, organization: organization)
     }    
     
     static func array(dictionaries: [[String: Any]]) -> [Event] {
@@ -67,6 +71,7 @@ extension Event {
     static var informationKey: String = "information"
     static var organizerKey: String = "organizer"
     static var idKey: String = "id"
+    static var organizationKey: String = "organization"
 }
 
 extension Event : Equatable {
@@ -76,7 +81,8 @@ extension Event : Equatable {
             lhs.location == rhs.location &&
             lhs.information == rhs.information &&
             lhs.organizer == rhs.organizer &&
-            lhs.id == rhs.id
+            lhs.id == rhs.id &&
+            lhs.organization == rhs.organization
         )
     }
     

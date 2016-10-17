@@ -16,7 +16,7 @@ class MemberDetailViewController: UIViewController, UINavigationControllerDelega
     @IBOutlet var emailField: UITextField!
  
     var member: Member!
-    var imageStore: ImageStore = ImageStore()
+//    var imageStore: ImageStore = ImageStore()
     
     @IBAction func cameraButtonTapped(_ sender: AnyObject) {
         let imagePicker = UIImagePickerController()
@@ -42,4 +42,11 @@ class MemberDetailViewController: UIViewController, UINavigationControllerDelega
         emailField.text = member.email
     }
  
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ViewMemberPosts" {
+           let memberPostsTableViewController = segue.destination as! MemberPostsTableViewController
+            memberPostsTableViewController.member = member
+        }
+    }
+    
 }

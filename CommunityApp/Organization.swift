@@ -47,3 +47,11 @@ class Organization {
     
 }
 
+extension Organization : Equatable {
+    public static func == (lhs:Organization, rhs:Organization)->Bool {
+        return (
+        lhs.name == rhs.name &&
+        lhs.id == rhs.id)
+    }
+}
+

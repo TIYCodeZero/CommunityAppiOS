@@ -15,13 +15,15 @@ class Post {
     var body: String
     var id: Int
     var member: [String: Any]
+    var organization: Organization
     
-    init(date: Date, title: String, body: String, id: Int, member: [String: Any]) {
+    init(date: Date, title: String, body: String, id: Int, member: [String: Any], organization: Organization) {
         self.date = date
         self.title = title
         self.body = body
         self.id = id
         self.member = member
+        self.organization = organization
     }
     
     convenience init?(dictionary: [String: Any]){
@@ -31,10 +33,11 @@ class Post {
         let title = dictionary["title"] as? String,
         let body = dictionary["body"] as? String,
         let id = dictionary["id"] as? Int,
-        let member = dictionary["member"] as? [String: Any] else {
+        let member = dictionary["member"] as? [String: Any],
+        let organization = dictionary ["organization"] as? Organization else {
             return nil
         }
-        self.init(date: date, title: title, body: body, id: id, member: member)
+        self.init(date: date, title: title, body: body, id: id, member: member, organization: organization)
     }
     
     static func array(data: Data) -> [Post] {

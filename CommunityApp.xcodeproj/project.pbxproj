@@ -47,6 +47,8 @@
 		F73F00531DA8238D007A9DEC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F00501DA8238D007A9DEC /* Post.swift */; };
 		F73F00551DA823A0007A9DEC /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F00541DA823A0007A9DEC /* Member.swift */; };
 		F7785EB81DAE786600149DCE /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7785EB71DAE786600149DCE /* CreatePostViewController.swift */; };
+		F78AA43E1DB553BB0061C0C0 /* MemberPostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78AA43D1DB553BB0061C0C0 /* MemberPostsTableViewController.swift */; };
+		F78AA4401DB556030061C0C0 /* MemberPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78AA43F1DB556030061C0C0 /* MemberPostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +115,8 @@
 		F73F00501DA8238D007A9DEC /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		F73F00541DA823A0007A9DEC /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		F7785EB71DAE786600149DCE /* CreatePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		F78AA43D1DB553BB0061C0C0 /* MemberPostsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberPostsTableViewController.swift; sourceTree = "<group>"; };
+		F78AA43F1DB556030061C0C0 /* MemberPostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberPostCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,16 +179,19 @@
 				F706B8871DB1246500F2EB37 /* EventStore.swift */,
 				F70CD57D1DB3F7F700A4F880 /* ImageStore.swift */,
 				F73F002C1DA8235C007A9DEC /* Info.plist */,
+				F70CD5891DB522A800A4F880 /* InvitationViewController.swift */,
 				F714A5D11DAADF840017958D /* JSONTools.swift */,
 				F73F00291DA8235C007A9DEC /* LaunchScreen.storyboard */,
 				F714A5CF1DAAD9FA0017958D /* LoginRequest.swift */,
 				F73F00221DA8235C007A9DEC /* LoginViewController.swift */,
 				F73F00241DA8235C007A9DEC /* Main.storyboard */,
+				F78AA43D1DB553BB0061C0C0 /* MemberPostsTableViewController.swift */,
 				F73F00541DA823A0007A9DEC /* Member.swift */,
 				F71FB1111DAD2E030091E8A8 /* MemberCell.swift */,
 				F71FB1171DAD627A0091E8A8 /* MemberDetailViewController.swift */,
 				F71FB1151DAD3C610091E8A8 /* MemberRequest.swift */,
 				F71FB10F1DAD2DAF0091E8A8 /* MembersTableViewController.swift */,
+				F78AA43F1DB556030061C0C0 /* MemberPostCell.swift */,
 				F71FB1131DAD2E580091E8A8 /* MemberStore.swift */,
 				F71FB10D1DAD2D530091E8A8 /* MenuViewController.swift */,
 				F70CD5811DB416F800A4F880 /* OganizationStore.swift */,
@@ -193,7 +200,6 @@
 				F70CD5831DB419B500A4F880 /* OrganizationRequest.swift */,
 				F70CD57F1DB414DB00A4F880 /* OrganizationsTableViewController.swift */,
 				F70CD5871DB513D900A4F880 /* OrgDetailViewController.swift */,
-				F70CD5891DB522A800A4F880 /* InvitationViewController.swift */,
 				F73F00501DA8238D007A9DEC /* Post.swift */,
 				F71FB11D1DAD6A9C0091E8A8 /* PostsCell.swift */,
 				F71FB11F1DAD6F940091E8A8 /* PostsRequest.swift */,
@@ -365,6 +371,7 @@
 				F706B8841DB1221D00F2EB37 /* EventsListTableViewController.swift in Sources */,
 				F71FB1201DAD6F940091E8A8 /* PostsRequest.swift in Sources */,
 				F73F00231DA8235C007A9DEC /* LoginViewController.swift in Sources */,
+				F78AA43E1DB553BB0061C0C0 /* MemberPostsTableViewController.swift in Sources */,
 				F73F00551DA823A0007A9DEC /* Member.swift in Sources */,
 				F714A5D41DAAE4710017958D /* RegistrationRequest.swift in Sources */,
 				F70CD5861DB41F9600A4F880 /* OrganizationCell.swift in Sources */,
@@ -373,6 +380,7 @@
 				F714A5D21DAADF840017958D /* JSONTools.swift in Sources */,
 				F714A5D61DAC1AA00017958D /* RegisterViewController.swift in Sources */,
 				F706B88A1DB1253500F2EB37 /* EventRequest.swift in Sources */,
+				F78AA4401DB556030061C0C0 /* MemberPostCell.swift in Sources */,
 				F73F00511DA8238D007A9DEC /* Event.swift in Sources */,
 				F73F00211DA8235C007A9DEC /* AppDelegate.swift in Sources */,
 				F706B8881DB1246500F2EB37 /* EventStore.swift in Sources */,
