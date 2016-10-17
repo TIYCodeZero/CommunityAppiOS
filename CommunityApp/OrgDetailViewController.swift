@@ -9,21 +9,30 @@
 import UIKit
 
 class OrgDetailViewController: UIViewController {
-
+    
     var organization: Organization!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         title = organization.name
     }
-
+    
     @IBAction func viewMembers(_ sender: AnyObject) {
+        
     }
-
+    
     @IBAction func sendInvitation(_ sender: AnyObject) {
+        
     }
     
     @IBAction func viewPosts(_ sender: AnyObject) {
+        
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "InviteMembers" {
+            let orgInviteVC = segue.destination as! InvitationViewController
+            orgInviteVC.organization = organization
+        }
+    }
 }

@@ -19,6 +19,7 @@
 		F70CD5841DB419B500A4F880 /* OrganizationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70CD5831DB419B500A4F880 /* OrganizationRequest.swift */; };
 		F70CD5861DB41F9600A4F880 /* OrganizationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70CD5851DB41F9600A4F880 /* OrganizationCell.swift */; };
 		F70CD5881DB513D900A4F880 /* OrgDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70CD5871DB513D900A4F880 /* OrgDetailViewController.swift */; };
+		F70CD58A1DB522A800A4F880 /* InvitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70CD5891DB522A800A4F880 /* InvitationViewController.swift */; };
 		F714A5CE1DAAD3970017958D /* CommunityAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F714A5CD1DAAD3970017958D /* CommunityAPI.swift */; };
 		F714A5D01DAAD9FA0017958D /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F714A5CF1DAAD9FA0017958D /* LoginRequest.swift */; };
 		F714A5D21DAADF840017958D /* JSONTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F714A5D11DAADF840017958D /* JSONTools.swift */; };
@@ -78,6 +79,7 @@
 		F70CD5831DB419B500A4F880 /* OrganizationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationRequest.swift; sourceTree = "<group>"; };
 		F70CD5851DB41F9600A4F880 /* OrganizationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationCell.swift; sourceTree = "<group>"; };
 		F70CD5871DB513D900A4F880 /* OrgDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrgDetailViewController.swift; sourceTree = "<group>"; };
+		F70CD5891DB522A800A4F880 /* InvitationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvitationViewController.swift; sourceTree = "<group>"; };
 		F714A5CD1DAAD3970017958D /* CommunityAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityAPI.swift; sourceTree = "<group>"; };
 		F714A5CF1DAAD9FA0017958D /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		F714A5D11DAADF840017958D /* JSONTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONTools.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				F70CD5831DB419B500A4F880 /* OrganizationRequest.swift */,
 				F70CD57F1DB414DB00A4F880 /* OrganizationsTableViewController.swift */,
 				F70CD5871DB513D900A4F880 /* OrgDetailViewController.swift */,
+				F70CD5891DB522A800A4F880 /* InvitationViewController.swift */,
 				F73F00501DA8238D007A9DEC /* Post.swift */,
 				F71FB11D1DAD6A9C0091E8A8 /* PostsCell.swift */,
 				F71FB11F1DAD6F940091E8A8 /* PostsRequest.swift */,
@@ -365,6 +368,7 @@
 				F73F00551DA823A0007A9DEC /* Member.swift in Sources */,
 				F714A5D41DAAE4710017958D /* RegistrationRequest.swift in Sources */,
 				F70CD5861DB41F9600A4F880 /* OrganizationCell.swift in Sources */,
+				F70CD58A1DB522A800A4F880 /* InvitationViewController.swift in Sources */,
 				F70CD5841DB419B500A4F880 /* OrganizationRequest.swift in Sources */,
 				F714A5D21DAADF840017958D /* JSONTools.swift in Sources */,
 				F714A5D61DAC1AA00017958D /* RegisterViewController.swift in Sources */,
