@@ -16,6 +16,7 @@ class Member {
     public var streetAddress: String
     public var id: Int
     public var password: String
+//  public var imageKey: String
     
     init(firstName: String, lastName: String, email: String, streetAddress: String, id: Int, password: String){
         self.firstName = firstName
@@ -24,6 +25,7 @@ class Member {
         self.streetAddress = streetAddress
         self.id = id
         self.password = password
+//      self.imageKey = UUID().uuidString
     }
     
     convenience init?(dictionary: [String: Any]){
@@ -32,10 +34,17 @@ class Member {
             let email = dictionary[Member.emailKey] as? String,
             let streetAddress = dictionary[Member.streetAddressKey] as? String,
             let id = dictionary[Member.idKey] as? Int,
+//          let imageKey =
             let password = dictionary[Member.passwordKey] as? String else {
                 return nil
         }
-        self.init(firstName: firstName, lastName: lastName, email: email, streetAddress: streetAddress, id: id, password: password)
+        self.init(firstName: firstName,
+                  lastName: lastName,
+                  email: email,
+                  streetAddress: streetAddress,
+                  id: id,
+//                imageKey: imageKey,
+                  password: password)
     }
     
     var jsonObject: [String: Any] {
@@ -46,6 +55,7 @@ class Member {
             Member.streetAddressKey : streetAddress,
             Member.idKey : id,
             Member.passwordKey : password
+//          Member.imageKey : imageKey
         ]
     }
     
@@ -65,6 +75,7 @@ extension Member {
     static var streetAddressKey: String = "streetAddress"
     static var idKey: String = "id"
     static var passwordKey: String = "password"
+//  static var imageKey: String = "imageKey"
 }
 
 extension Member : Equatable {
@@ -75,6 +86,7 @@ extension Member : Equatable {
         lhs.email == rhs.email &&
         lhs.streetAddress == rhs.streetAddress &&
         lhs.id == rhs.id &&
+//      lhs.imageKey = rhs.imageKey &&
         lhs.password == rhs.password)
     }
     

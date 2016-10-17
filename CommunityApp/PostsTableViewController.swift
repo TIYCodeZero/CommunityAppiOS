@@ -16,17 +16,14 @@ class PostsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Member Posts"
-        
         let statusBarHeight = UIApplication.shared.statusBarFrame.height
         let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
         tableView.contentInset = insets
         tableView.scrollIndicatorInsets = insets
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 120
-        
         postsStore.fetchPosts {
             (PostsResult) -> Void in
-            
             switch PostsResult {
             case let .success(posts):
                 print("Successfully found \(posts.count) posts.")
@@ -45,10 +42,8 @@ class PostsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostsCell", for: indexPath) as! PostsCell
         let post = posts[indexPath.row]
-        
         cell.titleLabel.text = post.title
         cell.memberLabel.text = "\(post.member["firstName"]!) \(post.member["lastName"]!)"
         cell.bodyLabel.text = post.body

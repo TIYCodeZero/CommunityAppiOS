@@ -37,7 +37,6 @@ class Post {
         self.init(date: date, title: title, body: body, id: id, member: member)
     }
     
-    // data: [[String: Any]]
     static func array(data: Data) -> [Post] {
         guard let jsonObject = (try? JSONSerialization.jsonObject(with: data, options: [])) as? [[String: Any]] else {
              fatalError("Failed to convert json into array of Post descriptions")

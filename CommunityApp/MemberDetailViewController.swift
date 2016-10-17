@@ -16,6 +16,7 @@ class MemberDetailViewController: UIViewController, UINavigationControllerDelega
     @IBOutlet var emailField: UITextField!
  
     var member: Member!
+    var imageStore: ImageStore = ImageStore()
     
     @IBAction func cameraButtonTapped(_ sender: AnyObject) {
         let imagePicker = UIImagePickerController()

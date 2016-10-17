@@ -49,7 +49,7 @@ extension CommunityAPI {
             case .eventList:
                 return "/eventsList.json"
             case .organizationList:
-                return "/organizationList.json"
+                return "/organizationsList.json"
             case .createEvent:
                 return "/createEvent.json"
             }

@@ -12,6 +12,7 @@ class MembersTableViewController: UITableViewController {
     
     var members: [Member] = []
     var memberStore: MemberStore = MemberStore()
+    var imageStore: ImageStore = ImageStore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +57,7 @@ class MembersTableViewController: UITableViewController {
                 let member = members[row]
                 let memberDetailViewController = segue.destination as! MemberDetailViewController
                 memberDetailViewController.member = member
+                memberDetailViewController.imageStore = imageStore
             }
         }
     }

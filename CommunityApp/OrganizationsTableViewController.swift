@@ -1,60 +1,52 @@
 //
-//  EventsListTableViewController.swift
+//  OrganizationsTableViewController.swift
 //  CommunityApp
 //
-//  Created by Dan Esrey on 2016/14/10.
+//  Created by Dan Esrey on 2016/16/10.
 //  Copyright © 2016 Dan Esrey. All rights reserved.
 //
 
 import UIKit
 
-class EventsListTableViewController: UITableViewController {
+class OrganizationsTableViewController: UITableViewController {
 
-    var events: [Event] = []
-    var eventStore: EventStore = EventStore()
+    var organizations: [Organization] = []
+    var organizationStore: OrganizationStore = OrganizationStore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "All Events"
-        
+        title = "All Organizations"
         let statusBarHeight = UIApplication.shared.statusBarFrame.height
         let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
         tableView.contentInset = insets
         tableView.scrollIndicatorInsets = insets
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 100
-        
-        eventStore.fetchEvents {
-            (EventsResult) -> Void in
-            
-            switch EventsResult {
-            case let .success(events):
-                print("Successfully found \(events.count) events.")
+        organizationStore.fetchOrgs {
+            (OrgResult) -> Void in
+            switch OrgResult {
+            case let .success(organizations):
+                print("Successfully found \(organizations.count) organizations.")
                 OperationQueue.main.addOperation {
-                    self.events = events
+                    self.organizations = organizations
                     self.tableView.reloadData()
                 }
             case let .failure(error):
-                print("Error fetching events: \(error)")
+                print("Error fetching organizations: \(error)")
             }
         }
-        
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return events.count
+        return organizations.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell", for: indexPath) as! EventCell
-        let event = events[indexPath.row]
-        
-        cell.nameLabel.text = event.name
-        cell.dateLabel.text = "\(event.date)"
-        cell.locationLabel.text = event.location
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "OrgCell", for: indexPath) as! OrganizationCell
+        let organization = organizations[indexPath.row]
+        cell.nameLabel.text = organization.name
         return cell
     }
-   
-
+    
+    
 }

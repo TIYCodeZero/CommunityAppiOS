@@ -350,7 +350,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PvH-SK-Ksg">
-                                <state key="normal" title="Create Posts"/>
+                                <state key="normal" title="Create Post"/>
                                 <connections>
                                     <segue destination="GuK-VY-b8e" kind="show" identifier="CreatePost" id="2Ln-O0-EfJ"/>
                                 </connections>
@@ -362,9 +362,15 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgf-lk-NB3">
-                                <state key="normal" title="Create Events"/>
+                                <state key="normal" title="Create Event"/>
                                 <connections>
                                     <segue destination="Exh-Qx-muH" kind="show" id="Mag-3c-at6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4NF-qn-29s">
+                                <state key="normal" title="View Organizations"/>
+                                <connections>
+                                    <segue destination="tFs-oe-GaB" kind="show" identifier="ShowOrganizations" id="vRy-IR-gWr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -374,7 +380,9 @@
                             <constraint firstItem="syy-wR-C10" firstAttribute="centerY" secondItem="8a5-R7-IMZ" secondAttribute="centerY" id="EXm-VI-i6d"/>
                             <constraint firstItem="syy-wR-C10" firstAttribute="centerX" secondItem="8a5-R7-IMZ" secondAttribute="centerX" id="HKj-re-A5i"/>
                             <constraint firstItem="syy-wR-C10" firstAttribute="top" secondItem="X3R-nE-mNL" secondAttribute="bottom" constant="8" id="YQv-bn-qdL"/>
+                            <constraint firstItem="fgf-lk-NB3" firstAttribute="top" secondItem="4NF-qn-29s" secondAttribute="bottom" constant="8" id="djH-eh-PLm"/>
                             <constraint firstItem="BpZ-NR-qOW" firstAttribute="top" secondItem="syy-wR-C10" secondAttribute="bottom" constant="8" id="i9P-5t-pF2"/>
+                            <constraint firstItem="4NF-qn-29s" firstAttribute="centerX" secondItem="8a5-R7-IMZ" secondAttribute="centerX" id="k2L-Ho-fVX"/>
                             <constraint firstItem="X3R-nE-mNL" firstAttribute="centerX" secondItem="8a5-R7-IMZ" secondAttribute="centerX" id="lzG-LS-lfU"/>
                             <constraint firstItem="BpZ-NR-qOW" firstAttribute="centerX" secondItem="8a5-R7-IMZ" secondAttribute="centerX" id="nlP-pw-82g"/>
                             <constraint firstItem="PvH-SK-Ksg" firstAttribute="centerX" secondItem="8a5-R7-IMZ" secondAttribute="centerX" id="tDw-dC-qGr"/>
@@ -456,15 +464,15 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lI6-my-zaJ" id="5z5-E7-Ozx">
-                                    <frame key="frameInset" width="375" height="140"/>
+                                    <frame key="frameInset" width="375" height="139"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXo-oh-nfs">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXo-oh-nfs">
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Body" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnb-W9-au0">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="248" verticalCompressionResistancePriority="748" text="Body" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnb-W9-au0">
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -661,6 +669,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bo2-IY-uLg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1008.8" y="1199.5502248875564"/>
+        </scene>
+        <!--Organizations Table View Controller-->
+        <scene sceneID="bod-wM-fMA">
+            <objects>
+                <tableViewController id="tFs-oe-GaB" customClass="OrganizationsTableViewController" customModule="CommunityApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2Z6-lg-YUs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrgCell" rowHeight="75" id="44u-MV-IyW" customClass="OrganizationCell" customModule="CommunityApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="75"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="44u-MV-IyW" id="1X0-R5-Bo9">
+                                    <frame key="frameInset" width="375" height="74"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Org Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WD2-TF-RFB">
+                                            <frame key="frameInset" minX="8" minY="8" width="78" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="WD2-TF-RFB" id="Bl9-GK-Frk"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="tFs-oe-GaB" id="AcT-fa-tts"/>
+                            <outlet property="delegate" destination="tFs-oe-GaB" id="oeu-87-Pz8"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="04i-GJ-Mpu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1665" y="1200"/>
         </scene>
         <!--Member Detail View Controller-->
         <scene sceneID="bYo-OV-gSN">
