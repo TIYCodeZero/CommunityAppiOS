@@ -28,7 +28,6 @@ class InvitationViewController: UIViewController, MFMailComposeViewControllerDel
     func configuredMailComposeVC() -> MFMailComposeViewController {
         let mailComposerVC = MFMailComposeViewController()
         mailComposerVC.mailComposeDelegate = self
-// Create fields for email to invitee
         mailComposerVC.setToRecipients(["\(emailTextField.text)"])
         mailComposerVC.setSubject("Invite to Join Community")
         mailComposerVC.setMessageBody("You have been invited to join an organization in the Community App! To get started, visit the App Store and get Community. Then register as directed by the app.", isHTML: false)
