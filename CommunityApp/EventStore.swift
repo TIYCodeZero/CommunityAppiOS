@@ -18,9 +18,7 @@ class EventStore {
         let session = URLSession(configuration: CommunityAPI.sessionConfig)
         let method = CommunityAPI.Method.eventList
         var request = URLRequest(url: method.url)
-        
         request.httpMethod = "GET"
-        
         let task = session.dataTask(with: request) { (optData, optResponse, optError) in
             guard let data = optData else {
                 let errorDescription = optResponse?.description ?? optError!.localizedDescription

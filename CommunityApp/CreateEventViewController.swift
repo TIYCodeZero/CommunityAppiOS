@@ -15,18 +15,15 @@ class CreateEventViewController: UIViewController {
     @IBOutlet var nameLabel: UITextField!
     @IBOutlet var locationLabel: UITextField!
     @IBOutlet var informationLabel: UITextField!
-
     @IBOutlet weak var datePicker: UIDatePicker!
     
     @IBAction func datePickerAction(_ sender: AnyObject) {
-        
     }
     
     @IBAction func createEvent(_ sender: AnyObject) {
         let dateFormatter = ISO8601DateFormatter()
         let organizer = user!
         let date = dateFormatter.string(from: datePicker.date)
-        
         guard let name = nameLabel.text,
             let location = locationLabel.text,
             let information = informationLabel.text else {
@@ -37,9 +34,7 @@ class CreateEventViewController: UIViewController {
         let method = CommunityAPI.Method.createEvent
         var request = URLRequest(url: method.url)
         request.httpMethod = "POST"
-        
         let eventProfile: [String: Any] = ["date": date, "name": name, "location": location, "information": information, "organizer": organizer.jsonObject]
-        
         request.httpBody = try! JSONSerialization.data(withJSONObject: eventProfile, options: [])
         session.dataTask(with: request) { (optData, optResponse, optError) in
             OperationQueue.main.addOperation {
@@ -62,14 +57,10 @@ class CreateEventViewController: UIViewController {
     func displayAlertMessage(){
         CommunityApp.displayAlertMessage(title: "Error", message: "Unable to create event", from: self)
     }
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Create Event"
-        
-        
     }
-
 
 }

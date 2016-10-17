@@ -41,6 +41,5 @@ class MemberDetailViewController: UIViewController, UINavigationControllerDelega
         addressField.text = member.streetAddress
         emailField.text = member.email
     }
-
  
 }

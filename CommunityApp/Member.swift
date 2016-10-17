@@ -90,5 +90,4 @@ extension Member : Equatable {
         lhs.password == rhs.password)
     }
     
-
 }

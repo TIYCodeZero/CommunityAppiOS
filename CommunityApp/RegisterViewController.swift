@@ -16,7 +16,6 @@ class RegisterViewController: UIViewController {
     @IBOutlet var passwordField: UITextField!
     @IBOutlet var confirmPasswordField: UITextField!
     
-   
     var registrationRequest: Registration.Request? {
         guard let firstName = firstNameField?.text,
             let lastName = lastNameField?.text,

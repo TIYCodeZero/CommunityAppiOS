@@ -16,9 +16,7 @@ class OrganizationStore {
         let session = URLSession(configuration: CommunityAPI.sessionConfig)
         let method = CommunityAPI.Method.organizationList
         var request = URLRequest(url: method.url)
-        
         request.httpMethod = "GET"
-        
         let task = session.dataTask(with: request) { (optData, optResponse, optError) in
             guard let data = optData else {
                 let errorDescription = optResponse?.description ?? optError!.localizedDescription
@@ -26,9 +24,9 @@ class OrganizationStore {
                 completionHandler(orgResult)
                 return
             }
-           
             completionHandler(.success(Organization.array(data: data)))
         }
         task.resume()
     }
+    
 }

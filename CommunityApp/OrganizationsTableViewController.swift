@@ -48,5 +48,14 @@ class OrganizationsTableViewController: UITableViewController {
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowOrgDetail" {
+            if let row = (tableView.indexPathForSelectedRow as IndexPath?)?.row {
+                let organization = organizations[row]
+                let orgDetailVC = segue.destination as! OrgDetailViewController
+                orgDetailVC.organization = organization
+            }            
+        }
+    }
     
 }

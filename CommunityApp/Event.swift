@@ -45,8 +45,7 @@ class Event {
                 return nil
         }
         self.init(name: name, date: date, location: location, information: information, organizer: organizer, id: id)
-    }
-    
+    }    
     
     static func array(dictionaries: [[String: Any]]) -> [Event] {
         let events = dictionaries.flatMap {

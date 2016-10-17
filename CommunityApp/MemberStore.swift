@@ -14,7 +14,6 @@ class MemberStore {
     var allMembers: [Member] = []
     
     func fetchMembers (completionHandler: @escaping (MembersResult) -> Void) -> Void {
-        
         let session = URLSession(configuration: CommunityAPI.sessionConfig)
         let method = CommunityAPI.Method.memberDirectory
         var request = URLRequest(url: method.url)

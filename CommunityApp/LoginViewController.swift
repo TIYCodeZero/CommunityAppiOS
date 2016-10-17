@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 internal func displayAlertMessage(title: String, message: String, from controller: UIViewController)-> Void {
     let myAlert = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertControllerStyle(rawValue: 1)!)
     let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
@@ -36,7 +35,7 @@ final class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+            title = "Login to Community"
     }
     
     @IBAction func loginButton (_ sender: AnyObject){
@@ -44,13 +43,11 @@ final class LoginViewController: UIViewController {
             displayAlertMessage()
             return
         }
-        
         let session = URLSession(configuration: CommunityAPI.sessionConfig)
         let method = CommunityAPI.Method.login
         var request = URLRequest(url: method.url)
         request.httpMethod = "POST"
         request.httpBody = try! loginReq.jsonData()
-        
         session.dataTask(with: request) { (optData, optResponse, optError) in
             OperationQueue.main.addOperation {
                 guard let data = optData else {

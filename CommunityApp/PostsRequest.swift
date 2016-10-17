@@ -12,7 +12,6 @@ enum PostsResult {
     case success([Post])
     case failure(String)
     
-    // data: [String: Any]
     init(data: Data) {
         guard ((try? JSONSerialization.jsonObject(with: data, options: [])) as? [String: Any]) != nil else {
             self = .failure("Unexpected data format in posts response")
@@ -27,7 +26,6 @@ enum CreatePostResult {
     case failure(String)
     
     init(data: Data) {
-        
         guard let jsonObject = (try? JSONSerialization.jsonObject(with: data, options: [])) as? [String: Any] else {
             self = .failure("Your effort to create a post was unsuccessful")
             return

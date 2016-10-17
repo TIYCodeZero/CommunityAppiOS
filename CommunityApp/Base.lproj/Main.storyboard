@@ -79,7 +79,7 @@
                             <constraint firstItem="4OD-oQ-jO5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DTz-xG-a0B"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BEI-ou-gIP" secondAttribute="trailing" id="Flq-pX-m8U"/>
                             <constraint firstItem="khJ-Id-Avq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lrw-f2-ZA1"/>
-                            <constraint firstItem="BEI-ou-gIP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="NOY-tt-hcT"/>
+                            <constraint firstItem="BEI-ou-gIP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="NOY-tt-hcT"/>
                             <constraint firstItem="4OD-oQ-jO5" firstAttribute="top" secondItem="hzw-5N-QKF" secondAttribute="bottom" constant="8" symbolic="YES" id="TaA-W1-6tS"/>
                             <constraint firstItem="hzw-5N-QKF" firstAttribute="top" secondItem="khJ-Id-Avq" secondAttribute="bottom" constant="30" id="VfY-8I-grO"/>
                             <constraint firstItem="hzw-5N-QKF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oxU-94-9wc"/>
@@ -686,17 +686,20 @@
                                     <frame key="frameInset" width="375" height="74"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Org Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WD2-TF-RFB">
-                                            <frame key="frameInset" minX="8" minY="8" width="78" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Org Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WD2-TF-RFB">
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="WD2-TF-RFB" firstAttribute="centerY" secondItem="1X0-R5-Bo9" secondAttribute="centerY" id="933-bG-nij"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="WD2-TF-RFB" secondAttribute="leading" id="yZU-UZ-e1j"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLabel" destination="WD2-TF-RFB" id="Bl9-GK-Frk"/>
+                                    <segue destination="IcX-eh-zDy" kind="show" identifier="ShowOrgDetail" id="2aK-LP-Ccc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -709,6 +712,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="04i-GJ-Mpu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1665" y="1200"/>
+        </scene>
+        <!--Org Detail View Controller-->
+        <scene sceneID="1Rz-es-LG9">
+            <objects>
+                <viewController id="IcX-eh-zDy" customClass="OrgDetailViewController" customModule="CommunityApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FqW-nt-QXI"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pfq-zj-wM9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="r90-Ku-KyP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6kQ-04-77G">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYo-SN-pfs">
+                                        <state key="normal" title="View Posts"/>
+                                        <connections>
+                                            <action selector="viewPosts:" destination="IcX-eh-zDy" eventType="touchUpInside" id="hsd-gu-4zU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhT-P6-XdT">
+                                        <state key="normal" title="View Members"/>
+                                        <connections>
+                                            <action selector="viewMembers:" destination="IcX-eh-zDy" eventType="touchUpInside" id="06i-t4-lKI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Oh-c9-nkE">
+                                        <state key="normal" title="Invite Members"/>
+                                        <connections>
+                                            <action selector="sendInvitation:" destination="IcX-eh-zDy" eventType="touchUpInside" id="wcM-ha-Dca"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6kQ-04-77G" firstAttribute="centerX" secondItem="r90-Ku-KyP" secondAttribute="centerX" id="QKp-tw-HTN"/>
+                            <constraint firstItem="6kQ-04-77G" firstAttribute="centerY" secondItem="r90-Ku-KyP" secondAttribute="centerY" id="vtp-9W-6ps"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tEz-1T-eGe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2458" y="1204"/>
         </scene>
         <!--Member Detail View Controller-->
         <scene sceneID="bYo-OV-gSN">

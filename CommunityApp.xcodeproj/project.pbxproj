@@ -18,6 +18,7 @@
 		F70CD5821DB416F800A4F880 /* OganizationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70CD5811DB416F800A4F880 /* OganizationStore.swift */; };
 		F70CD5841DB419B500A4F880 /* OrganizationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70CD5831DB419B500A4F880 /* OrganizationRequest.swift */; };
 		F70CD5861DB41F9600A4F880 /* OrganizationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70CD5851DB41F9600A4F880 /* OrganizationCell.swift */; };
+		F70CD5881DB513D900A4F880 /* OrgDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70CD5871DB513D900A4F880 /* OrgDetailViewController.swift */; };
 		F714A5CE1DAAD3970017958D /* CommunityAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F714A5CD1DAAD3970017958D /* CommunityAPI.swift */; };
 		F714A5D01DAAD9FA0017958D /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F714A5CF1DAAD9FA0017958D /* LoginRequest.swift */; };
 		F714A5D21DAADF840017958D /* JSONTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F714A5D11DAADF840017958D /* JSONTools.swift */; };
@@ -76,6 +77,7 @@
 		F70CD5811DB416F800A4F880 /* OganizationStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OganizationStore.swift; sourceTree = "<group>"; };
 		F70CD5831DB419B500A4F880 /* OrganizationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationRequest.swift; sourceTree = "<group>"; };
 		F70CD5851DB41F9600A4F880 /* OrganizationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationCell.swift; sourceTree = "<group>"; };
+		F70CD5871DB513D900A4F880 /* OrgDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrgDetailViewController.swift; sourceTree = "<group>"; };
 		F714A5CD1DAAD3970017958D /* CommunityAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityAPI.swift; sourceTree = "<group>"; };
 		F714A5CF1DAAD9FA0017958D /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		F714A5D11DAADF840017958D /* JSONTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONTools.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				F70CD5851DB41F9600A4F880 /* OrganizationCell.swift */,
 				F70CD5831DB419B500A4F880 /* OrganizationRequest.swift */,
 				F70CD57F1DB414DB00A4F880 /* OrganizationsTableViewController.swift */,
+				F70CD5871DB513D900A4F880 /* OrgDetailViewController.swift */,
 				F73F00501DA8238D007A9DEC /* Post.swift */,
 				F71FB11D1DAD6A9C0091E8A8 /* PostsCell.swift */,
 				F71FB11F1DAD6F940091E8A8 /* PostsRequest.swift */,
@@ -369,6 +372,7 @@
 				F73F00511DA8238D007A9DEC /* Event.swift in Sources */,
 				F73F00211DA8235C007A9DEC /* AppDelegate.swift in Sources */,
 				F706B8881DB1246500F2EB37 /* EventStore.swift in Sources */,
+				F70CD5881DB513D900A4F880 /* OrgDetailViewController.swift in Sources */,
 				F71FB10E1DAD2D530091E8A8 /* MenuViewController.swift in Sources */,
 				F73F00521DA8238D007A9DEC /* Organization.swift in Sources */,
 				F70CD5801DB414DB00A4F880 /* OrganizationsTableViewController.swift in Sources */,
