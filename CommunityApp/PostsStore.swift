@@ -33,7 +33,12 @@ class PostsStore {
         let session = URLSession(configuration: CommunityAPI.sessionConfig)
         let method = CommunityAPI.Method.postsByOrg
         var request = URLRequest(url: method.url)
-        request.httpMethod = "GET"
+        request.httpMethod = "POST"
+        
+//        let orgPostProfile: [String: Any] = ["organization": organization]
+//        request.httpBody = try! JSONSerialization.data(withJSONObject: orgPostProfile, options: [])
+
+        
         let task = session.dataTask(with: request) { (optData, optResponse, optError) in
             guard let data = optData else {
                 let errorDescription = optResponse?.description ?? optError!.localizedDescription

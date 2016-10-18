@@ -12,6 +12,13 @@ class OrgPostsTableViewController: UITableViewController {
     
     var posts: [Post] = []
     var postsStore: PostsStore = PostsStore()
+    var organization: Organization!
+//    var orgPostsRequest: OrgPosts.Request? {
+//        guard let organization = organization else {
+//            return nil
+//        }
+//        return OrgPosts.Request (organization: organization)
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -731,6 +731,12 @@
                                             <segue destination="oyg-2T-TNl" kind="show" id="Gx8-oE-ZJd"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Npn-RK-G3e">
+                                        <state key="normal" title="View Events"/>
+                                        <connections>
+                                            <segue destination="w1k-Cw-iqC" kind="show" id="a1r-Dl-jXV"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhT-P6-XdT">
                                         <state key="normal" title="View Members"/>
                                     </button>
@@ -804,6 +810,71 @@
             </objects>
             <point key="canvasLocation" x="3172" y="1206"/>
         </scene>
+        <!--Org Events Table View Controller-->
+        <scene sceneID="Gtz-IC-hus">
+            <objects>
+                <tableViewController id="w1k-Cw-iqC" customClass="OrgEventsTableViewController" customModule="CommunityApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="102" sectionHeaderHeight="28" sectionFooterHeight="28" id="2vR-iE-gGq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrgEventsCell" rowHeight="102" id="EVh-5J-pij" customClass="OrgEventsCell" customModule="CommunityApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="102"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EVh-5J-pij" id="Uag-jR-Ztd">
+                                    <frame key="frameInset" width="375" height="101"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="nameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2Y-vM-c2u">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" ambiguous="YES" misplaced="YES" text="dateLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOd-vi-OhN">
+                                            <frame key="frameInset" minX="16" minY="29" width="343" height="21"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="eventLocation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKK-6D-sPU">
+                                            <frame key="frameInset" minX="16" minY="50" width="343" height="46"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="gOd-vi-OhN" firstAttribute="leading" secondItem="Uag-jR-Ztd" secondAttribute="leadingMargin" constant="8" id="5cb-8w-121"/>
+                                        <constraint firstAttribute="bottom" secondItem="NKK-6D-sPU" secondAttribute="bottom" id="8es-4o-zwA"/>
+                                        <constraint firstItem="NKK-6D-sPU" firstAttribute="top" secondItem="gOd-vi-OhN" secondAttribute="bottom" id="C4b-MB-gjY"/>
+                                        <constraint firstItem="U2Y-vM-c2u" firstAttribute="leading" secondItem="Uag-jR-Ztd" secondAttribute="leadingMargin" constant="8" id="Cyn-p4-Gyf"/>
+                                        <constraint firstItem="gOd-vi-OhN" firstAttribute="top" secondItem="U2Y-vM-c2u" secondAttribute="bottom" id="GZA-21-xKx"/>
+                                        <constraint firstItem="NKK-6D-sPU" firstAttribute="leading" secondItem="Uag-jR-Ztd" secondAttribute="leading" constant="8" id="PlW-g9-hs3"/>
+                                        <constraint firstItem="U2Y-vM-c2u" firstAttribute="top" secondItem="Uag-jR-Ztd" secondAttribute="topMargin" id="SBC-c5-fwO"/>
+                                        <constraint firstItem="NKK-6D-sPU" firstAttribute="top" secondItem="gOd-vi-OhN" secondAttribute="bottom" id="Xvz-35-GWQ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="gOd-vi-OhN" secondAttribute="trailing" constant="8" id="YaK-U2-fxt"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="U2Y-vM-c2u" secondAttribute="trailing" constant="8" id="cU5-f5-MFU"/>
+                                        <constraint firstAttribute="trailing" secondItem="NKK-6D-sPU" secondAttribute="trailing" constant="8" id="fzR-E1-ers"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="gOd-vi-OhN" id="IGG-NL-Llh"/>
+                                    <outlet property="eventLocation" destination="NKK-6D-sPU" id="Piy-IY-y7S"/>
+                                    <outlet property="nameLabel" destination="U2Y-vM-c2u" id="UTc-RO-Rxn"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="w1k-Cw-iqC" id="32T-01-VLz"/>
+                            <outlet property="delegate" destination="w1k-Cw-iqC" id="8pO-qh-goz"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pcb-Zq-JEJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1424.8" y="-287.40629685157421"/>
+        </scene>
         <!--Org Posts Table View Controller-->
         <scene sceneID="otL-ST-iak">
             <objects>
@@ -864,7 +935,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pCq-04-zgT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-378.39999999999998" y="1884.1079460269866"/>
+            <point key="canvasLocation" x="2457" y="1949"/>
         </scene>
         <!--Member Detail View Controller-->
         <scene sceneID="bYo-OV-gSN">

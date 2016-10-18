@@ -50,6 +50,8 @@
 		F787A1091DB658C100042B0F /* InvitationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F787A1081DB658C100042B0F /* InvitationRequest.swift */; };
 		F787A10D1DB676D000042B0F /* OrgPostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F787A10C1DB676D000042B0F /* OrgPostsTableViewController.swift */; };
 		F787A10F1DB677C900042B0F /* OrgPostsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F787A10E1DB677C900042B0F /* OrgPostsCell.swift */; };
+		F787A1111DB6949000042B0F /* OrgEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F787A1101DB6949000042B0F /* OrgEventsTableViewController.swift */; };
+		F787A1131DB694FB00042B0F /* OrgEventsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F787A1121DB694FB00042B0F /* OrgEventsCell.swift */; };
 		F78AA43E1DB553BB0061C0C0 /* MemberPostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78AA43D1DB553BB0061C0C0 /* MemberPostsTableViewController.swift */; };
 		F78AA4401DB556030061C0C0 /* MemberPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78AA43F1DB556030061C0C0 /* MemberPostCell.swift */; };
 /* End PBXBuildFile section */
@@ -121,6 +123,8 @@
 		F787A1081DB658C100042B0F /* InvitationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvitationRequest.swift; sourceTree = "<group>"; };
 		F787A10C1DB676D000042B0F /* OrgPostsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrgPostsTableViewController.swift; sourceTree = "<group>"; };
 		F787A10E1DB677C900042B0F /* OrgPostsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrgPostsCell.swift; sourceTree = "<group>"; };
+		F787A1101DB6949000042B0F /* OrgEventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrgEventsTableViewController.swift; sourceTree = "<group>"; };
+		F787A1121DB694FB00042B0F /* OrgEventsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrgEventsCell.swift; sourceTree = "<group>"; };
 		F78AA43D1DB553BB0061C0C0 /* MemberPostsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberPostsTableViewController.swift; sourceTree = "<group>"; };
 		F78AA43F1DB556030061C0C0 /* MemberPostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberPostCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -192,6 +196,8 @@
 				F714A5CF1DAAD9FA0017958D /* LoginRequest.swift */,
 				F73F00221DA8235C007A9DEC /* LoginViewController.swift */,
 				F73F00241DA8235C007A9DEC /* Main.storyboard */,
+				F787A1101DB6949000042B0F /* OrgEventsTableViewController.swift */,
+				F787A1121DB694FB00042B0F /* OrgEventsCell.swift */,
 				F787A10E1DB677C900042B0F /* OrgPostsCell.swift */,
 				F787A10C1DB676D000042B0F /* OrgPostsTableViewController.swift */,
 				F73F00541DA823A0007A9DEC /* Member.swift */,
@@ -380,6 +386,7 @@
 				F706B8841DB1221D00F2EB37 /* EventsListTableViewController.swift in Sources */,
 				F71FB1201DAD6F940091E8A8 /* PostsRequest.swift in Sources */,
 				F73F00231DA8235C007A9DEC /* LoginViewController.swift in Sources */,
+				F787A1131DB694FB00042B0F /* OrgEventsCell.swift in Sources */,
 				F78AA43E1DB553BB0061C0C0 /* MemberPostsTableViewController.swift in Sources */,
 				F73F00551DA823A0007A9DEC /* Member.swift in Sources */,
 				F714A5D41DAAE4710017958D /* RegistrationRequest.swift in Sources */,
@@ -389,6 +396,7 @@
 				F714A5D21DAADF840017958D /* JSONTools.swift in Sources */,
 				F714A5D61DAC1AA00017958D /* RegisterViewController.swift in Sources */,
 				F706B88A1DB1253500F2EB37 /* EventRequest.swift in Sources */,
+				F787A1111DB6949000042B0F /* OrgEventsTableViewController.swift in Sources */,
 				F78AA4401DB556030061C0C0 /* MemberPostCell.swift in Sources */,
 				F73F00511DA8238D007A9DEC /* Event.swift in Sources */,
 				F73F00211DA8235C007A9DEC /* AppDelegate.swift in Sources */,
