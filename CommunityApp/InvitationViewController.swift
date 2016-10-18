@@ -10,26 +10,54 @@ import UIKit
 import MessageUI
 
 class InvitationViewController: UIViewController, MFMailComposeViewControllerDelegate {
-
+    
     @IBOutlet var invitationInfoLabel: UILabel!
     @IBOutlet var emailTextField: UITextField!
-
+    
     var organization: Organization!
+    var invitationRequest: Invitation.Request? {
+        guard let email = emailTextField?.text,
+            !email.isEmpty else {
+                return nil
+        }
+        return Invitation.Request(email: email)
+    }
+    
+    func displayAlertMessage() {
+        CommunityApp.displayAlertMessage(title: "Error", message: "Please check your information and try again", from: self)
+    }
     
     @IBAction func sendInvitationButton(_ sender: AnyObject) {
         let composeVC = configuredMailComposeVC()
         if MFMailComposeViewController.canSendMail() {
+            guard let invReq = invitationRequest else {
+                displayAlertMessage()
+                return
+            }
             
+            let session = URLSession(configuration: CommunityAPI.sessionConfig)
+            let method = CommunityAPI.Method.sendInvitation
+            var request = URLRequest(url: method.url)
             
+            request.httpMethod = "POST"
+            request.httpBody = try! invReq.jsonData()
             
-            
-            
-            
-            
-            
-            self.present(composeVC, animated: true, completion: nil)
-        } else {
-            self.displaySendMailAlertMessage()
+            session.dataTask(with: request) {(optData, optResponse, optError) in
+                OperationQueue.main.addOperation {
+                    guard let data = optData else {
+                        self.displayAlertMessage()
+                        return
+                    }
+                    switch Invitation.Response.Result(data: data) {
+                    case .success:
+                        self.present(composeVC, animated: true, completion: nil)
+                        return
+                    case .failure:
+                        self.displayAlertMessage()
+                    }
+                }
+                }
+                .resume()
         }
     }
     
@@ -54,5 +82,5 @@ class InvitationViewController: UIViewController, MFMailComposeViewControllerDel
         super.viewDidLoad()
         invitationInfoLabel.text = "Enter the email address of the person you would like to invite to join \(organization.name)"
     }
-
+    
 }

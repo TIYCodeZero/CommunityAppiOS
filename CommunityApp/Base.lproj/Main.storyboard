@@ -276,24 +276,22 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="akh-Z3-Jgd" id="0Y6-CL-tzs">
-                                    <frame key="frameInset" width="375" height="70"/>
+                                    <frame key="frameInset" width="375" height="69"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PoO-dI-rAf">
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" ambiguous="YES" text="nameLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQA-k0-et3">
-                                                    <frame key="frameInset" width="343" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="nameLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQA-k0-et3">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" verticalCompressionResistancePriority="751" ambiguous="YES" text="dateLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uj3-He-h0E">
-                                                    <frame key="frameInset" minY="24" width="343" height="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="dateLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uj3-He-h0E">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="eventLocation" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlH-q8-txZ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eventLocation" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlH-q8-txZ">
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -730,19 +728,15 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYo-SN-pfs">
                                         <state key="normal" title="View Posts"/>
                                         <connections>
-                                            <action selector="viewPosts:" destination="IcX-eh-zDy" eventType="touchUpInside" id="hsd-gu-4zU"/>
+                                            <segue destination="oyg-2T-TNl" kind="show" id="Gx8-oE-ZJd"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhT-P6-XdT">
                                         <state key="normal" title="View Members"/>
-                                        <connections>
-                                            <action selector="viewMembers:" destination="IcX-eh-zDy" eventType="touchUpInside" id="06i-t4-lKI"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Oh-c9-nkE">
                                         <state key="normal" title="Invite Members"/>
                                         <connections>
-                                            <action selector="sendInvitation:" destination="IcX-eh-zDy" eventType="touchUpInside" id="wcM-ha-Dca"/>
                                             <segue destination="cOk-IQ-XLr" kind="show" identifier="InviteMembers" id="Sva-4Y-822"/>
                                         </connections>
                                     </button>
@@ -809,6 +803,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jUN-Yn-Ecn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3172" y="1206"/>
+        </scene>
+        <!--Org Posts Table View Controller-->
+        <scene sceneID="otL-ST-iak">
+            <objects>
+                <tableViewController id="oyg-2T-TNl" customClass="OrgPostsTableViewController" customModule="CommunityApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="135" sectionHeaderHeight="28" sectionFooterHeight="28" id="DgD-7D-vLu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrgPostsCell" rowHeight="135" id="MYr-yO-xRn" customClass="OrgPostsCell" customModule="CommunityApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="135"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MYr-yO-xRn" id="sHD-NB-8Pa">
+                                    <frame key="frameInset" width="375" height="134"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z60-rJ-9zX">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Member" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cs-YE-Ffd">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="248" verticalCompressionResistancePriority="748" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYk-Oc-zGK">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="yYk-Oc-zGK" secondAttribute="bottom" id="BMP-fX-P79"/>
+                                        <constraint firstItem="yYk-Oc-zGK" firstAttribute="leading" secondItem="sHD-NB-8Pa" secondAttribute="leadingMargin" constant="8" id="QSP-dc-ZNb"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Z60-rJ-9zX" secondAttribute="trailing" constant="8" id="bgR-5s-5mk"/>
+                                        <constraint firstItem="4cs-YE-Ffd" firstAttribute="top" secondItem="Z60-rJ-9zX" secondAttribute="bottom" id="cic-XN-gE6"/>
+                                        <constraint firstItem="Z60-rJ-9zX" firstAttribute="top" secondItem="sHD-NB-8Pa" secondAttribute="topMargin" id="iwg-JC-zeX"/>
+                                        <constraint firstItem="Z60-rJ-9zX" firstAttribute="leading" secondItem="sHD-NB-8Pa" secondAttribute="leadingMargin" constant="8" id="ocv-Lr-Prb"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="yYk-Oc-zGK" secondAttribute="trailing" constant="8" id="oi8-0m-j9M"/>
+                                        <constraint firstItem="4cs-YE-Ffd" firstAttribute="leading" secondItem="sHD-NB-8Pa" secondAttribute="leadingMargin" constant="8" id="qCh-1L-QHC"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="4cs-YE-Ffd" secondAttribute="trailing" constant="8" id="rza-pB-tdf"/>
+                                        <constraint firstItem="yYk-Oc-zGK" firstAttribute="top" secondItem="4cs-YE-Ffd" secondAttribute="bottom" id="vrg-xt-QFc"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bodyLabel" destination="yYk-Oc-zGK" id="miG-Lk-t8b"/>
+                                    <outlet property="memberLabel" destination="4cs-YE-Ffd" id="UYh-OQ-hkX"/>
+                                    <outlet property="titleLabel" destination="Z60-rJ-9zX" id="oME-8V-YwZ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="oyg-2T-TNl" id="W35-cl-hV3"/>
+                            <outlet property="delegate" destination="oyg-2T-TNl" id="Nob-Ff-JlQ"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pCq-04-zgT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-378.39999999999998" y="1884.1079460269866"/>
         </scene>
         <!--Member Detail View Controller-->
         <scene sceneID="bYo-OV-gSN">
@@ -943,7 +999,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="148"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Ry-ju-fWA" id="s5f-AA-nPW">
-                                    <frame key="frameInset" width="375" height="147"/>
+                                    <frame key="frameInset" width="375" height="148"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LcT-rQ-4kx">

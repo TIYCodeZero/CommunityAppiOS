@@ -1,28 +1,28 @@
 //
-//  PostsTableViewController.swift
+//  OrgPostsTableViewController.swift
 //  CommunityApp
 //
-//  Created by Dan Esrey on 2016/11/10.
+//  Created by Dan Esrey on 2016/18/10.
 //  Copyright © 2016 Dan Esrey. All rights reserved.
 //
 
 import UIKit
 
-class PostsTableViewController: UITableViewController {
-
+class OrgPostsTableViewController: UITableViewController {
+    
     var posts: [Post] = []
     var postsStore: PostsStore = PostsStore()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "All Posts"
+        title = "Member Posts"
         let statusBarHeight = UIApplication.shared.statusBarFrame.height
         let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
         tableView.contentInset = insets
         tableView.scrollIndicatorInsets = insets
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 120
-        postsStore.fetchPosts {
+        postsStore.getMemberPosts {
             (PostsResult) -> Void in
             switch PostsResult {
             case let .success(posts):
@@ -36,18 +36,20 @@ class PostsTableViewController: UITableViewController {
             }
         }
     }
-    
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PostsCell", for: indexPath) as! PostsCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "OrgPostsCell", for: indexPath) as! OrgPostsCell
         let post = posts[indexPath.row]
         cell.titleLabel.text = post.title
         cell.memberLabel.text = "\(post.member["firstName"]!) \(post.member["lastName"]!)"
         cell.bodyLabel.text = post.body
         return cell
     }
+
+
 
 }

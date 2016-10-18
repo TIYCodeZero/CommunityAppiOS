@@ -29,16 +29,21 @@ class PostsStore {
         task.resume()
     }
     
-//    func getMemberPosts(posts: [Post], member: Member) -> [Post] {
-//        let postsCount = posts.count
-//        var memberPosts: [Post] = []
-//        
-//        for index in 0...(postsCount - 1) {
-//            if posts[index].member.id == member.id {
-//                memberPosts.append(posts[index])
-//            }
-//        }
-//        return memberPosts
-//    }
+    func getMemberPosts(completionHandler: @escaping (PostsResult) -> Void) -> Void {
+        let session = URLSession(configuration: CommunityAPI.sessionConfig)
+        let method = CommunityAPI.Method.postsByOrg
+        var request = URLRequest(url: method.url)
+        request.httpMethod = "GET"
+        let task = session.dataTask(with: request) { (optData, optResponse, optError) in
+            guard let data = optData else {
+                let errorDescription = optResponse?.description ?? optError!.localizedDescription
+                let postsResult: PostsResult = .failure(errorDescription)
+                completionHandler(postsResult)
+                return
+            }
+            completionHandler(.success(Post.array(data: data)))
+        }
+        task.resume()
+    }
     
 }
