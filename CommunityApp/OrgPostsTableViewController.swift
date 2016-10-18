@@ -17,7 +17,7 @@ class OrgPostsTableViewController: UITableViewController {
 //        guard let organization = organization else {
 //            return nil
 //        }
-//        return OrgPosts.Request (organization: organization)
+//        return OrgPosts.Request(organization: organization)
 //    }
 
     override func viewDidLoad() {
@@ -29,7 +29,7 @@ class OrgPostsTableViewController: UITableViewController {
         tableView.scrollIndicatorInsets = insets
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 120
-        postsStore.getMemberPosts {
+        getMemberPosts {
             (PostsResult) -> Void in
             switch PostsResult {
             case let .success(posts):
@@ -57,6 +57,32 @@ class OrgPostsTableViewController: UITableViewController {
         return cell
     }
 
-
+    func getMemberPosts(completionHandler: @escaping (PostsResult) -> Void) -> Void {
+        let organization = self.organization!
+        let name = organization.name
+        let id = organization.id
+        let session = URLSession(configuration: CommunityAPI.sessionConfig)
+        let method = CommunityAPI.Method.postsByOrg
+        var request = URLRequest(url: method.url)
+        request.httpMethod = "POST"
+        
+        let orgPostProfile: [String: Any] = ["name": name, "id": id]
+        request.httpBody = try! JSONSerialization.data(withJSONObject: orgPostProfile, options: [])
+        
+        
+        let task = session.dataTask(with: request) { (optData, optResponse, optError) in
+            guard let data = optData else {
+                let errorDescription = optResponse?.description ?? optError!.localizedDescription
+                let postsResult: PostsResult = .failure(errorDescription)
+                completionHandler(postsResult)
+                return
+            }
+            let jsonObject = try! JSONSerialization.jsonObject(with: data, options: []) as [String: Any]
+            let postDictionaries = jsonObject["postList"] as? [[String: Any]]
+            let posts = Post.array(dictionaries: postDictionaries!)
+            completionHandler(.success(posts))
+        }
+        task.resume()
+    }
 
 }

@@ -44,7 +44,7 @@ class CreateEventViewController: UIViewController {
                 }
                 switch CreateEventResult(data: data) {
                 case .success:
-                    self.navigationController?.popViewController(animated: true)
+                    _ = self.navigationController?.popViewController(animated: true)
                     return
                 case let .failure(message):
                     print("💜\(message)")
