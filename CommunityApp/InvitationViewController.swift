@@ -19,6 +19,14 @@ class InvitationViewController: UIViewController, MFMailComposeViewControllerDel
     @IBAction func sendInvitationButton(_ sender: AnyObject) {
         let composeVC = configuredMailComposeVC()
         if MFMailComposeViewController.canSendMail() {
+            
+            
+            
+            
+            
+            
+            
+            
             self.present(composeVC, animated: true, completion: nil)
         } else {
             self.displaySendMailAlertMessage()

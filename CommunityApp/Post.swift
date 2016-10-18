@@ -15,9 +15,9 @@ class Post {
     var body: String
     var id: Int
     var member: [String: Any]
-    var organization: Organization
+    var organization: [String: Any]
     
-    init(date: Date, title: String, body: String, id: Int, member: [String: Any], organization: Organization) {
+    init(date: Date, title: String, body: String, id: Int, member: [String: Any], organization: [String: Any]) {
         self.date = date
         self.title = title
         self.body = body
@@ -34,7 +34,7 @@ class Post {
         let body = dictionary["body"] as? String,
         let id = dictionary["id"] as? Int,
         let member = dictionary["member"] as? [String: Any],
-        let organization = dictionary ["organization"] as? Organization else {
+        let organization = dictionary ["organization"] as? [String: Any] else {
             return nil
         }
         self.init(date: date, title: title, body: body, id: id, member: member, organization: organization)

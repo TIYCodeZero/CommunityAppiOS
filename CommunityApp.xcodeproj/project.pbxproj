@@ -47,6 +47,7 @@
 		F73F00531DA8238D007A9DEC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F00501DA8238D007A9DEC /* Post.swift */; };
 		F73F00551DA823A0007A9DEC /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F00541DA823A0007A9DEC /* Member.swift */; };
 		F7785EB81DAE786600149DCE /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7785EB71DAE786600149DCE /* CreatePostViewController.swift */; };
+		F787A1091DB658C100042B0F /* InvitationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F787A1081DB658C100042B0F /* InvitationRequest.swift */; };
 		F78AA43E1DB553BB0061C0C0 /* MemberPostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78AA43D1DB553BB0061C0C0 /* MemberPostsTableViewController.swift */; };
 		F78AA4401DB556030061C0C0 /* MemberPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78AA43F1DB556030061C0C0 /* MemberPostCell.swift */; };
 /* End PBXBuildFile section */
@@ -115,6 +116,7 @@
 		F73F00501DA8238D007A9DEC /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		F73F00541DA823A0007A9DEC /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		F7785EB71DAE786600149DCE /* CreatePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		F787A1081DB658C100042B0F /* InvitationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvitationRequest.swift; sourceTree = "<group>"; };
 		F78AA43D1DB553BB0061C0C0 /* MemberPostsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberPostsTableViewController.swift; sourceTree = "<group>"; };
 		F78AA43F1DB556030061C0C0 /* MemberPostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberPostCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -179,19 +181,20 @@
 				F706B8871DB1246500F2EB37 /* EventStore.swift */,
 				F70CD57D1DB3F7F700A4F880 /* ImageStore.swift */,
 				F73F002C1DA8235C007A9DEC /* Info.plist */,
+				F787A1081DB658C100042B0F /* InvitationRequest.swift */,
 				F70CD5891DB522A800A4F880 /* InvitationViewController.swift */,
 				F714A5D11DAADF840017958D /* JSONTools.swift */,
 				F73F00291DA8235C007A9DEC /* LaunchScreen.storyboard */,
 				F714A5CF1DAAD9FA0017958D /* LoginRequest.swift */,
 				F73F00221DA8235C007A9DEC /* LoginViewController.swift */,
 				F73F00241DA8235C007A9DEC /* Main.storyboard */,
-				F78AA43D1DB553BB0061C0C0 /* MemberPostsTableViewController.swift */,
 				F73F00541DA823A0007A9DEC /* Member.swift */,
 				F71FB1111DAD2E030091E8A8 /* MemberCell.swift */,
 				F71FB1171DAD627A0091E8A8 /* MemberDetailViewController.swift */,
+				F78AA43F1DB556030061C0C0 /* MemberPostCell.swift */,
+				F78AA43D1DB553BB0061C0C0 /* MemberPostsTableViewController.swift */,
 				F71FB1151DAD3C610091E8A8 /* MemberRequest.swift */,
 				F71FB10F1DAD2DAF0091E8A8 /* MembersTableViewController.swift */,
-				F78AA43F1DB556030061C0C0 /* MemberPostCell.swift */,
 				F71FB1131DAD2E580091E8A8 /* MemberStore.swift */,
 				F71FB10D1DAD2D530091E8A8 /* MenuViewController.swift */,
 				F70CD5811DB416F800A4F880 /* OganizationStore.swift */,
@@ -397,6 +400,7 @@
 				F71FB11A1DAD6A150091E8A8 /* PostsTableViewController.swift in Sources */,
 				F71FB1141DAD2E580091E8A8 /* MemberStore.swift in Sources */,
 				F7785EB81DAE786600149DCE /* CreatePostViewController.swift in Sources */,
+				F787A1091DB658C100042B0F /* InvitationRequest.swift in Sources */,
 				F706B8861DB122C500F2EB37 /* EventCell.swift in Sources */,
 				F70CD5821DB416F800A4F880 /* OganizationStore.swift in Sources */,
 				F714A5CE1DAAD3970017958D /* CommunityAPI.swift in Sources */,
