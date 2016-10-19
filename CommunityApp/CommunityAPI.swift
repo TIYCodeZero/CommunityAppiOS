@@ -35,6 +35,7 @@ extension CommunityAPI {
         case createEvent
         case sendInvitation
         case postsByOrg
+        case eventsByOrg
                 
         var pathComponent: String {
             switch self {
@@ -58,6 +59,8 @@ extension CommunityAPI {
                 return "/sendInvitation.json"
             case .postsByOrg:
                 return "/postsByOrg.json"
+            case .eventsByOrg:
+                return "/eventsByOrg.json"
             }
         }
         var url: URL {
