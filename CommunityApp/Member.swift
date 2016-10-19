@@ -16,15 +16,17 @@ class Member {
     public var streetAddress: String
     public var id: Int
     public var password: String
+    public var photoURL: String
 //  public var imageKey: String
     
-    init(firstName: String, lastName: String, email: String, streetAddress: String, id: Int, password: String){
+    init(firstName: String, lastName: String, email: String, streetAddress: String, id: Int, password: String, photoURL: String){
         self.firstName = firstName
         self.lastName = lastName
         self.email = email
         self.streetAddress = streetAddress
         self.id = id
         self.password = password
+        self.photoURL = photoURL
 //      self.imageKey = UUID().uuidString
     }
     
@@ -35,7 +37,8 @@ class Member {
             let streetAddress = dictionary[Member.streetAddressKey] as? String,
             let id = dictionary[Member.idKey] as? Int,
 //          let imageKey =
-            let password = dictionary[Member.passwordKey] as? String else {
+            let password = dictionary[Member.passwordKey] as? String,
+            let photoURL = dictionary[Member.photoURLKey]  as? String else {
                 return nil
         }
         self.init(firstName: firstName,
@@ -44,7 +47,8 @@ class Member {
                   streetAddress: streetAddress,
                   id: id,
 //                imageKey: imageKey,
-                  password: password)
+                  password: password,
+                  photoURL: photoURL)
     }
     
     var jsonObject: [String: Any] {
@@ -54,7 +58,8 @@ class Member {
             Member.emailKey : email,
             Member.streetAddressKey : streetAddress,
             Member.idKey : id,
-            Member.passwordKey : password
+            Member.passwordKey : password,
+            Member.photoURLKey : photoURL
 //          Member.imageKey : imageKey
         ]
     }
@@ -75,6 +80,7 @@ extension Member {
     static var streetAddressKey: String = "streetAddress"
     static var idKey: String = "id"
     static var passwordKey: String = "password"
+    static var photoURLKey: String = "photoURL"
 //  static var imageKey: String = "imageKey"
 }
 
@@ -87,7 +93,8 @@ extension Member : Equatable {
         lhs.streetAddress == rhs.streetAddress &&
         lhs.id == rhs.id &&
 //      lhs.imageKey = rhs.imageKey &&
-        lhs.password == rhs.password)
+        lhs.password == rhs.password &&
+        lhs.photoURL == rhs.photoURL)
     }
     
 }

@@ -15,13 +15,15 @@ enum Registration {
         var email: String
         var streetAddress: String
         var password: String
+//        var photoURL: String
         
-        init(firstName: String, lastName: String, email: String, streetAddress: String, password: String){
+        init(firstName: String, lastName: String, email: String, streetAddress: String, password: String/*, photoURL: String*/){
             self.firstName = firstName
             self.lastName = lastName
             self.email = email
             self.streetAddress = streetAddress
             self.password = password
+//            self.photoURL = photoURL
         }
     }
 }
@@ -33,7 +35,8 @@ extension Registration.Request {
             Member.lastNameKey : lastName,
             Member.emailKey : email,
             Member.streetAddressKey : streetAddress,
-            Member.passwordKey : password
+            Member.passwordKey : password/*,
+            Member.photoURLKey : photoURL*/
         ]
     }
     

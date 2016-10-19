@@ -12,7 +12,7 @@ class MemberPostsTableViewController: UITableViewController {
 
     var member: Member?
     var posts: [Post] = []
-    var memberPosts: [Post] = []
+    var memberPost: [Post] = []
     var postsStore: PostsStore = PostsStore()
     
     override func viewDidLoad() {
@@ -23,13 +23,12 @@ class MemberPostsTableViewController: UITableViewController {
         tableView.scrollIndicatorInsets = insets
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 100
-        postsStore.fetchPosts { (PostsResult) -> Void in
+        getPostsByMember { (PostsResult) -> Void in
             switch PostsResult {
             case let .success(posts):
                 print("Successfully found \(posts.count)")
                 OperationQueue.main.addOperation {
                     self.posts = posts
-                    
                     self.tableView.reloadData()
                 }
             case let .failure(error):
@@ -39,19 +38,46 @@ class MemberPostsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return memberPosts.count
+        return posts.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MemberPostCell", for: indexPath) as! MemberPostCell
-        let memberPost = memberPosts[indexPath.row]
+        let memberPost = posts[indexPath.row]
         cell.titleLabel.text = memberPost.title
         cell.memberLabel.text = "\(memberPost.member["firstName"]!) \(memberPost.member["lastName"]!)"
         cell.bodyLabel.text = memberPost.body
         return cell
     }
     
+    func getPostsByMember(completionHandler: @escaping (PostsResult) -> Void) -> Void {
+        let member = self.member!
+        let session = URLSession(configuration: CommunityAPI.sessionConfig)
+        let method = CommunityAPI.Method.postsByMember
+        var  request = URLRequest(url: method.url)
+        request.httpMethod = "POST"
+        let memberProfile: [String: Any] = ["member": member.jsonObject]
+        request.httpBody = try! JSONSerialization.data(withJSONObject: memberProfile, options: [])
+        
+        let task = session.dataTask(with: request) { (optData, optResponse, optError) in
+            guard let data = optData else {
+                let errorDescription = optResponse?.description ?? optError!.localizedDescription
+                let postsResult: PostsResult = .failure(errorDescription)
+                completionHandler(postsResult)
+                return
+            }
+            let jsonObject = try! JSONSerialization.jsonObject(with: data, options: []) as [String: Any]
+            let postDictionaries = jsonObject["postList"] as? [[String: Any]]
+            let posts = Post.array(dictionaries: postDictionaries!)
+            completionHandler(.success(posts))
+        }
+        task.resume()
+        
+    }
+        func displayAlertMessage(){
+            CommunityApp.displayAlertMessage(title: "Error", message: "Unable to display member posts", from: self)
+        }
 
  
 }
