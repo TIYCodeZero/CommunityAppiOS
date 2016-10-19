@@ -38,5 +38,9 @@ class OrgDetailViewController: UIViewController {
             let orgPostsVC = segue.destination as! OrgPostsTableViewController
             orgPostsVC.organization = organization
         }
+        if segue.identifier == "ShowOrgEvents" {
+            let orgEventsVC = segue.destination as! OrgEventsTableViewController
+            orgEventsVC.organization = organization
+        }
     }
 }

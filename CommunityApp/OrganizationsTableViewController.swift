@@ -10,6 +10,7 @@ import UIKit
 
 class OrganizationsTableViewController: UITableViewController {
 
+    var user: Member?
     var organizations: [Organization] = []
     var organizationStore: OrganizationStore = OrganizationStore()
     

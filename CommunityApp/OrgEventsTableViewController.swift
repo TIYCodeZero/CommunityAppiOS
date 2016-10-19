@@ -16,14 +16,16 @@ class OrgEventsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-// change title
-        title = "\(organization.name) Events"
         let statusBarHeight = UIApplication.shared.statusBarFrame.height
         let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
         tableView.contentInset = insets
         tableView.scrollIndicatorInsets = insets
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 100
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        title = "\(organization.name) Events"
         getMemberEvents {
             (EventsResult) -> Void in
             switch EventsResult {

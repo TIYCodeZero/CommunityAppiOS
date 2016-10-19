@@ -10,6 +10,7 @@ import UIKit
 
 class MembersTableViewController: UITableViewController {
     
+    var user: Member?
     var members: [Member] = []
     var memberStore: MemberStore = MemberStore()
     var imageStore: ImageStore = ImageStore()

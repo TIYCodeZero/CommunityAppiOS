@@ -22,6 +22,15 @@ class MenuViewController: UIViewController {
         if let destination = segue.destination as? CreateEventViewController {
             destination.user = self.user
         }
+        if let destination = segue.destination as? OrganizationsTableViewController {
+            destination.user = self.user
+        }
+        if let destination = segue.destination as? MembersTableViewController {
+            destination.user = self.user
+        }
+        if let destination = segue.destination as? EventsListTableViewController {
+            destination.user = self.user
+        }
     }
     
 }

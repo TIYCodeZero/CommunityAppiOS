@@ -47,15 +47,5 @@ enum CreatePostResult {
     
 }
 
-//enum OrgPosts {
-//    struct Request {
-//        var organization: Organization
-//        
-//        init(organization: Organization) {
-//            self.organization = organization
-//        }
-//    }
-//}
-
 
 
