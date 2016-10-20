@@ -38,6 +38,8 @@ extension CommunityAPI {
         case eventsByOrg
         case postsByMember
         case eventsByMember
+        case editPost
+        case editEvent
                 
         var pathComponent: String {
             switch self {
@@ -67,6 +69,10 @@ extension CommunityAPI {
                 return "/postsListByMember.json"
             case .eventsByMember:
                 return "/eventsListByMember.json"
+            case .editPost:
+                return "/editPost.json"
+            case .editEvent:
+                return "/editEvent.json"
             }
         }
         var url: URL {

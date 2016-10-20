@@ -47,6 +47,10 @@ class MemberDetailViewController: UIViewController, UINavigationControllerDelega
            let memberPostsTableViewController = segue.destination as! MemberPostsTableViewController
             memberPostsTableViewController.member = member
         }
+        if segue.identifier == "ViewMemberEvents" {
+            let memberEventsTableViewController = segue.destination as! MemberEventsTableViewController
+            memberEventsTableViewController.member = member
+        }
     }
     
 }

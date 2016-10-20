@@ -57,8 +57,7 @@ class MemberPostsTableViewController: UITableViewController {
         let method = CommunityAPI.Method.postsByMember
         var  request = URLRequest(url: method.url)
         request.httpMethod = "POST"
-        let memberProfile: [String: Any] = ["member": member.jsonObject]
-        request.httpBody = try! JSONSerialization.data(withJSONObject: memberProfile, options: [])
+        request.httpBody = try! JSONSerialization.data(withJSONObject: member.jsonObject, options: [])
         
         let task = session.dataTask(with: request) { (optData, optResponse, optError) in
             guard let data = optData else {

@@ -56,6 +56,7 @@
 		F787A1131DB694FB00042B0F /* OrgEventsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F787A1121DB694FB00042B0F /* OrgEventsCell.swift */; };
 		F78AA43E1DB553BB0061C0C0 /* MemberPostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78AA43D1DB553BB0061C0C0 /* MemberPostsTableViewController.swift */; };
 		F78AA4401DB556030061C0C0 /* MemberPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78AA43F1DB556030061C0C0 /* MemberPostCell.swift */; };
+		F7D3AB881DB922ED0004F03E /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D3AB871DB922ED0004F03E /* EventDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +132,7 @@
 		F787A1121DB694FB00042B0F /* OrgEventsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrgEventsCell.swift; sourceTree = "<group>"; };
 		F78AA43D1DB553BB0061C0C0 /* MemberPostsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberPostsTableViewController.swift; sourceTree = "<group>"; };
 		F78AA43F1DB556030061C0C0 /* MemberPostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberPostCell.swift; sourceTree = "<group>"; };
+		F7D3AB871DB922ED0004F03E /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 				F73F00541DA823A0007A9DEC /* Member.swift */,
 				F71FB1111DAD2E030091E8A8 /* MemberCell.swift */,
 				F71FB1171DAD627A0091E8A8 /* MemberDetailViewController.swift */,
+				F7D3AB871DB922ED0004F03E /* EventDetailViewController.swift */,
 				F78AA43F1DB556030061C0C0 /* MemberPostCell.swift */,
 				F78AA43D1DB553BB0061C0C0 /* MemberPostsTableViewController.swift */,
 				F71FB1151DAD3C610091E8A8 /* MemberRequest.swift */,
@@ -430,6 +433,7 @@
 				F714A5CE1DAAD3970017958D /* CommunityAPI.swift in Sources */,
 				F714A5D01DAAD9FA0017958D /* LoginRequest.swift in Sources */,
 				F71FB1161DAD3C610091E8A8 /* MemberRequest.swift in Sources */,
+				F7D3AB881DB922ED0004F03E /* EventDetailViewController.swift in Sources */,
 				F706B88E1DB2A55F00F2EB37 /* CreateEventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
