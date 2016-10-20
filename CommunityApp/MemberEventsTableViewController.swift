@@ -82,4 +82,15 @@ class MemberEventsTableViewController: UITableViewController {
         task.resume()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowEventDetail" {
+            if let row = (tableView.indexPathForSelectedRow as IndexPath?)?.row {
+                let event = events[row]
+                let eventDetailVC = segue.destination as! EventDetailViewController
+                eventDetailVC.event = event
+                eventDetailVC.member = member
+            }
+            
+        }
+    }
 }

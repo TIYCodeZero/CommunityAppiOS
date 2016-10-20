@@ -10,6 +10,7 @@ import UIKit
 
 class OrgEventsTableViewController: UITableViewController {
     
+    var member: Member!
     var events: [Event] = []
     var eventStore: EventStore = EventStore()
     var organization: Organization!
@@ -80,6 +81,19 @@ class OrgEventsTableViewController: UITableViewController {
         }
         task.resume()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowEventDetail" {
+            if let row = (tableView.indexPathForSelectedRow as IndexPath?)?.row {
+                let event = events[row]
+                let eventDetailVC = segue.destination as! EventDetailViewController
+                eventDetailVC.event = event
+                eventDetailVC.member = member
+            }
+            
+        }
+    }
+
 }
 
         

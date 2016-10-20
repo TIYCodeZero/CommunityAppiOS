@@ -57,6 +57,8 @@
 		F78AA43E1DB553BB0061C0C0 /* MemberPostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78AA43D1DB553BB0061C0C0 /* MemberPostsTableViewController.swift */; };
 		F78AA4401DB556030061C0C0 /* MemberPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78AA43F1DB556030061C0C0 /* MemberPostCell.swift */; };
 		F7D3AB881DB922ED0004F03E /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D3AB871DB922ED0004F03E /* EventDetailViewController.swift */; };
+		F7D3ABCA1DB958590004F03E /* OrgMembersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D3ABC91DB958590004F03E /* OrgMembersTableViewController.swift */; };
+		F7D3ABCC1DB95C390004F03E /* OrgMemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D3ABCB1DB95C390004F03E /* OrgMemberCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +135,8 @@
 		F78AA43D1DB553BB0061C0C0 /* MemberPostsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberPostsTableViewController.swift; sourceTree = "<group>"; };
 		F78AA43F1DB556030061C0C0 /* MemberPostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberPostCell.swift; sourceTree = "<group>"; };
 		F7D3AB871DB922ED0004F03E /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		F7D3ABC91DB958590004F03E /* OrgMembersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrgMembersTableViewController.swift; sourceTree = "<group>"; };
+		F7D3ABCB1DB95C390004F03E /* OrgMemberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrgMemberCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +194,7 @@
 				F7785EB71DAE786600149DCE /* CreatePostViewController.swift */,
 				F73F004E1DA8238D007A9DEC /* Event.swift */,
 				F706B8851DB122C500F2EB37 /* EventCell.swift */,
+				F7D3AB871DB922ED0004F03E /* EventDetailViewController.swift */,
 				F706B8891DB1253500F2EB37 /* EventRequest.swift */,
 				F706B8831DB1221D00F2EB37 /* EventsListTableViewController.swift */,
 				F706B8871DB1246500F2EB37 /* EventStore.swift */,
@@ -202,12 +207,11 @@
 				F714A5CF1DAAD9FA0017958D /* LoginRequest.swift */,
 				F73F00221DA8235C007A9DEC /* LoginViewController.swift */,
 				F73F00241DA8235C007A9DEC /* Main.storyboard */,
-				F73CD0431DB80C1100B4C7B5 /* MemberEventsTableViewController.swift */,
-				F73CD0451DB80C6C00B4C7B5 /* MemberEventCell.swift */,
 				F73F00541DA823A0007A9DEC /* Member.swift */,
 				F71FB1111DAD2E030091E8A8 /* MemberCell.swift */,
 				F71FB1171DAD627A0091E8A8 /* MemberDetailViewController.swift */,
-				F7D3AB871DB922ED0004F03E /* EventDetailViewController.swift */,
+				F73CD0451DB80C6C00B4C7B5 /* MemberEventCell.swift */,
+				F73CD0431DB80C1100B4C7B5 /* MemberEventsTableViewController.swift */,
 				F78AA43F1DB556030061C0C0 /* MemberPostCell.swift */,
 				F78AA43D1DB553BB0061C0C0 /* MemberPostsTableViewController.swift */,
 				F71FB1151DAD3C610091E8A8 /* MemberRequest.swift */,
@@ -222,6 +226,8 @@
 				F70CD5871DB513D900A4F880 /* OrgDetailViewController.swift */,
 				F787A1121DB694FB00042B0F /* OrgEventsCell.swift */,
 				F787A1101DB6949000042B0F /* OrgEventsTableViewController.swift */,
+				F7D3ABCB1DB95C390004F03E /* OrgMemberCell.swift */,
+				F7D3ABC91DB958590004F03E /* OrgMembersTableViewController.swift */,
 				F787A10E1DB677C900042B0F /* OrgPostsCell.swift */,
 				F787A10C1DB676D000042B0F /* OrgPostsTableViewController.swift */,
 				F73F00501DA8238D007A9DEC /* Post.swift */,
@@ -398,6 +404,7 @@
 				F73F00231DA8235C007A9DEC /* LoginViewController.swift in Sources */,
 				F787A1131DB694FB00042B0F /* OrgEventsCell.swift in Sources */,
 				F78AA43E1DB553BB0061C0C0 /* MemberPostsTableViewController.swift in Sources */,
+				F7D3ABCA1DB958590004F03E /* OrgMembersTableViewController.swift in Sources */,
 				F73F00551DA823A0007A9DEC /* Member.swift in Sources */,
 				F714A5D41DAAE4710017958D /* RegistrationRequest.swift in Sources */,
 				F70CD5861DB41F9600A4F880 /* OrganizationCell.swift in Sources */,
@@ -432,6 +439,7 @@
 				F70CD5821DB416F800A4F880 /* OganizationStore.swift in Sources */,
 				F714A5CE1DAAD3970017958D /* CommunityAPI.swift in Sources */,
 				F714A5D01DAAD9FA0017958D /* LoginRequest.swift in Sources */,
+				F7D3ABCC1DB95C390004F03E /* OrgMemberCell.swift in Sources */,
 				F71FB1161DAD3C610091E8A8 /* MemberRequest.swift in Sources */,
 				F7D3AB881DB922ED0004F03E /* EventDetailViewController.swift in Sources */,
 				F706B88E1DB2A55F00F2EB37 /* CreateEventViewController.swift in Sources */,

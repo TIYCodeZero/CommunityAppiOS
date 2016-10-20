@@ -27,7 +27,7 @@ class EventDetailViewController: UIViewController {
         dateTextField.text = "\(event.date)"
         locationTextField.text = event.location
         organizationTextField.text = event.organization.name
-        organizerTextField.text = "\(member.firstName) \(member.lastName)"
+        organizerTextField.text = "\(event.organizer.firstName) \(event.organizer.lastName)"
         informationLabel.text = event.information
     }
    

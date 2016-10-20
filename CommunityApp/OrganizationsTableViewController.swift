@@ -55,6 +55,7 @@ class OrganizationsTableViewController: UITableViewController {
                 let organization = organizations[row]
                 let orgDetailVC = segue.destination as! OrgDetailViewController
                 orgDetailVC.organization = organization
+                
             }            
         }
     }
