@@ -36,6 +36,7 @@ extension CommunityAPI {
         case sendInvitation
         case postsByOrg
         case eventsByOrg
+        case membersByOrg
         case postsByMember
         case eventsByMember
         case editPost
@@ -65,6 +66,8 @@ extension CommunityAPI {
                 return "/postsByOrg.json"
             case .eventsByOrg:
                 return "/eventsByOrg.json"
+            case .membersByOrg:
+                return "/membersByOrg.json"
             case .postsByMember:
                 return "/postsListByMember.json"
             case .eventsByMember:

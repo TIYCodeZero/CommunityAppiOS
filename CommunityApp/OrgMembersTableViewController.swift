@@ -45,7 +45,7 @@ class OrgMembersTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "OrgMemberCell", for: indexPath) as! MemberCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "OrgMemberCell", for: indexPath) as! OrgMemberCell
         let member = members[indexPath.row]
         cell.nameLabel.text = "\(member.lastName), \(member.firstName)"
         cell.addressLabel.text = member.streetAddress
@@ -67,8 +67,7 @@ class OrgMembersTableViewController: UITableViewController {
         let name = organization.name
         let id = organization.id
         let session = URLSession(configuration: CommunityAPI.sessionConfig)
-// update method
-        let method = CommunityAPI.Method.memberDirectory
+        let method = CommunityAPI.Method.membersByOrg
         var request = URLRequest(url: method.url)
         request.httpMethod = "POST"
         
