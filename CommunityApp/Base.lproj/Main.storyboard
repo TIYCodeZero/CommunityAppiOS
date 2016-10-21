@@ -1252,7 +1252,7 @@
                                                     <constraint firstItem="3EG-nv-Y0F" firstAttribute="width" secondItem="9cP-3T-kNi" secondAttribute="width" id="iR8-e9-ZmM"/>
                                                 </constraints>
                                             </stackView>
-                                            <imageView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleAspectFill" verticalHuggingPriority="248" verticalCompressionResistancePriority="748" translatesAutoresizingMaskIntoConstraints="NO" id="HOP-8p-mRy"/>
+                                            <imageView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleAspectFill" verticalHuggingPriority="248" verticalCompressionResistancePriority="748" image="DefaultAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="HOP-8p-mRy"/>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="AmV-eq-N0w" secondAttribute="trailing" id="0x1-mT-V5U"/>
@@ -1390,6 +1390,9 @@
             <point key="canvasLocation" x="-3625" y="-1239"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="DefaultAvatar" width="400" height="400"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ePK-Oi-lUp"/>
         <segue reference="2zP-L2-C8a"/>
