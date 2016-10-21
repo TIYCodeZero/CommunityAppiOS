@@ -56,7 +56,7 @@ class MemberEventsTableViewController: UITableViewController {
     }
     
     func displayErrorMessage(){
-        CommunityApp.displayAlertMessage(title: "Error", message: "Unable to display member events", from: self)
+        CommunityApp.displayAlertMessage(title: "Alert", message: "\(member!.firstName) \(member!.lastName) has no events", from: self)
     }
     
     func getEventsByMember(completionHandler: @escaping (EventsResult) -> Void) -> Void {
@@ -76,8 +76,17 @@ class MemberEventsTableViewController: UITableViewController {
             }
             let jsonObject = try! JSONSerialization.jsonObject(with: data, options: []) as [String: Any]
             let eventDictionaries = jsonObject["eventList"] as? [[String: Any]]
+            if eventDictionaries != nil {
             let events = Event.array(dictionaries: eventDictionaries!)
             completionHandler(.success(events))
+            } else if jsonObject["errorMessage"] != nil {
+                let someString = jsonObject["errorMessage"] as? String
+                if (someString?.hasPrefix("Event list was empty"))! {
+                    let events: [Event] = []
+                    self.displayErrorMessage()
+                    completionHandler(.success(events))
+                }
+            }
         }
         task.resume()
     }
@@ -90,7 +99,6 @@ class MemberEventsTableViewController: UITableViewController {
                 eventDetailVC.event = event
                 eventDetailVC.member = member
             }
-            
         }
     }
 }

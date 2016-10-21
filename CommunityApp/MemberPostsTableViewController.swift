@@ -68,14 +68,23 @@ class MemberPostsTableViewController: UITableViewController {
             }
             let jsonObject = try! JSONSerialization.jsonObject(with: data, options: []) as [String: Any]
             let postDictionaries = jsonObject["postList"] as? [[String: Any]]
+            if postDictionaries != nil {
             let posts = Post.array(dictionaries: postDictionaries!)
             completionHandler(.success(posts))
+            } else if jsonObject["errorMessage"] != nil {
+                let someString = jsonObject["errorMessage"] as? String
+                if (someString?.hasPrefix("Post list was empty"))! {
+                    let posts: [Post] = []
+                    self.displayAlertMessage()
+                    completionHandler(.success(posts))
+                }
+            }
         }
         task.resume()
         
     }
         func displayAlertMessage(){
-            CommunityApp.displayAlertMessage(title: "Error", message: "Unable to display member posts", from: self)
+            CommunityApp.displayAlertMessage(title: "Alert", message: "\(member!.firstName) \(member!.lastName) has no posts", from: self)
         }
 
  
