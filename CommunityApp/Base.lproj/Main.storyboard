@@ -1338,6 +1338,7 @@
                         <outlet property="emailField" destination="nRg-3i-om7" id="Cim-5H-bPF"/>
                         <outlet property="imageView" destination="HOP-8p-mRy" id="Q4O-sl-fY5"/>
                         <outlet property="nameField" destination="9Ti-RF-B6g" id="y2u-Zx-zF3"/>
+                        <outlet property="toolbar" destination="kWi-yH-4o4" id="4Ng-w3-0E5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hC4-Ba-kd8" userLabel="First Responder" sceneMemberID="firstResponder"/>

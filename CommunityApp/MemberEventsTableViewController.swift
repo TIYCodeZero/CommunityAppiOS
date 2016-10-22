@@ -10,7 +10,8 @@ import UIKit
 
 class MemberEventsTableViewController: UITableViewController {
     
-    var member: Member?
+    var user: Member?
+    var member: Member!
     var events: [Event] = []
     var memberEvent: [Event] = []
     var eventStore: EventStore = EventStore()

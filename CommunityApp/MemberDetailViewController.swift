@@ -14,6 +14,7 @@ class MemberDetailViewController: UIViewController, UINavigationControllerDelega
     @IBOutlet var nameField: UITextField!
     @IBOutlet var addressField: UITextField!
     @IBOutlet var emailField: UITextField!
+    @IBOutlet var toolbar: UIToolbar!
  
     var user: Member!
     var member: Member!
@@ -41,6 +42,9 @@ class MemberDetailViewController: UIViewController, UINavigationControllerDelega
         nameField.text = "\(member.firstName) \(member.lastName)"
         addressField.text = member.streetAddress
         emailField.text = member.email
+        if user != member {
+            toolbar.isHidden = true
+        }
     }
  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -51,7 +55,7 @@ class MemberDetailViewController: UIViewController, UINavigationControllerDelega
         if segue.identifier == "ViewMemberEvents" {
             let memberEventsTableViewController = segue.destination as! MemberEventsTableViewController
             memberEventsTableViewController.member = member
-            memberEventsTableViewController.user = user 
+            memberEventsTableViewController.user = user
         }
     }
     

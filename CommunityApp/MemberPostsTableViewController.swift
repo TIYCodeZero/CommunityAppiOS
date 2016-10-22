@@ -10,7 +10,8 @@ import UIKit
 
 class MemberPostsTableViewController: UITableViewController {
 
-    var member: Member?
+    var user: Member?
+    var member: Member!
     var posts: [Post] = []
     var memberPost: [Post] = []
     var postsStore: PostsStore = PostsStore()
