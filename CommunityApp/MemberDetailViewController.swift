@@ -44,6 +44,9 @@ class MemberDetailViewController: UIViewController, UINavigationControllerDelega
         emailField.text = member.email
         if user != member {
             toolbar.isHidden = true
+            nameField.isEnabled = false
+            addressField.isEnabled = false
+            emailField.isEnabled = false
         }
     }
  

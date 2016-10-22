@@ -42,7 +42,6 @@ class MemberPostsTableViewController: UITableViewController {
         return posts.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MemberPostCell", for: indexPath) as! MemberPostCell
         let memberPost = posts[indexPath.row]
@@ -59,7 +58,6 @@ class MemberPostsTableViewController: UITableViewController {
         var  request = URLRequest(url: method.url)
         request.httpMethod = "POST"
         request.httpBody = try! JSONSerialization.data(withJSONObject: member.jsonObject, options: [])
-        
         let task = session.dataTask(with: request) { (optData, optResponse, optError) in
             guard let data = optData else {
                 let errorDescription = optResponse?.description ?? optError!.localizedDescription
@@ -82,11 +80,9 @@ class MemberPostsTableViewController: UITableViewController {
             }
         }
         task.resume()
-        
     }
         func displayAlertMessage(){
             CommunityApp.displayAlertMessage(title: "Alert", message: "\(member!.firstName) \(member!.lastName) has no posts", from: self)
         }
-
  
 }

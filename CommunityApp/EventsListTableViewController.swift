@@ -10,6 +10,7 @@ import UIKit
 
 class EventsListTableViewController: UITableViewController {
 
+    var member: Member!
     var user: Member?
     var events: [Event] = []
     var eventStore: EventStore = EventStore()
@@ -58,11 +59,10 @@ class EventsListTableViewController: UITableViewController {
                 let event = events[row]
                 let eventDetailVC = segue.destination as! EventDetailViewController
                 eventDetailVC.event = event
-                eventDetailVC.member = user
+                eventDetailVC.user = user
+                eventDetailVC.member = member
             }
-            
         }
     }
-
    
 }

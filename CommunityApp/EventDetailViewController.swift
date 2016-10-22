@@ -17,6 +17,7 @@ class EventDetailViewController: UIViewController {
     @IBOutlet var organizerTextField: UITextField!
     @IBOutlet var informationLabel: UILabel!
     
+    var user: Member?
     var event: Event!
     var member: Member!
     var organization: Organization!
@@ -29,6 +30,11 @@ class EventDetailViewController: UIViewController {
         organizationTextField.text = event.organization.name
         organizerTextField.text = "\(event.organizer.firstName) \(event.organizer.lastName)"
         informationLabel.text = event.information
+        nameTextField.isEnabled = false
+        dateTextField.isEnabled = false
+        locationTextField.isEnabled = false
+        organizationTextField.isEnabled = false
+        organizerTextField.isEnabled = false
     }
-   
+    
 }
