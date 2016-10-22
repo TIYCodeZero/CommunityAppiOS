@@ -70,4 +70,13 @@ class RegisterViewController: UIViewController {
             }
             .resume()
     }
+    
+    @IBAction func dismissKeyboard(_ sender: AnyObject){
+        firstNameField.resignFirstResponder()
+        lastNameField.resignFirstResponder()
+        emailField.resignFirstResponder()
+        streetAddressField.resignFirstResponder()
+        passwordField.resignFirstResponder()
+        confirmPasswordField.resignFirstResponder()
+    }
 }

@@ -17,7 +17,6 @@ class Member {
     public var id: Int
     public var password: String
     public var photoURL: String
-//  public var imageKey: String
     
     init(firstName: String, lastName: String, email: String, streetAddress: String, id: Int, password: String, photoURL: String){
         self.firstName = firstName

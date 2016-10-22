@@ -15,8 +15,8 @@ class MemberDetailViewController: UIViewController, UINavigationControllerDelega
     @IBOutlet var addressField: UITextField!
     @IBOutlet var emailField: UITextField!
  
+    var user: Member!
     var member: Member!
-//    var imageStore: ImageStore = ImageStore()
     
     @IBAction func cameraButtonTapped(_ sender: AnyObject) {
         let imagePicker = UIImagePickerController()
@@ -37,6 +37,7 @@ class MemberDetailViewController: UIViewController, UINavigationControllerDelega
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        loadImage(member.photoURL)
         nameField.text = "\(member.firstName) \(member.lastName)"
         addressField.text = member.streetAddress
         emailField.text = member.email
@@ -50,7 +51,23 @@ class MemberDetailViewController: UIViewController, UINavigationControllerDelega
         if segue.identifier == "ViewMemberEvents" {
             let memberEventsTableViewController = segue.destination as! MemberEventsTableViewController
             memberEventsTableViewController.member = member
+            memberEventsTableViewController.user = user 
         }
+    }
+    
+    func loadImage(_ urlString:String) {
+        let imageURL: URL = URL(string: urlString)!
+        let request: URLRequest = URLRequest(url: imageURL)
+        let session = URLSession(configuration: CommunityAPI.sessionConfig)
+        let task = session.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
+            if (error == nil && data != nil) {
+                func display_image() {
+                    self.imageView.image = UIImage(data: data!)
+                }
+                DispatchQueue.main.async(execute: display_image)
+            }
+        })
+        task.resume()
     }
     
 }

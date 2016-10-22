@@ -70,4 +70,8 @@ final class LoginViewController: UIViewController {
             .resume()
     }
     
+    @IBAction func dismissKeyboard(_ sender: AnyObject){
+        emailField.resignFirstResponder()
+        passwordField.resignFirstResponder()
+    }
 }

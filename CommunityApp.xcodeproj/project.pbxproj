@@ -13,7 +13,6 @@
 		F706B88A1DB1253500F2EB37 /* EventRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F706B8891DB1253500F2EB37 /* EventRequest.swift */; };
 		F706B88C1DB14DC500F2EB37 /* EventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F706B88B1DB14DC500F2EB37 /* EventTests.swift */; };
 		F706B88E1DB2A55F00F2EB37 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F706B88D1DB2A55F00F2EB37 /* CreateEventViewController.swift */; };
-		F70CD57E1DB3F7F700A4F880 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70CD57D1DB3F7F700A4F880 /* ImageStore.swift */; };
 		F70CD5801DB414DB00A4F880 /* OrganizationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70CD57F1DB414DB00A4F880 /* OrganizationsTableViewController.swift */; };
 		F70CD5821DB416F800A4F880 /* OganizationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70CD5811DB416F800A4F880 /* OganizationStore.swift */; };
 		F70CD5841DB419B500A4F880 /* OrganizationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70CD5831DB419B500A4F880 /* OrganizationRequest.swift */; };
@@ -85,7 +84,6 @@
 		F706B8891DB1253500F2EB37 /* EventRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRequest.swift; sourceTree = "<group>"; };
 		F706B88B1DB14DC500F2EB37 /* EventTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTests.swift; sourceTree = "<group>"; };
 		F706B88D1DB2A55F00F2EB37 /* CreateEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
-		F70CD57D1DB3F7F700A4F880 /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		F70CD57F1DB414DB00A4F880 /* OrganizationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationsTableViewController.swift; sourceTree = "<group>"; };
 		F70CD5811DB416F800A4F880 /* OganizationStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OganizationStore.swift; sourceTree = "<group>"; };
 		F70CD5831DB419B500A4F880 /* OrganizationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationRequest.swift; sourceTree = "<group>"; };
@@ -198,7 +196,6 @@
 				F706B8891DB1253500F2EB37 /* EventRequest.swift */,
 				F706B8831DB1221D00F2EB37 /* EventsListTableViewController.swift */,
 				F706B8871DB1246500F2EB37 /* EventStore.swift */,
-				F70CD57D1DB3F7F700A4F880 /* ImageStore.swift */,
 				F73F002C1DA8235C007A9DEC /* Info.plist */,
 				F787A1081DB658C100042B0F /* InvitationRequest.swift */,
 				F70CD5891DB522A800A4F880 /* InvitationViewController.swift */,
@@ -430,7 +427,6 @@
 				F787A10D1DB676D000042B0F /* OrgPostsTableViewController.swift in Sources */,
 				F71FB11C1DAD6A450091E8A8 /* PostsStore.swift in Sources */,
 				F71FB1121DAD2E030091E8A8 /* MemberCell.swift in Sources */,
-				F70CD57E1DB3F7F700A4F880 /* ImageStore.swift in Sources */,
 				F71FB11A1DAD6A150091E8A8 /* PostsTableViewController.swift in Sources */,
 				F71FB1141DAD2E580091E8A8 /* MemberStore.swift in Sources */,
 				F7785EB81DAE786600149DCE /* CreatePostViewController.swift in Sources */,

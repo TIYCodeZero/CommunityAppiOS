@@ -74,6 +74,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="BEI-ou-gIP" secondAttribute="leading" id="At7-pc-zhm"/>
                             <constraint firstItem="4OD-oQ-jO5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DTz-xG-a0B"/>
@@ -85,6 +86,9 @@
                             <constraint firstItem="hzw-5N-QKF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oxU-94-9wc"/>
                             <constraint firstItem="khJ-Id-Avq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sVr-i0-xtQ"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="HGh-GK-tHT" appends="YES" id="ChR-pb-soM"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="CfC-EF-KpZ"/>
                     <connections>
@@ -93,6 +97,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="HGh-GK-tHT">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="BYZ-38-t0r" id="evb-Ly-clU"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-4026" y="437"/>
         </scene>
@@ -224,6 +233,7 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="rUy-p5-D2w" firstAttribute="centerX" secondItem="fzw-aF-qHD" secondAttribute="centerX" id="URq-Vu-HLN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lHr-YA-myD" secondAttribute="trailing" id="fTi-Nj-kJm"/>
@@ -231,6 +241,9 @@
                             <constraint firstItem="rUy-p5-D2w" firstAttribute="top" secondItem="lHr-YA-myD" secondAttribute="bottom" constant="16" id="nNP-9f-Lj4"/>
                             <constraint firstItem="lHr-YA-myD" firstAttribute="top" secondItem="pXw-95-HFb" secondAttribute="bottom" constant="8" id="xLy-6H-VqV"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="rvW-ag-IrG" appends="YES" id="kBW-ZW-uaE"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="confirmPasswordField" destination="7DB-aL-SYh" id="0xv-iU-FDK"/>
@@ -242,6 +255,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pCi-bX-Fga" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="rvW-ag-IrG">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="Wih-ay-5GT" id="TTZ-lx-50D"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-4026" y="1124"/>
         </scene>
@@ -1225,7 +1243,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Ti-RF-B6g">
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Ti-RF-B6g">
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -1239,7 +1257,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ry-gF-45C">
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ry-gF-45C">
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -1253,7 +1271,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nRg-3i-om7">
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nRg-3i-om7">
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -1269,7 +1287,7 @@
                                                     <constraint firstItem="3EG-nv-Y0F" firstAttribute="width" secondItem="9cP-3T-kNi" secondAttribute="width" id="iR8-e9-ZmM"/>
                                                 </constraints>
                                             </stackView>
-                                            <imageView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleAspectFill" verticalHuggingPriority="248" verticalCompressionResistancePriority="748" image="DefaultAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="HOP-8p-mRy"/>
+                                            <imageView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleAspectFit" verticalHuggingPriority="248" verticalCompressionResistancePriority="748" image="DefaultAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="HOP-8p-mRy"/>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="AmV-eq-N0w" secondAttribute="trailing" id="0x1-mT-V5U"/>
