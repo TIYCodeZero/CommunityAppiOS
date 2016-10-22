@@ -82,6 +82,7 @@ class MemberPostsTableViewController: UITableViewController {
         }
         task.resume()
     }
+    
         func displayAlertMessage(){
             CommunityApp.displayAlertMessage(title: "Alert", message: "\(member!.firstName) \(member!.lastName) has no posts", from: self)
         }
