@@ -11,6 +11,7 @@ import UIKit
 class CreateEventViewController: UIViewController {
     
     var user: Member?
+    var organization: Organization?
 
     @IBOutlet var nameLabel: UITextField!
     @IBOutlet var locationLabel: UITextField!
