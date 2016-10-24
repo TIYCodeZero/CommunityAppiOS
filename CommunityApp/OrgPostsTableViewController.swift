@@ -17,13 +17,16 @@ class OrgPostsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "\(organization.name) Posts"
         let statusBarHeight = UIApplication.shared.statusBarFrame.height
         let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
         tableView.contentInset = insets
         tableView.scrollIndicatorInsets = insets
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 100
+     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        title = "\(organization.name) Posts"
         getMemberPosts {
             (PostsResult) -> Void in
             switch PostsResult {
