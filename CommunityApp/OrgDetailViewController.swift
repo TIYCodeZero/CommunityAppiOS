@@ -10,6 +10,7 @@ import UIKit
 
 class OrgDetailViewController: UIViewController {
     
+    var user: Member!
     var organization: Organization!
     
     override func viewWillAppear(_ animated: Bool) {
@@ -17,30 +18,22 @@ class OrgDetailViewController: UIViewController {
         title = organization.name
     }
     
-    @IBAction func viewMembers(_ sender: AnyObject) {
-        
-    }
-    
-    @IBAction func sendInvitation(_ sender: AnyObject) {
-        
-    }
-    
-    @IBAction func viewPosts(_ sender: AnyObject) {
-        
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "InviteMembers" {
             let orgInviteVC = segue.destination as! InvitationViewController
             orgInviteVC.organization = organization
+            orgInviteVC.user = user
         }
         if segue.identifier == "ShowOrgPosts" {
             let orgPostsVC = segue.destination as! OrgPostsTableViewController
             orgPostsVC.organization = organization
+            orgPostsVC.user = user
         }
         if segue.identifier == "ShowOrgEvents" {
             let orgEventsVC = segue.destination as! OrgEventsTableViewController
             orgEventsVC.organization = organization
+            orgEventsVC.user = user
         }
         if segue.identifier == "ShowOrgMembers" {
             let orgMembersVC = segue.destination as! OrgMembersTableViewController

@@ -16,7 +16,6 @@ class MemberDetailViewController: UIViewController, UINavigationControllerDelega
     @IBOutlet var emailField: UITextField!
     @IBOutlet var toolbar: UIToolbar!
  
-    var user: Member!
     var member: Member!
     
     @IBAction func cameraButtonTapped(_ sender: AnyObject) {
@@ -42,12 +41,10 @@ class MemberDetailViewController: UIViewController, UINavigationControllerDelega
         nameField.text = "\(member.firstName) \(member.lastName)"
         addressField.text = member.streetAddress
         emailField.text = member.email
-        if user != member {
-            toolbar.isHidden = true
-            nameField.isEnabled = false
-            addressField.isEnabled = false
-            emailField.isEnabled = false
-        }
+        toolbar.isHidden = true
+        nameField.isEnabled = false
+        addressField.isEnabled = false
+        emailField.isEnabled = false
     }
  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -58,7 +55,6 @@ class MemberDetailViewController: UIViewController, UINavigationControllerDelega
         if segue.identifier == "ViewMemberEvents" {
             let memberEventsTableViewController = segue.destination as! MemberEventsTableViewController
             memberEventsTableViewController.member = member
-            memberEventsTableViewController.user = user
         }
     }
     

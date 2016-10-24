@@ -10,30 +10,30 @@ import UIKit
 
 class MemberOrgsViewController: UITableViewController {
     
-    var member: Member!
+    var user: Member!
     var organizations: [Organization] = []
     var organizationStore: OrganizationStore = OrganizationStore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "\(member.firstName) \(member.lastName)'s Organizations"
+        title = "\(user.firstName) \(user.lastName)'s Communities"
         let statusBarHeight = UIApplication.shared.statusBarFrame.height
         let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
         tableView.contentInset = insets
         tableView.scrollIndicatorInsets = insets
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 100
-        organizationStore.fetchOrgsByMember {
+        fetchOrgsByMember {
             (OrgResult) -> Void in
             switch OrgResult {
             case let .success(organizations):
-                print("Successfully found \(organizations.count) organizations.")
+                print("Successfully found \(organizations.count) communities.")
                 OperationQueue.main.addOperation {
                     self.organizations = organizations
                     self.tableView.reloadData()
                 }
             case let .failure(error):
-                print("Error fetching organizations: \(error)")
+                print("Error fetching communities: \(error)")
             }
         }
     }
@@ -50,13 +50,35 @@ class MemberOrgsViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "CreateEventVC" {
+        if segue.identifier == "ViewOrgDetails" {
             if let row = (tableView.indexPathForSelectedRow as IndexPath?)?.row {
                 let organization = organizations[row]
-                let createEventVC = segue.destination as! CreateEventViewController
-                createEventVC.organization = organization
+                let viewOrgDetailsVC = segue.destination as! OrgDetailViewController
+                viewOrgDetailsVC.organization = organization
+                viewOrgDetailsVC.user = user
             }
         }
     }
-    
+   
+    func fetchOrgsByMember(completionHandler: @escaping (OrgResult)-> Void) -> Void {
+        let session = URLSession(configuration: CommunityAPI.sessionConfig)
+        let method = CommunityAPI.Method.membersOrgs
+        var request = URLRequest(url: method.url)
+        request.httpMethod = "POST"
+        request.httpBody = try! JSONSerialization.data(withJSONObject: user.jsonObject, options: [])
+        let task = session.dataTask(with: request) { (optData, optResponse, optError) in
+            guard let data = optData else {
+                let errorDescription = optResponse?.description ?? optError!.localizedDescription
+                let orgResult: OrgResult = .failure(errorDescription)
+                completionHandler(orgResult)
+                return
+            }
+            let jsonObject = try! JSONSerialization.jsonObject(with: data, options: []) as [String:Any]
+            let orgDictionaries = jsonObject["responseOrganization"] as? [[String: Any]]
+            let orgs = Organization.array(dictionaries: orgDictionaries!)
+            completionHandler(.success(orgs))
+        }
+        task.resume()
+    }
+
 }

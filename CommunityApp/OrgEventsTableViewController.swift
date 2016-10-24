@@ -10,7 +10,7 @@ import UIKit
 
 class OrgEventsTableViewController: UITableViewController {
     
-    var member: Member!
+    var user: Member!
     var events: [Event] = []
     var eventStore: EventStore = EventStore()
     var organization: Organization!
@@ -88,14 +88,19 @@ class OrgEventsTableViewController: UITableViewController {
                 let event = events[row]
                 let eventDetailVC = segue.destination as! EventDetailViewController
                 eventDetailVC.event = event
-                eventDetailVC.member = member
+                eventDetailVC.user = user
             }
-            
+        }
+        if segue.identifier == "CreateEvent" {
+            let createEventVC = segue.destination as! CreateEventViewController
+            createEventVC.organization = organization
+            createEventVC.user = user
         }
     }
-
 }
 
-        
-        
+
+
+
+
 

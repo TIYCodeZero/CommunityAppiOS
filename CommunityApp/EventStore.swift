@@ -8,9 +8,7 @@
 
 import UIKit
 
-
 class EventStore {
-    
     
     var allEvents: [Event] = []
     

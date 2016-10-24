@@ -10,7 +10,8 @@ import UIKit
 
 class CreatePostViewController: UIViewController {
     
-    var user: Member?
+    var organization: Organization!
+    var user: Member!
     
     @IBOutlet var titleField: UITextField!
     @IBOutlet var bodyField: UITextField!
@@ -19,7 +20,6 @@ class CreatePostViewController: UIViewController {
         let currentDate = Date()
         let dateFormatter = ISO8601DateFormatter()
         let date = dateFormatter.string(from: currentDate)
-        let member = user!
         guard let title = titleField.text,
             let body = bodyField.text else {
                 CommunityApp.displayAlertMessage(title: "Error", message: "All fields are required", from: self)
@@ -29,7 +29,7 @@ class CreatePostViewController: UIViewController {
         let method = CommunityAPI.Method.createPost
         var request = URLRequest(url: method.url)
         request.httpMethod = "POST"
-        let postProfile: [String: Any] = ["date": date, "title": title, "body": body, "member": member.jsonObject]
+        let postProfile: [String: Any] = ["date": date, "title": title, "body": body, "member": user.jsonObject, "organization": organization.jsonObject]
         request.httpBody = try! JSONSerialization.data(withJSONObject: postProfile, options: [])
         session.dataTask(with: request) { (optData, optResponse, optError) in
             OperationQueue.main.addOperation {
@@ -44,6 +44,7 @@ class CreatePostViewController: UIViewController {
                 case let .failure(message):
                     print("💜\(message)")
                     self.displayAlertMessage()
+                    _ = self.navigationController?.popViewController(animated: true)
                 }
             }
             }

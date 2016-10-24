@@ -10,8 +10,8 @@ import UIKit
 
 class CreateEventViewController: UIViewController {
     
-    var user: Member?
-    var organization: Organization?
+    var user: Member!
+    var organization: Organization!
 
     @IBOutlet var nameLabel: UITextField!
     @IBOutlet var locationLabel: UITextField!
@@ -23,7 +23,6 @@ class CreateEventViewController: UIViewController {
     
     @IBAction func createEvent(_ sender: AnyObject) {
         let dateFormatter = ISO8601DateFormatter()
-        let organizer = user!
         let date = dateFormatter.string(from: datePicker.date)
         guard let name = nameLabel.text,
             let location = locationLabel.text,
@@ -35,7 +34,7 @@ class CreateEventViewController: UIViewController {
         let method = CommunityAPI.Method.createEvent
         var request = URLRequest(url: method.url)
         request.httpMethod = "POST"
-        let eventProfile: [String: Any] = ["date": date, "name": name, "location": location, "information": information, "organizer": organizer.jsonObject]
+        let eventProfile: [String: Any] = ["date": date, "name": name, "location": location, "information": information, "organizer": user.jsonObject, "organization": organization.jsonObject]
         request.httpBody = try! JSONSerialization.data(withJSONObject: eventProfile, options: [])
         session.dataTask(with: request) { (optData, optResponse, optError) in
             OperationQueue.main.addOperation {

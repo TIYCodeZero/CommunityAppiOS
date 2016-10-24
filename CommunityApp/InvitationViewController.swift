@@ -14,6 +14,7 @@ class InvitationViewController: UIViewController, MFMailComposeViewControllerDel
     @IBOutlet var invitationInfoLabel: UILabel!
     @IBOutlet var emailTextField: UITextField!
     
+    var user: Member!
     var organization: Organization!
     var invitationRequest: Invitation.Request? {
         guard let email = emailTextField?.text,

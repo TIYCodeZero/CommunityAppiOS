@@ -30,22 +30,5 @@ class OrganizationStore {
         task.resume()
     }
     
-    func fetchOrgsByMember(completionHandler: @escaping (OrgResult)-> Void) -> Void {
-        let session = URLSession(configuration: CommunityAPI.sessionConfig)
-        let method = CommunityAPI.Method.membersOrgs
-        var request = URLRequest(url: method.url)
-        request.httpMethod = "POST"
-        request.httpBody = try! JSONSerialization.data(withJSONObject: member.jsonObject, options: [])
-        let task = session.dataTask(with: request) { (optData, optResponse, optError) in
-            guard let data = optData else {
-                let errorDescription = optResponse?.description ?? optError!.localizedDescription
-                let orgResult: OrgResult = .failure(errorDescription)
-                completionHandler(orgResult)
-                return
-            }
-            completionHandler(.success(Organization.array(data: data)))
-        }
-        task.resume()
-    }
-    
+       
 }

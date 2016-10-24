@@ -10,6 +10,7 @@ import UIKit
 
 class OrgPostsTableViewController: UITableViewController {
     
+    var user: Member?
     var posts: [Post] = []
     var postsStore: PostsStore = PostsStore()
     var organization: Organization!
@@ -59,11 +60,8 @@ class OrgPostsTableViewController: UITableViewController {
         let method = CommunityAPI.Method.postsByOrg
         var request = URLRequest(url: method.url)
         request.httpMethod = "POST"
-        
         let orgPostProfile: [String: Any] = ["name": name, "id": id]
         request.httpBody = try! JSONSerialization.data(withJSONObject: orgPostProfile, options: [])
-        
-        
         let task = session.dataTask(with: request) { (optData, optResponse, optError) in
             guard let data = optData else {
                 let errorDescription = optResponse?.description ?? optError!.localizedDescription
@@ -79,4 +77,12 @@ class OrgPostsTableViewController: UITableViewController {
         task.resume()
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "CreatePost" {
+            let createPostVC = segue.destination as! CreatePostViewController
+            createPostVC.user = user
+            createPostVC.organization = organization
+        }
+    }
+    
 }

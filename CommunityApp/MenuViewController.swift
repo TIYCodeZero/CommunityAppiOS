@@ -16,20 +16,14 @@ class MenuViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? CreatePostViewController {
+        if let destination = segue.destination as? MemberDetailViewController {
+            destination.member = self.user
+        }
+        if let destination = segue.destination as? MemberOrgsViewController {
             destination.user = self.user
         }
-        if let destination = segue.destination as? CreateEventViewController {
-            destination.user = self.user
-        }
-        if let destination = segue.destination as? OrganizationsTableViewController {
-            destination.user = self.user
-        }
-        if let destination = segue.destination as? MembersTableViewController {
-            destination.user = self.user
-        }
-        if let destination = segue.destination as? EventsListTableViewController {
-            destination.user = self.user
+        if let destination = segue.destination as? MemberPostsTableViewController {
+            destination.member = self.user
         }
     }
     

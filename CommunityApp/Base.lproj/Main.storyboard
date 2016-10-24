@@ -103,7 +103,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-4039" y="-385"/>
+            <point key="canvasLocation" x="-3532" y="-2124"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="rah-u6-U9c">
@@ -261,7 +261,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-4039" y="358"/>
+            <point key="canvasLocation" x="-2607" y="-2124"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="40d-0M-VC3">
@@ -279,7 +279,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vtO-1J-fwX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4039" y="-1239"/>
+            <point key="canvasLocation" x="-4436" y="-2124"/>
         </scene>
         <!--Member Events Table View Controller-->
         <scene sceneID="aoV-gR-Ajs">
@@ -342,7 +342,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Dd-D7-EYL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="508" y="-497"/>
+            <point key="canvasLocation" x="-1690" y="-654"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="sqo-1T-nBJ">
@@ -357,24 +357,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4NF-qn-29s">
-                                <state key="normal" title="View Organizations"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="My Communities">
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
-                                    <segue destination="tFs-oe-GaB" kind="show" identifier="ShowOrganizations" id="vRy-IR-gWr"/>
+                                    <segue destination="5sY-Dy-g0M" kind="show" identifier="ViewMyCommunities" id="zfi-gz-Wqy"/>
+                                </connections>
+                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BNF-Ql-dK1">
+                                <frame key="frameInset" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="My Profile" id="iix-71-xRM">
+                                        <connections>
+                                            <segue destination="Fsq-6O-U4H" kind="show" id="gDh-TX-bQ6"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AgH-AV-3Ve">
+                                <state key="normal" title="My Posts">
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Db4-ua-nmL" kind="show" identifier="ViewMemberPosts" id="Wvu-K8-lo4"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4NF-qn-29s" firstAttribute="centerY" secondItem="8a5-R7-IMZ" secondAttribute="centerY" id="CGl-UH-Aa7"/>
-                            <constraint firstItem="4NF-qn-29s" firstAttribute="centerX" secondItem="8a5-R7-IMZ" secondAttribute="centerX" id="Ugs-TP-LfH"/>
-                            <constraint firstItem="4NF-qn-29s" firstAttribute="centerX" secondItem="8a5-R7-IMZ" secondAttribute="centerX" id="k2L-Ho-fVX"/>
+                            <constraint firstItem="4NF-qn-29s" firstAttribute="centerY" secondItem="8a5-R7-IMZ" secondAttribute="centerY" id="FIM-dM-Pzm"/>
+                            <constraint firstItem="T3j-K7-JUE" firstAttribute="top" secondItem="AgH-AV-3Ve" secondAttribute="bottom" constant="56" id="JT1-B2-2vE"/>
+                            <constraint firstItem="4NF-qn-29s" firstAttribute="centerX" secondItem="8a5-R7-IMZ" secondAttribute="centerX" id="S8b-O9-YI6"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="AgH-AV-3Ve" secondAttribute="leading" id="vZb-4n-MdC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cIh-wK-t07"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m5H-rY-its" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2404" y="-1239"/>
+            <point key="canvasLocation" x="-3532" y="-1397.4512743628186"/>
         </scene>
         <!--Org Members Table View Controller-->
         <scene sceneID="pTa-Vx-Uos">
@@ -431,7 +454,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OjN-O3-wgJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-257" y="-497"/>
+            <point key="canvasLocation" x="-1743" y="-1397"/>
         </scene>
         <!--Create Post-->
         <scene sceneID="Ohg-LZ-TXm">
@@ -495,7 +518,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbg-bg-v5v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1361" y="-1923"/>
+            <point key="canvasLocation" x="161" y="-2124"/>
         </scene>
         <!--Create Event View Controller-->
         <scene sceneID="lO3-MF-G5P">
@@ -587,50 +610,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bo2-IY-uLg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1361" y="-1239"/>
-        </scene>
-        <!--Organizations Table View Controller-->
-        <scene sceneID="bod-wM-fMA">
-            <objects>
-                <tableViewController id="tFs-oe-GaB" customClass="OrganizationsTableViewController" customModule="CommunityApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2Z6-lg-YUs">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrgCell" rowHeight="75" id="44u-MV-IyW" customClass="OrganizationCell" customModule="CommunityApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="75"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="44u-MV-IyW" id="1X0-R5-Bo9">
-                                    <frame key="frameInset" width="375" height="74"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Org Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WD2-TF-RFB">
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="WD2-TF-RFB" firstAttribute="centerY" secondItem="1X0-R5-Bo9" secondAttribute="centerY" id="933-bG-nij"/>
-                                        <constraint firstAttribute="leadingMargin" secondItem="WD2-TF-RFB" secondAttribute="leading" id="yZU-UZ-e1j"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="nameLabel" destination="WD2-TF-RFB" id="Bl9-GK-Frk"/>
-                                    <segue destination="IcX-eh-zDy" kind="show" identifier="ShowOrgDetail" id="2aK-LP-Ccc"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="tFs-oe-GaB" id="AcT-fa-tts"/>
-                            <outlet property="delegate" destination="tFs-oe-GaB" id="oeu-87-Pz8"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="04i-GJ-Mpu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1594" y="-1239"/>
+            <point key="canvasLocation" x="161" y="-1397"/>
         </scene>
         <!--Org Detail View Controller-->
         <scene sceneID="1Rz-es-LG9">
@@ -647,19 +627,19 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6kQ-04-77G">
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYo-SN-pfs">
-                                        <state key="normal" title="View Posts"/>
+                                        <state key="normal" title="Community Posts"/>
                                         <connections>
                                             <segue destination="oyg-2T-TNl" kind="show" identifier="ShowOrgPosts" id="Gx8-oE-ZJd"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Npn-RK-G3e">
-                                        <state key="normal" title="View Events"/>
+                                        <state key="normal" title="Community Events"/>
                                         <connections>
                                             <segue destination="w1k-Cw-iqC" kind="show" identifier="ShowOrgEvents" id="a1r-Dl-jXV"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhT-P6-XdT">
-                                        <state key="normal" title="View Members"/>
+                                        <state key="normal" title="Community Members"/>
                                         <connections>
                                             <segue destination="hKf-dt-heV" kind="show" identifier="ShowOrgMembers" id="EHU-jo-AQ1"/>
                                         </connections>
@@ -682,7 +662,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tEz-1T-eGe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-700" y="-1239"/>
+            <point key="canvasLocation" x="-1569" y="-2124"/>
         </scene>
         <!--Invitation View Controller-->
         <scene sceneID="Nux-zM-RTf">
@@ -732,7 +712,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jUN-Yn-Ecn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1100" y="-497"/>
+            <point key="canvasLocation" x="-751" y="-2860"/>
         </scene>
         <!--Org Events Table View Controller-->
         <scene sceneID="Gtz-IC-hus">
@@ -797,10 +777,17 @@
                             <outlet property="delegate" destination="w1k-Cw-iqC" id="8pO-qh-goz"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="OiZ-OB-XFW">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="WCi-2A-9ep">
+                            <connections>
+                                <segue destination="Exh-Qx-muH" kind="show" identifier="CreateEvent" id="ZRJ-Ox-1V9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pcb-Zq-JEJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="508" y="-1239"/>
+            <point key="canvasLocation" x="-751" y="-1397"/>
         </scene>
         <!--Event Detail View Controller-->
         <scene sceneID="hry-Le-MCL">
@@ -860,7 +847,7 @@
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Adw-E7-8OY">
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organization:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYU-VU-fgm">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Community:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYU-VU-fgm">
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -921,7 +908,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8hy-ci-6gR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1361" y="-497"/>
+            <point key="canvasLocation" x="-751" y="-654"/>
         </scene>
         <!--Org Posts Table View Controller-->
         <scene sceneID="otL-ST-iak">
@@ -969,7 +956,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="bodyLabel" destination="yYk-Oc-zGK" id="miG-Lk-t8b"/>
+                                    <outlet property="bodyLabel" destination="yYk-Oc-zGK" id="p6e-QZ-XrZ"/>
                                     <outlet property="memberLabel" destination="4cs-YE-Ffd" id="UYh-OQ-hkX"/>
                                     <outlet property="titleLabel" destination="Z60-rJ-9zX" id="oME-8V-YwZ"/>
                                 </connections>
@@ -980,10 +967,17 @@
                             <outlet property="delegate" destination="oyg-2T-TNl" id="Nob-Ff-JlQ"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="79r-eu-la2">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ePm-dQ-zoX">
+                            <connections>
+                                <segue destination="GuK-VY-b8e" kind="show" identifier="CreatePost" id="87b-5V-H4T"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pCq-04-zgT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="508" y="-1922"/>
+            <point key="canvasLocation" x="-751" y="-2124"/>
         </scene>
         <!--Member Orgs View Controller-->
         <scene sceneID="ues-q8-ZvK">
@@ -995,7 +989,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemberOrgCell" id="IBF-W3-Lhx" customClass="MemberOrgCell" customModule="CommunityApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IBF-W3-Lhx" id="8Um-Lo-hAV">
                                     <frame key="frameInset" width="375" height="43"/>
@@ -1012,6 +1006,10 @@
                                         <constraint firstItem="Lp6-E1-1uH" firstAttribute="leading" secondItem="8Um-Lo-hAV" secondAttribute="leadingMargin" constant="8" id="guN-qp-8AR"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="Lp6-E1-1uH" id="wGY-ol-edW"/>
+                                    <segue destination="IcX-eh-zDy" kind="show" identifier="ViewOrgDetails" id="gLr-YQ-EcD"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1022,7 +1020,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mFp-3x-vh6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2537" y="883"/>
+            <point key="canvasLocation" x="-2607.1999999999998" y="-1397.4512743628186"/>
         </scene>
         <!--Member Detail View Controller-->
         <scene sceneID="bYo-OV-gSN">
@@ -1102,13 +1100,13 @@
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bk8-Yo-QgQ">
-                                        <state key="normal" title="View This Member's Posts"/>
+                                        <state key="normal" title="View Posts"/>
                                         <connections>
                                             <segue destination="Db4-ua-nmL" kind="show" identifier="ViewMemberPosts" id="ms2-3H-RLz"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72W-k6-xA7">
-                                        <state key="normal" title="View This Member's Events"/>
+                                        <state key="normal" title="View Events"/>
                                         <connections>
                                             <segue destination="sCy-wd-7KJ" kind="show" identifier="ViewMemberEvents" id="hhc-f0-dHL"/>
                                         </connections>
@@ -1149,7 +1147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hC4-Ba-kd8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-258" y="260"/>
+            <point key="canvasLocation" x="-2607" y="-654"/>
         </scene>
         <!--Member Posts Table View Controller-->
         <scene sceneID="4ab-gw-PRI">
@@ -1211,7 +1209,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="orB-MK-3qa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="508" y="260"/>
+            <point key="canvasLocation" x="-3532" y="24"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xN8-l4-f54">
@@ -1229,13 +1227,15 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="htL-lA-SF9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3218" y="-1239"/>
+            <point key="canvasLocation" x="-4436" y="-1397"/>
         </scene>
     </scenes>
     <resources>
         <image name="DefaultAvatar" width="400" height="400"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2zP-L2-C8a"/>
+        <segue reference="gDh-TX-bQ6"/>
+        <segue reference="Wvu-K8-lo4"/>
+        <segue reference="WUl-28-vpf"/>
     </inferredMetricsTieBreakers>
 </document>
