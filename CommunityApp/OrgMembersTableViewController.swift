@@ -58,6 +58,7 @@ class OrgMembersTableViewController: UITableViewController {
                 let member = members[row]
                 let memberDetailViewController = segue.destination as! MemberDetailViewController
                 memberDetailViewController.member = member
+                memberDetailViewController.organization = organization
             }
         }
     }

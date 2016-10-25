@@ -17,6 +17,7 @@ class MemberDetailViewController: UIViewController, UINavigationControllerDelega
     @IBOutlet var toolbar: UIToolbar!
  
     var member: Member!
+    var organization: Organization!
     
     @IBAction func cameraButtonTapped(_ sender: AnyObject) {
         let imagePicker = UIImagePickerController()
@@ -51,6 +52,7 @@ class MemberDetailViewController: UIViewController, UINavigationControllerDelega
         if segue.identifier == "ViewMemberPosts" {
            let memberPostsTableViewController = segue.destination as! MemberPostsTableViewController
             memberPostsTableViewController.member = member
+            memberPostsTableViewController.organization = organization
         }
         if segue.identifier == "ViewMemberEvents" {
             let memberEventsTableViewController = segue.destination as! MemberEventsTableViewController
