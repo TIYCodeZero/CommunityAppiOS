@@ -28,6 +28,10 @@ class InvitationViewController: UIViewController, MFMailComposeViewControllerDel
         CommunityApp.displayAlertMessage(title: "Error", message: "Please check your information and try again", from: self)
     }
     
+    @IBAction func dismissKeyboard(_ sender: AnyObject) {
+        emailTextField.resignFirstResponder()
+    }
+    
     @IBAction func sendInvitationButton(_ sender: AnyObject) {
         let composeVC = configuredMailComposeVC()
         if MFMailComposeViewController.canSendMail() {
