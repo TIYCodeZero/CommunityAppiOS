@@ -42,7 +42,6 @@ class MemberDetailViewController: UIViewController, UINavigationControllerDelega
         nameField.text = "\(member.firstName) \(member.lastName)"
         addressField.text = member.streetAddress
         emailField.text = member.email
-        toolbar.isHidden = true
         nameField.isEnabled = false
         addressField.isEnabled = false
         emailField.isEnabled = false

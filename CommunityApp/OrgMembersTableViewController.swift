@@ -59,6 +59,7 @@ class OrgMembersTableViewController: UITableViewController {
                 let memberDetailViewController = segue.destination as! MemberDetailViewController
                 memberDetailViewController.member = member
                 memberDetailViewController.organization = organization
+                memberDetailViewController.toolbar.isHidden = true
             }
         }
     }
