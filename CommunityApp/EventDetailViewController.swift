@@ -25,7 +25,7 @@ class EventDetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         nameTextField.text = event.name
-        dateTextField.text = "\(event.date)"
+        dateTextField.text = simpleDate(from: event.date)
         locationTextField.text = event.location
         organizationTextField.text = event.organization.name
         organizerTextField.text = "\(event.organizer.firstName) \(event.organizer.lastName)"
@@ -37,4 +37,14 @@ class EventDetailViewController: UIViewController {
         organizerTextField.isEnabled = false
     }
     
+    func simpleDate(from date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = DateFormatter.Style.long
+        formatter.timeStyle = .medium
+        formatter.amSymbol = "AM"
+        formatter.pmSymbol = "PM"
+        formatter.dateFormat = "MMM dd, yyyy, hh:mm a"
+        let dateString = formatter.string(from: date)
+        return dateString
+    }
 }

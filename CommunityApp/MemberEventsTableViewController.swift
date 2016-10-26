@@ -51,7 +51,7 @@ class MemberEventsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MemberEventCell", for: indexPath) as! MemberEventCell
         let memberEvent = events[indexPath.row]
         cell.nameLabel.text = memberEvent.name
-        cell.dateLabel.text = "\(memberEvent.date)"
+        cell.dateLabel.text = simpleDate(from: memberEvent.date)
         cell.eventLocation.text = memberEvent.location
         return cell
     }
@@ -101,5 +101,16 @@ class MemberEventsTableViewController: UITableViewController {
                 eventDetailVC.member = member
             }
         }
+    }
+    
+    func simpleDate(from date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = DateFormatter.Style.long
+        formatter.timeStyle = .medium
+        formatter.amSymbol = "AM"
+        formatter.pmSymbol = "PM"
+        formatter.dateFormat = "MMM dd, yyyy, hh:mm a"
+        let dateString = formatter.string(from: date)
+        return dateString
     }
 }

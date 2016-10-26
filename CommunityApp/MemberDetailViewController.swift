@@ -16,6 +16,7 @@ class MemberDetailViewController: UIViewController, UINavigationControllerDelega
     @IBOutlet var emailField: UITextField!
     @IBOutlet var toolbar: UIToolbar!
  
+    var user: Member!
     var member: Member!
     var organization: Organization!
     
@@ -45,6 +46,11 @@ class MemberDetailViewController: UIViewController, UINavigationControllerDelega
         nameField.isEnabled = false
         addressField.isEnabled = false
         emailField.isEnabled = false
+        if member != user {
+            self.toolbar.isHidden = true
+        } else {
+            self.toolbar.isHidden = false
+        }
     }
  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

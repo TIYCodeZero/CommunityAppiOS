@@ -18,7 +18,6 @@ class MenuViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? MemberDetailViewController {
             destination.member = self.user
-            destination.toolbar.isHidden = false
 
         }
         if let destination = segue.destination as? MemberOrgsViewController {

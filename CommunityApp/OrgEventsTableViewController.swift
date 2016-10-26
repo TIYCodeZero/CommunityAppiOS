@@ -50,7 +50,7 @@ class OrgEventsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OrgEventsCell", for: indexPath) as! OrgEventsCell
         let event = events[indexPath.row]
         cell.nameLabel.text = event.name
-        cell.dateLabel.text = "\(event.date)"
+        cell.dateLabel.text = simpleDate(from: event.date)
         cell.eventLocation.text = event.location
         return cell
     }
@@ -96,6 +96,17 @@ class OrgEventsTableViewController: UITableViewController {
             createEventVC.organization = organization
             createEventVC.user = user
         }
+    }
+    
+    func simpleDate(from date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = DateFormatter.Style.long
+        formatter.timeStyle = .medium
+        formatter.amSymbol = "AM"
+        formatter.pmSymbol = "PM"
+        formatter.dateFormat = "MMM dd, yyyy, hh:mm a"
+        let dateString = formatter.string(from: date)
+        return dateString
     }
 }
 
