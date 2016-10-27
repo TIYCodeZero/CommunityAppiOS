@@ -294,7 +294,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemberEventCell" rowHeight="127" id="dpC-1k-Y3h" customClass="MemberEventCell" customModule="CommunityApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="127"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="127"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dpC-1k-Y3h" id="1ZN-AJ-fVg">
                                     <frame key="frameInset" width="375" height="126"/>
@@ -412,7 +412,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrgMemberCell" rowHeight="83" id="2Ee-Wi-Spa" customClass="OrgMemberCell" customModule="CommunityApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="83"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="83"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Ee-Wi-Spa" id="EBP-8g-S5C">
                                     <frame key="frameInset" width="375" height="82"/>
@@ -745,7 +745,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrgEventsCell" rowHeight="102" id="EVh-5J-pij" customClass="OrgEventsCell" customModule="CommunityApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="102"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="102"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EVh-5J-pij" id="Uag-jR-Ztd">
                                     <frame key="frameInset" width="375" height="101"/>
@@ -953,7 +953,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrgPostsCell" rowHeight="135" id="MYr-yO-xRn" customClass="OrgPostsCell" customModule="CommunityApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="135"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="135"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MYr-yO-xRn" id="sHD-NB-8Pa">
                                     <frame key="frameInset" width="375" height="134"/>
@@ -1195,7 +1195,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemberPostCell" rowHeight="148" id="6Ry-ju-fWA" customClass="MemberPostCell" customModule="CommunityApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="148"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="148"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Ry-ju-fWA" id="s5f-AA-nPW">
                                     <frame key="frameInset" width="375" height="147"/>
@@ -1247,6 +1247,74 @@
             </objects>
             <point key="canvasLocation" x="-3532" y="24"/>
         </scene>
+        <!--Member Organizations View Controller-->
+        <scene sceneID="CUn-bm-Z5u">
+            <objects>
+                <viewController id="3dj-aS-s1P" customClass="MemberOrganizationsViewController" customModule="CommunityApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Owy-0c-IRS"/>
+                        <viewControllerLayoutGuide type="bottom" id="YNM-xx-tOW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PwS-JM-334">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cki-n5-9fe">
+                                <items>
+                                    <barButtonItem title="My Profile" id="VkC-KN-1gY">
+                                        <connections>
+                                            <segue destination="Fsq-6O-U4H" kind="show" id="xRO-nH-lNS"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Iik-NJ-WGT">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="iTZ-P2-7mv" customClass="MemberOrgCell" customModule="CommunityApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iTZ-P2-7mv" id="2if-wQ-mg5">
+                                            <frame key="frameInset" width="343" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OrgName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSH-3a-BbV">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="XSH-3a-BbV" firstAttribute="centerY" secondItem="2if-wQ-mg5" secondAttribute="centerY" id="Qq5-9y-VQu"/>
+                                                <constraint firstItem="XSH-3a-BbV" firstAttribute="leading" secondItem="2if-wQ-mg5" secondAttribute="leadingMargin" constant="8" id="cNv-QX-DAp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="IcX-eh-zDy" kind="show" identifier="ViewOrgDetails" id="H1n-2m-FYT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YNM-xx-tOW" firstAttribute="top" secondItem="Cki-n5-9fe" secondAttribute="bottom" id="54s-LG-LBy"/>
+                            <constraint firstItem="Cki-n5-9fe" firstAttribute="leading" secondItem="PwS-JM-334" secondAttribute="leading" id="CW1-PO-zOC"/>
+                            <constraint firstAttribute="trailing" secondItem="Cki-n5-9fe" secondAttribute="trailing" id="DSh-g8-TWp"/>
+                            <constraint firstItem="Cki-n5-9fe" firstAttribute="top" secondItem="Iik-NJ-WGT" secondAttribute="bottom" id="Qw8-Ad-4lY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Iik-NJ-WGT" secondAttribute="trailing" id="Uqw-KH-GYw"/>
+                            <constraint firstItem="Iik-NJ-WGT" firstAttribute="leading" secondItem="PwS-JM-334" secondAttribute="leadingMargin" id="rG8-iL-v6v"/>
+                            <constraint firstItem="Iik-NJ-WGT" firstAttribute="top" secondItem="Owy-0c-IRS" secondAttribute="bottom" id="rUX-1S-9h4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Iik-NJ-WGT" id="mfc-8D-FnL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7I3-Je-O26" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2319" y="-2915"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="xN8-l4-f54">
             <objects>
@@ -1270,7 +1338,8 @@
         <image name="DefaultAvatar" width="400" height="400"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ePK-Oi-lUp"/>
+        <segue reference="H1n-2m-FYT"/>
+        <segue reference="xRO-nH-lNS"/>
         <segue reference="ms2-3H-RLz"/>
         <segue reference="2zP-L2-C8a"/>
     </inferredMetricsTieBreakers>

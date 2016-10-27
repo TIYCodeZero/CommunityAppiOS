@@ -55,6 +55,7 @@
 		F7D3ABCA1DB958590004F03E /* OrgMembersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D3ABC91DB958590004F03E /* OrgMembersTableViewController.swift */; };
 		F7D3ABCC1DB95C390004F03E /* OrgMemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D3ABCB1DB95C390004F03E /* OrgMemberCell.swift */; };
 		F7DF16501DC1780C00F0E291 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = F7DF164F1DC1780C00F0E291 /* FontAwesome.otf */; };
+		F7F258971DC2453A00B3F220 /* MemberOrganizationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F258961DC2453A00B3F220 /* MemberOrganizationsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +130,7 @@
 		F7D3ABC91DB958590004F03E /* OrgMembersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrgMembersTableViewController.swift; sourceTree = "<group>"; };
 		F7D3ABCB1DB95C390004F03E /* OrgMemberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrgMemberCell.swift; sourceTree = "<group>"; };
 		F7DF164F1DC1780C00F0E291 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
+		F7F258961DC2453A00B3F220 /* MemberOrganizationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberOrganizationsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +264,7 @@
 				F71FB1171DAD627A0091E8A8 /* MemberDetailViewController.swift */,
 				F73CD0431DB80C1100B4C7B5 /* MemberEventsTableViewController.swift */,
 				F767D75A1DBD384300D85CDC /* MemberOrgsViewController.swift */,
+				F7F258961DC2453A00B3F220 /* MemberOrganizationsViewController.swift */,
 				F78AA43D1DB553BB0061C0C0 /* MemberPostsTableViewController.swift */,
 				F71FB10D1DAD2D530091E8A8 /* MenuViewController.swift */,
 				F70CD57F1DB414DB00A4F880 /* OrganizationsTableViewController.swift */,
@@ -449,6 +452,7 @@
 				F70CD5881DB513D900A4F880 /* OrgDetailViewController.swift in Sources */,
 				F71FB10E1DAD2D530091E8A8 /* MenuViewController.swift in Sources */,
 				F73F00521DA8238D007A9DEC /* Organization.swift in Sources */,
+				F7F258971DC2453A00B3F220 /* MemberOrganizationsViewController.swift in Sources */,
 				F70CD5801DB414DB00A4F880 /* OrganizationsTableViewController.swift in Sources */,
 				F73F00531DA8238D007A9DEC /* Post.swift in Sources */,
 				F73CD0441DB80C1100B4C7B5 /* MemberEventsTableViewController.swift in Sources */,
