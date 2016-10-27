@@ -35,18 +35,17 @@ class InvitationViewController: UIViewController, MFMailComposeViewControllerDel
     @IBAction func sendInvitationButton(_ sender: AnyObject) {
         let composeVC = configuredMailComposeVC()
         if MFMailComposeViewController.canSendMail() {
-            guard let invReq = invitationRequest else {
-                displayAlertMessage()
-                return
+            guard let email = emailTextField?.text,
+                !email.isEmpty else {
+                    displayAlertMessage()
+                    return
             }
-            
             let session = URLSession(configuration: CommunityAPI.sessionConfig)
             let method = CommunityAPI.Method.sendInvitation
             var request = URLRequest(url: method.url)
-            
             request.httpMethod = "POST"
-            request.httpBody = try! invReq.jsonData()
-            
+            let inviteProfile: [String: Any] = ["email": email, "organization": organization.jsonObject, "member": user.jsonObject]
+            request.httpBody = try! JSONSerialization.data(withJSONObject: inviteProfile, options: [])
             session.dataTask(with: request) {(optData, optResponse, optError) in
                 OperationQueue.main.addOperation {
                     guard let data = optData else {
