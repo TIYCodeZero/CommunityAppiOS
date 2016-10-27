@@ -11,10 +11,10 @@ import UIKit
 class MemberDetailViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet var imageView: UIImageView!
-    @IBOutlet var nameField: UITextField!
-    @IBOutlet var addressField: UITextField!
-    @IBOutlet var emailField: UITextField!
     @IBOutlet var toolbar: UIToolbar!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var addressLabel: UILabel!
+    @IBOutlet var emailLabel: UILabel!
  
     var user: Member!
     var member: Member!
@@ -40,12 +40,9 @@ class MemberDetailViewController: UIViewController, UINavigationControllerDelega
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         loadImage(member.photoURL)
-        nameField.text = "\(member.firstName) \(member.lastName)"
-        addressField.text = member.streetAddress
-        emailField.text = member.email
-        nameField.isEnabled = false
-        addressField.isEnabled = false
-        emailField.isEnabled = false
+        nameLabel.text = "\(member.firstName) \(member.lastName)"
+        addressLabel.text = member.streetAddress
+        emailLabel.text = member.email
         if member != user {
             self.toolbar.isHidden = true
         } else {
