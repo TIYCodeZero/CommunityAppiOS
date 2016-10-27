@@ -54,6 +54,7 @@
 		F7D3AB881DB922ED0004F03E /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D3AB871DB922ED0004F03E /* EventDetailViewController.swift */; };
 		F7D3ABCA1DB958590004F03E /* OrgMembersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D3ABC91DB958590004F03E /* OrgMembersTableViewController.swift */; };
 		F7D3ABCC1DB95C390004F03E /* OrgMemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D3ABCB1DB95C390004F03E /* OrgMemberCell.swift */; };
+		F7DF16501DC1780C00F0E291 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = F7DF164F1DC1780C00F0E291 /* FontAwesome.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,7 @@
 		F7D3AB871DB922ED0004F03E /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		F7D3ABC91DB958590004F03E /* OrgMembersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrgMembersTableViewController.swift; sourceTree = "<group>"; };
 		F7D3ABCB1DB95C390004F03E /* OrgMemberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrgMemberCell.swift; sourceTree = "<group>"; };
+		F7DF164F1DC1780C00F0E291 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +213,7 @@
 				F73F00271DA8235C007A9DEC /* Assets.xcassets */,
 				F714A5CD1DAAD3970017958D /* CommunityAPI.swift */,
 				F73F002C1DA8235C007A9DEC /* Info.plist */,
+				F7DF164F1DC1780C00F0E291 /* FontAwesome.otf */,
 				F714A5D11DAADF840017958D /* JSONTools.swift */,
 				F73F00291DA8235C007A9DEC /* LaunchScreen.storyboard */,
 				F73F00241DA8235C007A9DEC /* Main.storyboard */,
@@ -397,6 +400,7 @@
 			files = (
 				F73F002B1DA8235C007A9DEC /* LaunchScreen.storyboard in Resources */,
 				F73F00281DA8235C007A9DEC /* Assets.xcassets in Resources */,
+				F7DF16501DC1780C00F0E291 /* FontAwesome.otf in Resources */,
 				F73F00261DA8235C007A9DEC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
