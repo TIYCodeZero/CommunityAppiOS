@@ -63,5 +63,11 @@ class CreateEventViewController: UIViewController {
         super.viewDidLoad()
         title = "Create Event"
     }
-
+    
+    @IBAction func dismissKeyboard (_ sender: AnyObject){
+        nameLabel.resignFirstResponder()
+        locationLabel.resignFirstResponder()
+        informationLabel.resignFirstResponder()
+    }
+    
 }

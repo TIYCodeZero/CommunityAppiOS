@@ -54,7 +54,9 @@ class InvitationViewController: UIViewController, MFMailComposeViewControllerDel
                         return
                     }
                     switch Invitation.Response.Result(data: data) {
-                    case .success:
+                    case let .success(message):
+                        print(message)
+                        composeVC.navigationBar.tintColor = .white
                         self.present(composeVC, animated: true, completion: nil)
                         return
                     case .failure:

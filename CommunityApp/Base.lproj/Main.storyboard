@@ -468,7 +468,7 @@
             </objects>
             <point key="canvasLocation" x="161" y="-2124"/>
         </scene>
-        <!--Create Event View Controller-->
+        <!--Title-->
         <scene sceneID="lO3-MF-G5P">
             <objects>
                 <viewController id="Exh-Qx-muH" customClass="CreateEventViewController" customModule="CommunityApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -512,6 +512,7 @@
                                 </constraints>
                             </stackView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="7ba-oh-dr3">
+                                <gestureRecognizers/>
                                 <date key="date" timeIntervalSinceReferenceDate="498247657.538822">
                                     <!--2016-10-15 18:07:37 +0000-->
                                 </date>
@@ -525,30 +526,28 @@
                                     <action selector="datePickerAction:" destination="Exh-Qx-muH" eventType="valueChanged" id="aAD-wP-Wic"/>
                                 </connections>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXy-NO-zoe">
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Create Event"/>
-                                <connections>
-                                    <action selector="createEvent:" destination="Exh-Qx-muH" eventType="touchUpInside" id="L1h-yY-ubZ"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="iXy-NO-zoe" firstAttribute="centerX" secondItem="Toa-tM-n6m" secondAttribute="centerX" id="7TT-Tt-8MN"/>
-                            <constraint firstItem="Gs5-7V-lL6" firstAttribute="top" secondItem="iXy-NO-zoe" secondAttribute="bottom" id="Iz8-FH-Zsi"/>
+                            <constraint firstItem="Gs5-7V-lL6" firstAttribute="top" secondItem="7ba-oh-dr3" secondAttribute="bottom" constant="8" symbolic="YES" id="Fl3-dR-9ek"/>
                             <constraint firstItem="bNc-bg-djM" firstAttribute="leading" secondItem="Toa-tM-n6m" secondAttribute="leadingMargin" constant="-16" id="NsA-RX-GmP"/>
                             <constraint firstItem="7ba-oh-dr3" firstAttribute="width" secondItem="Toa-tM-n6m" secondAttribute="width" id="Rzq-GQ-FSP"/>
                             <constraint firstAttribute="trailing" secondItem="bNc-bg-djM" secondAttribute="trailing" id="Sfg-16-WrU"/>
                             <constraint firstItem="7ba-oh-dr3" firstAttribute="top" secondItem="CT9-8r-CWo" secondAttribute="bottom" id="TJc-ED-w3f"/>
                             <constraint firstItem="bNc-bg-djM" firstAttribute="leading" secondItem="Toa-tM-n6m" secondAttribute="leading" id="UIS-Xu-tKo"/>
                             <constraint firstItem="bNc-bg-djM" firstAttribute="width" secondItem="Toa-tM-n6m" secondAttribute="width" id="bTJ-wb-XQA"/>
-                            <constraint firstItem="iXy-NO-zoe" firstAttribute="top" secondItem="7ba-oh-dr3" secondAttribute="bottom" constant="8" symbolic="YES" id="fHr-ch-FI6"/>
                             <constraint firstItem="bNc-bg-djM" firstAttribute="top" secondItem="3mq-Xi-dd5" secondAttribute="bottom" id="wnP-ai-hyC"/>
                             <constraint firstItem="7ba-oh-dr3" firstAttribute="centerX" secondItem="Toa-tM-n6m" secondAttribute="centerX" id="xLS-cI-SVg"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="1ji-ov-Z0D">
+                        <barButtonItem key="rightBarButtonItem" title="Create" id="NLy-MF-3Tv">
+                            <connections>
+                                <action selector="createEvent:" destination="Exh-Qx-muH" id="2bq-m3-hQ3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="datePicker" destination="7ba-oh-dr3" id="kvW-nR-Zz8"/>
