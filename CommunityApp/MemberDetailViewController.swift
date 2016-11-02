@@ -11,12 +11,14 @@ import UIKit
 class MemberDetailViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet var imageView: UIImageView!
-    @IBOutlet var nameField: UITextField!
-    @IBOutlet var addressField: UITextField!
-    @IBOutlet var emailField: UITextField!
+    @IBOutlet var toolbar: UIToolbar!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var addressLabel: UILabel!
+    @IBOutlet var emailLabel: UILabel!
  
+    var user: Member!
     var member: Member!
-//    var imageStore: ImageStore = ImageStore()
+    var organization: Organization!
     
     @IBAction func cameraButtonTapped(_ sender: AnyObject) {
         let imagePicker = UIImagePickerController()
@@ -37,20 +39,42 @@ class MemberDetailViewController: UIViewController, UINavigationControllerDelega
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        nameField.text = "\(member.firstName) \(member.lastName)"
-        addressField.text = member.streetAddress
-        emailField.text = member.email
+        loadImage(member.photoURL)
+        nameLabel.text = "\(member.firstName) \(member.lastName)"
+        addressLabel.text = member.streetAddress
+        emailLabel.text = member.email
+        if member != user {
+            self.toolbar.isHidden = true
+        } else {
+            self.toolbar.isHidden = false
+        }
     }
  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ViewMemberPosts" {
            let memberPostsTableViewController = segue.destination as! MemberPostsTableViewController
             memberPostsTableViewController.member = member
+            memberPostsTableViewController.organization = organization
         }
         if segue.identifier == "ViewMemberEvents" {
             let memberEventsTableViewController = segue.destination as! MemberEventsTableViewController
             memberEventsTableViewController.member = member
         }
+    }
+    
+    func loadImage(_ urlString:String) {
+        let imageURL: URL = URL(string: urlString)!
+        let request: URLRequest = URLRequest(url: imageURL)
+        let session = URLSession(configuration: CommunityAPI.sessionConfig)
+        let task = session.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
+            if (error == nil && data != nil) {
+                func display_image() {
+                    self.imageView.image = UIImage(data: data!)
+                }
+                DispatchQueue.main.async(execute: display_image)
+            }
+        })
+        task.resume()
     }
     
 }

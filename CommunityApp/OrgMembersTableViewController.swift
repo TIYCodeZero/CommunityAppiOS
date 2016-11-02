@@ -10,6 +10,7 @@ import UIKit
 
 class OrgMembersTableViewController: UITableViewController {
 
+    var user: Member!
     var organization: Organization!
     var members: [Member] = []
     var memberStore:MemberStore = MemberStore()
@@ -58,6 +59,8 @@ class OrgMembersTableViewController: UITableViewController {
                 let member = members[row]
                 let memberDetailViewController = segue.destination as! MemberDetailViewController
                 memberDetailViewController.member = member
+                memberDetailViewController.user = user
+                memberDetailViewController.organization = organization
             }
         }
     }

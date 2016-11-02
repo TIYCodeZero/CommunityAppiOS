@@ -7,13 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F706B8841DB1221D00F2EB37 /* EventsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F706B8831DB1221D00F2EB37 /* EventsListTableViewController.swift */; };
-		F706B8861DB122C500F2EB37 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F706B8851DB122C500F2EB37 /* EventCell.swift */; };
 		F706B8881DB1246500F2EB37 /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F706B8871DB1246500F2EB37 /* EventStore.swift */; };
 		F706B88A1DB1253500F2EB37 /* EventRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F706B8891DB1253500F2EB37 /* EventRequest.swift */; };
 		F706B88C1DB14DC500F2EB37 /* EventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F706B88B1DB14DC500F2EB37 /* EventTests.swift */; };
 		F706B88E1DB2A55F00F2EB37 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F706B88D1DB2A55F00F2EB37 /* CreateEventViewController.swift */; };
-		F70CD57E1DB3F7F700A4F880 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70CD57D1DB3F7F700A4F880 /* ImageStore.swift */; };
 		F70CD5801DB414DB00A4F880 /* OrganizationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70CD57F1DB414DB00A4F880 /* OrganizationsTableViewController.swift */; };
 		F70CD5821DB416F800A4F880 /* OganizationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70CD5811DB416F800A4F880 /* OganizationStore.swift */; };
 		F70CD5841DB419B500A4F880 /* OrganizationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70CD5831DB419B500A4F880 /* OrganizationRequest.swift */; };
@@ -25,15 +22,10 @@
 		F714A5D21DAADF840017958D /* JSONTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F714A5D11DAADF840017958D /* JSONTools.swift */; };
 		F714A5D41DAAE4710017958D /* RegistrationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F714A5D31DAAE4710017958D /* RegistrationRequest.swift */; };
 		F714A5D61DAC1AA00017958D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F714A5D51DAC1AA00017958D /* RegisterViewController.swift */; };
-		F71FB10E1DAD2D530091E8A8 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71FB10D1DAD2D530091E8A8 /* MenuViewController.swift */; };
-		F71FB1101DAD2DAF0091E8A8 /* MembersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71FB10F1DAD2DAF0091E8A8 /* MembersTableViewController.swift */; };
-		F71FB1121DAD2E030091E8A8 /* MemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71FB1111DAD2E030091E8A8 /* MemberCell.swift */; };
 		F71FB1141DAD2E580091E8A8 /* MemberStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71FB1131DAD2E580091E8A8 /* MemberStore.swift */; };
 		F71FB1161DAD3C610091E8A8 /* MemberRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71FB1151DAD3C610091E8A8 /* MemberRequest.swift */; };
 		F71FB1181DAD627A0091E8A8 /* MemberDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71FB1171DAD627A0091E8A8 /* MemberDetailViewController.swift */; };
-		F71FB11A1DAD6A150091E8A8 /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71FB1191DAD6A150091E8A8 /* PostsTableViewController.swift */; };
 		F71FB11C1DAD6A450091E8A8 /* PostsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71FB11B1DAD6A450091E8A8 /* PostsStore.swift */; };
-		F71FB11E1DAD6A9C0091E8A8 /* PostsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71FB11D1DAD6A9C0091E8A8 /* PostsCell.swift */; };
 		F71FB1201DAD6F940091E8A8 /* PostsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71FB11F1DAD6F940091E8A8 /* PostsRequest.swift */; };
 		F73CD0441DB80C1100B4C7B5 /* MemberEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73CD0431DB80C1100B4C7B5 /* MemberEventsTableViewController.swift */; };
 		F73CD0461DB80C6C00B4C7B5 /* MemberEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73CD0451DB80C6C00B4C7B5 /* MemberEventCell.swift */; };
@@ -48,6 +40,7 @@
 		F73F00521DA8238D007A9DEC /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F004F1DA8238D007A9DEC /* Organization.swift */; };
 		F73F00531DA8238D007A9DEC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F00501DA8238D007A9DEC /* Post.swift */; };
 		F73F00551DA823A0007A9DEC /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F00541DA823A0007A9DEC /* Member.swift */; };
+		F767D75D1DBD38D900D85CDC /* MemberOrgCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F767D75C1DBD38D900D85CDC /* MemberOrgCell.swift */; };
 		F7785EB81DAE786600149DCE /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7785EB71DAE786600149DCE /* CreatePostViewController.swift */; };
 		F787A1091DB658C100042B0F /* InvitationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F787A1081DB658C100042B0F /* InvitationRequest.swift */; };
 		F787A10D1DB676D000042B0F /* OrgPostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F787A10C1DB676D000042B0F /* OrgPostsTableViewController.swift */; };
@@ -59,6 +52,8 @@
 		F7D3AB881DB922ED0004F03E /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D3AB871DB922ED0004F03E /* EventDetailViewController.swift */; };
 		F7D3ABCA1DB958590004F03E /* OrgMembersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D3ABC91DB958590004F03E /* OrgMembersTableViewController.swift */; };
 		F7D3ABCC1DB95C390004F03E /* OrgMemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D3ABCB1DB95C390004F03E /* OrgMemberCell.swift */; };
+		F7DF16501DC1780C00F0E291 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = F7DF164F1DC1780C00F0E291 /* FontAwesome.otf */; };
+		F7F258971DC2453A00B3F220 /* MemberOrganizationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F258961DC2453A00B3F220 /* MemberOrganizationsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,13 +74,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F706B8831DB1221D00F2EB37 /* EventsListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsListTableViewController.swift; sourceTree = "<group>"; };
-		F706B8851DB122C500F2EB37 /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		F706B8871DB1246500F2EB37 /* EventStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventStore.swift; sourceTree = "<group>"; };
 		F706B8891DB1253500F2EB37 /* EventRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRequest.swift; sourceTree = "<group>"; };
 		F706B88B1DB14DC500F2EB37 /* EventTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTests.swift; sourceTree = "<group>"; };
 		F706B88D1DB2A55F00F2EB37 /* CreateEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
-		F70CD57D1DB3F7F700A4F880 /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		F70CD57F1DB414DB00A4F880 /* OrganizationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationsTableViewController.swift; sourceTree = "<group>"; };
 		F70CD5811DB416F800A4F880 /* OganizationStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OganizationStore.swift; sourceTree = "<group>"; };
 		F70CD5831DB419B500A4F880 /* OrganizationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationRequest.swift; sourceTree = "<group>"; };
@@ -97,15 +89,10 @@
 		F714A5D11DAADF840017958D /* JSONTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONTools.swift; sourceTree = "<group>"; };
 		F714A5D31DAAE4710017958D /* RegistrationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationRequest.swift; sourceTree = "<group>"; };
 		F714A5D51DAC1AA00017958D /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		F71FB10D1DAD2D530091E8A8 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		F71FB10F1DAD2DAF0091E8A8 /* MembersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersTableViewController.swift; sourceTree = "<group>"; };
-		F71FB1111DAD2E030091E8A8 /* MemberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberCell.swift; sourceTree = "<group>"; };
 		F71FB1131DAD2E580091E8A8 /* MemberStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberStore.swift; sourceTree = "<group>"; };
 		F71FB1151DAD3C610091E8A8 /* MemberRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberRequest.swift; sourceTree = "<group>"; };
 		F71FB1171DAD627A0091E8A8 /* MemberDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberDetailViewController.swift; sourceTree = "<group>"; };
-		F71FB1191DAD6A150091E8A8 /* PostsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
 		F71FB11B1DAD6A450091E8A8 /* PostsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsStore.swift; sourceTree = "<group>"; };
-		F71FB11D1DAD6A9C0091E8A8 /* PostsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsCell.swift; sourceTree = "<group>"; };
 		F71FB11F1DAD6F940091E8A8 /* PostsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsRequest.swift; sourceTree = "<group>"; };
 		F73CD0431DB80C1100B4C7B5 /* MemberEventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberEventsTableViewController.swift; sourceTree = "<group>"; };
 		F73CD0451DB80C6C00B4C7B5 /* MemberEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberEventCell.swift; sourceTree = "<group>"; };
@@ -126,6 +113,7 @@
 		F73F004F1DA8238D007A9DEC /* Organization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 		F73F00501DA8238D007A9DEC /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		F73F00541DA823A0007A9DEC /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		F767D75C1DBD38D900D85CDC /* MemberOrgCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberOrgCell.swift; sourceTree = "<group>"; };
 		F7785EB71DAE786600149DCE /* CreatePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
 		F787A1081DB658C100042B0F /* InvitationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvitationRequest.swift; sourceTree = "<group>"; };
 		F787A10C1DB676D000042B0F /* OrgPostsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrgPostsTableViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +125,8 @@
 		F7D3AB871DB922ED0004F03E /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		F7D3ABC91DB958590004F03E /* OrgMembersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrgMembersTableViewController.swift; sourceTree = "<group>"; };
 		F7D3ABCB1DB95C390004F03E /* OrgMemberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrgMemberCell.swift; sourceTree = "<group>"; };
+		F7DF164F1DC1780C00F0E291 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
+		F7F258961DC2453A00B3F220 /* MemberOrganizationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberOrganizationsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +154,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F70C4F491DBE5295002B0D8F /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				F706B8891DB1253500F2EB37 /* EventRequest.swift */,
+				F787A1081DB658C100042B0F /* InvitationRequest.swift */,
+				F714A5CF1DAAD9FA0017958D /* LoginRequest.swift */,
+				F71FB1151DAD3C610091E8A8 /* MemberRequest.swift */,
+				F71FB11F1DAD6F940091E8A8 /* PostsRequest.swift */,
+				F714A5D31DAAE4710017958D /* RegistrationRequest.swift */,
+				F70CD5831DB419B500A4F880 /* OrganizationRequest.swift */,
+			);
+			name = Requests;
+			sourceTree = "<group>";
+		};
+		F70C4F4A1DBE52F6002B0D8F /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				F71FB1131DAD2E580091E8A8 /* MemberStore.swift */,
+				F70CD5811DB416F800A4F880 /* OganizationStore.swift */,
+				F71FB11B1DAD6A450091E8A8 /* PostsStore.swift */,
+				F706B8871DB1246500F2EB37 /* EventStore.swift */,
+			);
+			name = Stores;
+			sourceTree = "<group>";
+		};
 		F73F00141DA8235C007A9DEC = {
 			isa = PBXGroup;
 			children = (
@@ -187,56 +202,19 @@
 		F73F001F1DA8235C007A9DEC /* CommunityApp */ = {
 			isa = PBXGroup;
 			children = (
+				F767D75E1DBD638000D85CDC /* Base Classes */,
+				F70C4F491DBE5295002B0D8F /* Requests */,
+				F70C4F4A1DBE52F6002B0D8F /* Stores */,
+				F767D7601DBD641B00D85CDC /* Table Cells */,
+				F767D75F1DBD63B100D85CDC /* View Controllers */,
 				F73F00201DA8235C007A9DEC /* AppDelegate.swift */,
 				F73F00271DA8235C007A9DEC /* Assets.xcassets */,
 				F714A5CD1DAAD3970017958D /* CommunityAPI.swift */,
-				F706B88D1DB2A55F00F2EB37 /* CreateEventViewController.swift */,
-				F7785EB71DAE786600149DCE /* CreatePostViewController.swift */,
-				F73F004E1DA8238D007A9DEC /* Event.swift */,
-				F706B8851DB122C500F2EB37 /* EventCell.swift */,
-				F7D3AB871DB922ED0004F03E /* EventDetailViewController.swift */,
-				F706B8891DB1253500F2EB37 /* EventRequest.swift */,
-				F706B8831DB1221D00F2EB37 /* EventsListTableViewController.swift */,
-				F706B8871DB1246500F2EB37 /* EventStore.swift */,
-				F70CD57D1DB3F7F700A4F880 /* ImageStore.swift */,
 				F73F002C1DA8235C007A9DEC /* Info.plist */,
-				F787A1081DB658C100042B0F /* InvitationRequest.swift */,
-				F70CD5891DB522A800A4F880 /* InvitationViewController.swift */,
+				F7DF164F1DC1780C00F0E291 /* FontAwesome.otf */,
 				F714A5D11DAADF840017958D /* JSONTools.swift */,
 				F73F00291DA8235C007A9DEC /* LaunchScreen.storyboard */,
-				F714A5CF1DAAD9FA0017958D /* LoginRequest.swift */,
-				F73F00221DA8235C007A9DEC /* LoginViewController.swift */,
 				F73F00241DA8235C007A9DEC /* Main.storyboard */,
-				F73F00541DA823A0007A9DEC /* Member.swift */,
-				F71FB1111DAD2E030091E8A8 /* MemberCell.swift */,
-				F71FB1171DAD627A0091E8A8 /* MemberDetailViewController.swift */,
-				F73CD0451DB80C6C00B4C7B5 /* MemberEventCell.swift */,
-				F73CD0431DB80C1100B4C7B5 /* MemberEventsTableViewController.swift */,
-				F78AA43F1DB556030061C0C0 /* MemberPostCell.swift */,
-				F78AA43D1DB553BB0061C0C0 /* MemberPostsTableViewController.swift */,
-				F71FB1151DAD3C610091E8A8 /* MemberRequest.swift */,
-				F71FB10F1DAD2DAF0091E8A8 /* MembersTableViewController.swift */,
-				F71FB1131DAD2E580091E8A8 /* MemberStore.swift */,
-				F71FB10D1DAD2D530091E8A8 /* MenuViewController.swift */,
-				F70CD5811DB416F800A4F880 /* OganizationStore.swift */,
-				F73F004F1DA8238D007A9DEC /* Organization.swift */,
-				F70CD5851DB41F9600A4F880 /* OrganizationCell.swift */,
-				F70CD5831DB419B500A4F880 /* OrganizationRequest.swift */,
-				F70CD57F1DB414DB00A4F880 /* OrganizationsTableViewController.swift */,
-				F70CD5871DB513D900A4F880 /* OrgDetailViewController.swift */,
-				F787A1121DB694FB00042B0F /* OrgEventsCell.swift */,
-				F787A1101DB6949000042B0F /* OrgEventsTableViewController.swift */,
-				F7D3ABCB1DB95C390004F03E /* OrgMemberCell.swift */,
-				F7D3ABC91DB958590004F03E /* OrgMembersTableViewController.swift */,
-				F787A10E1DB677C900042B0F /* OrgPostsCell.swift */,
-				F787A10C1DB676D000042B0F /* OrgPostsTableViewController.swift */,
-				F73F00501DA8238D007A9DEC /* Post.swift */,
-				F71FB11D1DAD6A9C0091E8A8 /* PostsCell.swift */,
-				F71FB11F1DAD6F940091E8A8 /* PostsRequest.swift */,
-				F71FB11B1DAD6A450091E8A8 /* PostsStore.swift */,
-				F71FB1191DAD6A150091E8A8 /* PostsTableViewController.swift */,
-				F714A5D51DAC1AA00017958D /* RegisterViewController.swift */,
-				F714A5D31DAAE4710017958D /* RegistrationRequest.swift */,
 			);
 			path = CommunityApp;
 			sourceTree = "<group>";
@@ -258,6 +236,53 @@
 				F73F00421DA8235C007A9DEC /* Info.plist */,
 			);
 			path = CommunityAppUITests;
+			sourceTree = "<group>";
+		};
+		F767D75E1DBD638000D85CDC /* Base Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F73F004F1DA8238D007A9DEC /* Organization.swift */,
+				F73F00541DA823A0007A9DEC /* Member.swift */,
+				F73F00501DA8238D007A9DEC /* Post.swift */,
+				F73F004E1DA8238D007A9DEC /* Event.swift */,
+			);
+			name = "Base Classes";
+			sourceTree = "<group>";
+		};
+		F767D75F1DBD63B100D85CDC /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F706B88D1DB2A55F00F2EB37 /* CreateEventViewController.swift */,
+				F7785EB71DAE786600149DCE /* CreatePostViewController.swift */,
+				F7D3AB871DB922ED0004F03E /* EventDetailViewController.swift */,
+				F70CD5891DB522A800A4F880 /* InvitationViewController.swift */,
+				F73F00221DA8235C007A9DEC /* LoginViewController.swift */,
+				F71FB1171DAD627A0091E8A8 /* MemberDetailViewController.swift */,
+				F73CD0431DB80C1100B4C7B5 /* MemberEventsTableViewController.swift */,
+				F7F258961DC2453A00B3F220 /* MemberOrganizationsViewController.swift */,
+				F78AA43D1DB553BB0061C0C0 /* MemberPostsTableViewController.swift */,
+				F70CD57F1DB414DB00A4F880 /* OrganizationsTableViewController.swift */,
+				F70CD5871DB513D900A4F880 /* OrgDetailViewController.swift */,
+				F787A1101DB6949000042B0F /* OrgEventsTableViewController.swift */,
+				F7D3ABC91DB958590004F03E /* OrgMembersTableViewController.swift */,
+				F787A10C1DB676D000042B0F /* OrgPostsTableViewController.swift */,
+				F714A5D51DAC1AA00017958D /* RegisterViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		F767D7601DBD641B00D85CDC /* Table Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F767D75C1DBD38D900D85CDC /* MemberOrgCell.swift */,
+				F78AA43F1DB556030061C0C0 /* MemberPostCell.swift */,
+				F73CD0451DB80C6C00B4C7B5 /* MemberEventCell.swift */,
+				F787A10E1DB677C900042B0F /* OrgPostsCell.swift */,
+				F787A1121DB694FB00042B0F /* OrgEventsCell.swift */,
+				F7D3ABCB1DB95C390004F03E /* OrgMemberCell.swift */,
+				F70CD5851DB41F9600A4F880 /* OrganizationCell.swift */,
+			);
+			name = "Table Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,6 +397,7 @@
 			files = (
 				F73F002B1DA8235C007A9DEC /* LaunchScreen.storyboard in Resources */,
 				F73F00281DA8235C007A9DEC /* Assets.xcassets in Resources */,
+				F7DF16501DC1780C00F0E291 /* FontAwesome.otf in Resources */,
 				F73F00261DA8235C007A9DEC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,7 +424,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F71FB1181DAD627A0091E8A8 /* MemberDetailViewController.swift in Sources */,
-				F706B8841DB1221D00F2EB37 /* EventsListTableViewController.swift in Sources */,
 				F73CD0461DB80C6C00B4C7B5 /* MemberEventCell.swift in Sources */,
 				F71FB1201DAD6F940091E8A8 /* PostsRequest.swift in Sources */,
 				F73F00231DA8235C007A9DEC /* LoginViewController.swift in Sources */,
@@ -419,24 +444,19 @@
 				F73F00211DA8235C007A9DEC /* AppDelegate.swift in Sources */,
 				F706B8881DB1246500F2EB37 /* EventStore.swift in Sources */,
 				F70CD5881DB513D900A4F880 /* OrgDetailViewController.swift in Sources */,
-				F71FB10E1DAD2D530091E8A8 /* MenuViewController.swift in Sources */,
 				F73F00521DA8238D007A9DEC /* Organization.swift in Sources */,
+				F7F258971DC2453A00B3F220 /* MemberOrganizationsViewController.swift in Sources */,
 				F70CD5801DB414DB00A4F880 /* OrganizationsTableViewController.swift in Sources */,
-				F71FB1101DAD2DAF0091E8A8 /* MembersTableViewController.swift in Sources */,
-				F71FB11E1DAD6A9C0091E8A8 /* PostsCell.swift in Sources */,
 				F73F00531DA8238D007A9DEC /* Post.swift in Sources */,
 				F73CD0441DB80C1100B4C7B5 /* MemberEventsTableViewController.swift in Sources */,
 				F787A10F1DB677C900042B0F /* OrgPostsCell.swift in Sources */,
 				F787A10D1DB676D000042B0F /* OrgPostsTableViewController.swift in Sources */,
 				F71FB11C1DAD6A450091E8A8 /* PostsStore.swift in Sources */,
-				F71FB1121DAD2E030091E8A8 /* MemberCell.swift in Sources */,
-				F70CD57E1DB3F7F700A4F880 /* ImageStore.swift in Sources */,
-				F71FB11A1DAD6A150091E8A8 /* PostsTableViewController.swift in Sources */,
 				F71FB1141DAD2E580091E8A8 /* MemberStore.swift in Sources */,
 				F7785EB81DAE786600149DCE /* CreatePostViewController.swift in Sources */,
 				F787A1091DB658C100042B0F /* InvitationRequest.swift in Sources */,
-				F706B8861DB122C500F2EB37 /* EventCell.swift in Sources */,
 				F70CD5821DB416F800A4F880 /* OganizationStore.swift in Sources */,
+				F767D75D1DBD38D900D85CDC /* MemberOrgCell.swift in Sources */,
 				F714A5CE1DAAD3970017958D /* CommunityAPI.swift in Sources */,
 				F714A5D01DAAD9FA0017958D /* LoginRequest.swift in Sources */,
 				F7D3ABCC1DB95C390004F03E /* OrgMemberCell.swift in Sources */,

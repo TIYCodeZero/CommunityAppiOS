@@ -12,6 +12,7 @@ enum Invitation {
     struct Request {
         var email: String
         
+        
         init(email: String) {
             self.email = email
         }

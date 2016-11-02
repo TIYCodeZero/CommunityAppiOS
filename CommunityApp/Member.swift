@@ -17,7 +17,6 @@ class Member {
     public var id: Int
     public var password: String
     public var photoURL: String
-//  public var imageKey: String
     
     init(firstName: String, lastName: String, email: String, streetAddress: String, id: Int, password: String, photoURL: String){
         self.firstName = firstName
@@ -27,7 +26,6 @@ class Member {
         self.id = id
         self.password = password
         self.photoURL = photoURL
-//      self.imageKey = UUID().uuidString
     }
     
     convenience init?(dictionary: [String: Any]){
@@ -36,7 +34,6 @@ class Member {
             let email = dictionary[Member.emailKey] as? String,
             let streetAddress = dictionary[Member.streetAddressKey] as? String,
             let id = dictionary[Member.idKey] as? Int,
-//          let imageKey =
             let password = dictionary[Member.passwordKey] as? String,
             let photoURL = dictionary[Member.photoURLKey]  as? String else {
                 return nil
@@ -46,7 +43,6 @@ class Member {
                   email: email,
                   streetAddress: streetAddress,
                   id: id,
-//                imageKey: imageKey,
                   password: password,
                   photoURL: photoURL)
     }
@@ -60,7 +56,6 @@ class Member {
             Member.idKey : id,
             Member.passwordKey : password,
             Member.photoURLKey : photoURL
-//          Member.imageKey : imageKey
         ]
     }
     
@@ -81,7 +76,6 @@ extension Member {
     static var idKey: String = "id"
     static var passwordKey: String = "password"
     static var photoURLKey: String = "photoURL"
-//  static var imageKey: String = "imageKey"
 }
 
 extension Member : Equatable {
@@ -92,7 +86,6 @@ extension Member : Equatable {
         lhs.email == rhs.email &&
         lhs.streetAddress == rhs.streetAddress &&
         lhs.id == rhs.id &&
-//      lhs.imageKey = rhs.imageKey &&
         lhs.password == rhs.password &&
         lhs.photoURL == rhs.photoURL)
     }

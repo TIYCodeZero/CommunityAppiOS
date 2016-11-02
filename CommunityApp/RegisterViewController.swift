@@ -43,14 +43,11 @@ class RegisterViewController: UIViewController {
             displayAlertMessage()
             return
         }
-        
         let session = URLSession(configuration: CommunityAPI.sessionConfig)
         let method = CommunityAPI.Method.register
         var request = URLRequest(url: method.url)
-        
         request.httpMethod = "POST"
         request.httpBody = try! regReq.jsonData()
-        
         session.dataTask(with: request) { (optData, optResponse, optError) in
             OperationQueue.main.addOperation {
                 guard let data = optData else {
@@ -58,16 +55,28 @@ class RegisterViewController: UIViewController {
                     return
                 }
                 switch Registration.Response.Result(data: data) {
-                case .success:
+                case let .success(user):
                     let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-                    let vc = storyboard.instantiateViewController(withIdentifier: "MainNav")
-                    self.present(vc, animated: true, completion: nil)
+                    let navController = storyboard.instantiateViewController(withIdentifier: "MainNav") as! UINavigationController
+                    let mainVC = navController.topViewController as! MemberOrganizationsViewController
+                    mainVC.user = user
+                    self.present(navController, animated: true, completion: nil)
                     return
+
                 case .failure:
                     self.displayAlertMessage()
                 }
             }
             }
             .resume()
+    }
+    
+    @IBAction func dismissKeyboard(_ sender: AnyObject){
+        firstNameField.resignFirstResponder()
+        lastNameField.resignFirstResponder()
+        emailField.resignFirstResponder()
+        streetAddressField.resignFirstResponder()
+        passwordField.resignFirstResponder()
+        confirmPasswordField.resignFirstResponder()
     }
 }

@@ -10,6 +10,7 @@ import Foundation
 
 class OrganizationStore {
     
+    var member: Member!
     var allOrgs: [Organization] = []
     
     func fetchOrgs(completionHandler: @escaping (OrgResult)-> Void) -> Void {
@@ -29,4 +30,5 @@ class OrganizationStore {
         task.resume()
     }
     
+       
 }

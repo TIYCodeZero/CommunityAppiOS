@@ -27,6 +27,13 @@ class Organization {
         self.init(name: name, id: id)
     }
     
+    var jsonObject: [String: Any] {
+        return [
+            Organization.nameKey: name,
+            Organization.idKey: id
+        ]
+    }
+    
     static func array(data: Data) -> [Organization] {
         guard let jsonObject = (try? JSONSerialization.jsonObject(with: data, options: [])) as? [[String: Any]] else {
             fatalError("Failed to convert json into array of Org descriptions")
@@ -45,6 +52,11 @@ class Organization {
         return organizations
     }
     
+}
+
+extension Organization {
+    static var nameKey: String = "name"
+    static var idKey: String = "id"
 }
 
 extension Organization : Equatable {

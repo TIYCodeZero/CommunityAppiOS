@@ -58,7 +58,7 @@ final class LoginViewController: UIViewController {
                 case let .success(user):
                     let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
                     let navController = storyboard.instantiateViewController(withIdentifier: "MainNav") as! UINavigationController
-                    let mainVC = navController.topViewController as! MenuViewController
+                    let mainVC = navController.topViewController as! MemberOrganizationsViewController
                     mainVC.user = user
                     self.present(navController, animated: true, completion: nil)
                     return
@@ -70,4 +70,8 @@ final class LoginViewController: UIViewController {
             .resume()
     }
     
+    @IBAction func dismissKeyboard(_ sender: AnyObject){
+        emailField.resignFirstResponder()
+        passwordField.resignFirstResponder()
+    }
 }

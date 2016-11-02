@@ -14,6 +14,7 @@ class InvitationViewController: UIViewController, MFMailComposeViewControllerDel
     @IBOutlet var invitationInfoLabel: UILabel!
     @IBOutlet var emailTextField: UITextField!
     
+    var user: Member!
     var organization: Organization!
     var invitationRequest: Invitation.Request? {
         guard let email = emailTextField?.text,
@@ -27,21 +28,24 @@ class InvitationViewController: UIViewController, MFMailComposeViewControllerDel
         CommunityApp.displayAlertMessage(title: "Error", message: "Please check your information and try again", from: self)
     }
     
+    @IBAction func dismissKeyboard(_ sender: AnyObject) {
+        emailTextField.resignFirstResponder()
+    }
+    
     @IBAction func sendInvitationButton(_ sender: AnyObject) {
         let composeVC = configuredMailComposeVC()
         if MFMailComposeViewController.canSendMail() {
-            guard let invReq = invitationRequest else {
-                displayAlertMessage()
-                return
+            guard let email = emailTextField?.text,
+                !email.isEmpty else {
+                    displayAlertMessage()
+                    return
             }
-            
             let session = URLSession(configuration: CommunityAPI.sessionConfig)
             let method = CommunityAPI.Method.sendInvitation
             var request = URLRequest(url: method.url)
-            
             request.httpMethod = "POST"
-            request.httpBody = try! invReq.jsonData()
-            
+            let inviteProfile: [String: Any] = ["email": email, "organization": organization.jsonObject, "member": user.jsonObject]
+            request.httpBody = try! JSONSerialization.data(withJSONObject: inviteProfile, options: [])
             session.dataTask(with: request) {(optData, optResponse, optError) in
                 OperationQueue.main.addOperation {
                     guard let data = optData else {
@@ -49,7 +53,9 @@ class InvitationViewController: UIViewController, MFMailComposeViewControllerDel
                         return
                     }
                     switch Invitation.Response.Result(data: data) {
-                    case .success:
+                    case let .success(message):
+                        print(message)
+                        composeVC.navigationBar.tintColor = .white
                         self.present(composeVC, animated: true, completion: nil)
                         return
                     case .failure:
@@ -63,8 +69,9 @@ class InvitationViewController: UIViewController, MFMailComposeViewControllerDel
     
     func configuredMailComposeVC() -> MFMailComposeViewController {
         let mailComposerVC = MFMailComposeViewController()
+        let email = emailTextField.text
         mailComposerVC.mailComposeDelegate = self
-        mailComposerVC.setToRecipients(["\(emailTextField.text)"])
+        mailComposerVC.setToRecipients(["\(email!)"])
         mailComposerVC.setSubject("Invite to Join Community")
         mailComposerVC.setMessageBody("You have been invited to join an organization in the Community App! To get started, visit the App Store and get Community. Then register as directed by the app.", isHTML: false)
         return mailComposerVC

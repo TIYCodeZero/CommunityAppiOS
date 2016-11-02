@@ -10,19 +10,23 @@ import UIKit
 
 class OrgPostsTableViewController: UITableViewController {
     
+    var user: Member?
     var posts: [Post] = []
     var postsStore: PostsStore = PostsStore()
     var organization: Organization!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "\(organization.name) Posts"
         let statusBarHeight = UIApplication.shared.statusBarFrame.height
         let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
         tableView.contentInset = insets
         tableView.scrollIndicatorInsets = insets
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 100
+     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        title = "\(organization.name) Posts"
         getMemberPosts {
             (PostsResult) -> Void in
             switch PostsResult {
@@ -59,11 +63,8 @@ class OrgPostsTableViewController: UITableViewController {
         let method = CommunityAPI.Method.postsByOrg
         var request = URLRequest(url: method.url)
         request.httpMethod = "POST"
-        
         let orgPostProfile: [String: Any] = ["name": name, "id": id]
         request.httpBody = try! JSONSerialization.data(withJSONObject: orgPostProfile, options: [])
-        
-        
         let task = session.dataTask(with: request) { (optData, optResponse, optError) in
             guard let data = optData else {
                 let errorDescription = optResponse?.description ?? optError!.localizedDescription
@@ -79,4 +80,12 @@ class OrgPostsTableViewController: UITableViewController {
         task.resume()
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "CreatePost" {
+            let createPostVC = segue.destination as! CreatePostViewController
+            createPostVC.user = user
+            createPostVC.organization = organization
+        }
+    }
+    
 }
